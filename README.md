@@ -22,7 +22,7 @@
 
 #  Olist E-Commerce Data Analytics Project  
 ### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**  
-[Back to Top](#top) (#-table-of-contents)
+[Back to Top](#top) 
 
 **Team Members & Roles**
 - **Xue** – Customer Analysis + NLP + Sentiment  
@@ -53,7 +53,7 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 ---
 
 #  Repository Structure  
-[Back to Top](#top)(#📘-table-of-contents)
+[Back to Top](#top)
 
 
 
@@ -92,8 +92,7 @@ README.md
 ---
 
 #  Analysis Sections  
-[Back to Top](#top)(#-table-of-contents)
-
+[Back to Top](#top)
 ---
 
 ## 1️. Customer Analysis (Xue)  
@@ -161,7 +160,7 @@ Key findings:
 ---
 
 #  Review Translation (Python – VS Code)  
-[Back to Top](#top)(#-table-of-contents)
+[Back to Top](#top)
 
 Power BI cannot translate 50k+ text rows, handle API limits, or resume safely after failures.
 
@@ -180,7 +179,7 @@ Script location:
 ```
 
 ## Key Findings Summary  
-[Back to Top](#top)(#)
+[Back to Top](#top)
 
 ### Customer Insights  
 - 22.27% of customers are at risk.  
@@ -211,7 +210,7 @@ Script location:
 ---
 
 ## Recommendations  
-[Back to Top](#top)(#)
+[Back to Top](#top)
 
 ### 1. High-Value Order Rapid Response Team  
 Prioritise large, high-risk orders in slow-delivery regions.
@@ -228,7 +227,7 @@ Use negative sentiment spikes to detect emerging product defects early.
 ---
 
 ## Tools & Technologies  
-[Back to Top](#top)(#)
+[Back to Top](#top)
 
 ### Power BI  
 - Star schema data modelling  
