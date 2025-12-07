@@ -1,11 +1,32 @@
+#  Table of Contents
+- [ Olist E-Commerce Data Analytics Project](#-olist-e-commerce-data-analytics-project)
+- [ Project Overview](#-project-overview)
+- [ Repository Structure](#-repository-structure)
+- [ Analysis Sections](#-analysis-sections)
+  - [1️. Customer Analysis (Xue)](#1️-customer-analysis-xue)
+  - [2️. Product Analysis (Rebecca)](#2️-product-analysis-rebecca)
+  - [3️. Sales Analysis (Bijal)](#3️-sales-analysis-bijal)
+  - [4️. Delivery Analysis (Lina)](#4️-delivery-analysis-lina)
+- [ Review Translation (Python – VS Code)](#-review-translation-python--vs-code)
+- [ Key Findings Summary](#-key-findings-summary)
+  - [ Customer Insights](#-customer-insights)
+  - [ Delivery Insights](#-delivery-insights)
+  - [ Product Insights](#-product-insights)
+  - [ Sales Insights](#-sales-insights)
+- [ Recommendations](#-recommendations)
+- [ Tools & Technologies](#-tools--technologies)
+
+---
+
 #  Olist E-Commerce Data Analytics Project  
-### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**
+### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**  
+[ Back to Top](#📘-table-of-contents)
 
 **Team Members & Roles**
-- **Xue** - Customer Analysis + NLP + Sentiment  
-- **Lina** - Delivery Performance Analysis  
-- **Rebecca** - Product Analysis  
-- **Bijal** - Sales Analysis  
+- **Xue** – Customer Analysis + NLP + Sentiment  
+- **Lina** – Delivery Performance Analysis  
+- **Rebecca** – Product Analysis  
+- **Bijal** – Sales Analysis  
 
 **Project Completion:** 9 December 2025  
 **Presentation Date:** 9 December 2025  
@@ -13,22 +34,26 @@
 ---
 
 #  Project Overview  
+[ Back to Top](#-table-of-contents)
 
-This repository contains the full end-to-end analysis of the **Olist E-commerce dataset** — a Brazilian marketplace with **100,000+ orders (2016–2018)**.
+This repository contains the end-to-end analysis of the **Olist E-commerce dataset** — a Brazilian marketplace with **100,000+ orders (2016–2018)**.
 
 The goal of this project was to deliver:
 
-✔ A complete, business-focused Power BI dashboard  
-✔ Deep insights into customers, sales, products, and delivery performance  
+✔ A business-focused Power BI dashboard  
+✔ Insights into customers, sales, products, delivery performance  
 ✔ Clean and transformed datasets  
-✔ A final written report and presentation  
-✔ Python-based translation of Portuguese text for review analysis  
+✔ A final written report & presentation  
+✔ Python-based translation of Portuguese review text  
 
-All modelling, analysis, and visualisation were performed in **Power BI**, with **Python used only to translate review text** for later sentiment and clustering analysis.
+All modelling and analysis were done in **Power BI**, with **Python used only for translating review text**.
 
 ---
 
 #  Repository Structure  
+[ Back to Top](#📘-table-of-contents)
+
+
 
 /data
 /raw → Original datasets
@@ -44,13 +69,14 @@ All modelling, analysis, and visualisation were performed in **Power BI**, with 
 /customer → NLP, sentiment, segmentation
 /product → Category, freight, seasonal patterns
 /sales → Revenue, forecasting, payment trends
-/delivery → Delivery status modelling + review correlation
+/delivery → Delivery modelling + review correlation
 
-/dax → All DAX measures, columns, model schema
+/dax → DAX measures & model schema
+
 /scripts
-/python → Translation code (performed in VS Code)
-/powerquery → Power Query M-scripts
-/utils → Supporting helpers
+/python → Translation script (VS Code)
+/powerquery → Power Query M scripts
+/utils → Helper utilities
 
 /assets
 /high_res_charts → Exported Power BI visuals
@@ -63,164 +89,154 @@ README.md
 
 ---
 
-#  Analysis Sections
+#  Analysis Sections  
+[ Back to Top](#-table-of-contents)
+
+---
 
 ## 1️. Customer Analysis (Xue)  
 Focus areas:
-- Portuguese → English translation (via Python)
-- Sentiment analysis for all reviews  
-- Topic extraction for negative comments  
-- K-means clustering (customer groups)  
-- Revenue-at-risk modeling  
-- Customer satisfaction trends  
-- Regional satisfaction heatmaps  
+- Portuguese → English translation (Python)
+- Sentiment analysis  
+- Topic extraction (negative reviews)  
+- K-means customer clustering  
+- Revenue-at-risk modelling  
+- Satisfaction trends  
+- Regional heatmaps  
 
 Deliverables:
 - Word clouds  
 - Sentiment distributions  
-- High-risk customer identification  
-- PCA cluster visualisation  
-- Full reasoning in `/analysis/customer/`
+- High-risk customer list  
+- PCA cluster plot  
 
 ---
 
 ## 2️. Product Analysis (Rebecca)  
 Focus areas:
-- Product category performance  
-- Freight value vs. weight & dimensions  
-- Regional product preferences  
-- Seasonal & category-level trends  
-- Product attributes impacting review score  
+- Category performance  
+- Freight vs weight/dimensions  
+- Regional preferences  
+- Seasonal trends  
+- Product features influencing reviews  
 
 Deliverables:
-- Category revenue insights  
+- Category revenue charts  
 - Freight cost modelling  
 - Regional demand heatmaps  
-- Complaint topics tied to product attributes  
 
 ---
 
 ## 3️. Sales Analysis (Bijal)  
 Focus areas:
-- Monthly & yearly revenue trends  
-- Time-series forecasting (Power BI)  
-- Payment method behaviour  
-- Average order value analysis  
-- Customer retention & cohort analysis  
+- Monthly & yearly revenue  
+- Power BI forecasting  
+- Payment behaviour trends  
+- AOV (Average Order Value)  
+- Customer retention + cohort analysis  
 
 Deliverables:
-- Forecast visuals  
-- AOV trends  
-- Sales breakdown by payment type  
+- Forecast visualisations  
+- Payment method analysis  
+- Revenue cycle charts  
 
 ---
 
-## 4. Delivery Analysis (Lina)  
+## 4️. Delivery Analysis (Lina)  
 Focus areas:
-- Delivery status classification (Early / On-time / Late)  
-- Delivery time calculation (actual vs estimated)  
-- Review score impact  
-- State-by-state logistics performance  
-- High-delay outlier locations  
+- Delivery classification (Early / On-time / Late)  
+- Actual vs Estimated delivery  
+- Review score correlation  
+- State-level logistics performance  
+- Delay outlier states  
 
 Key findings:
-- **91.96%** of orders were delivered **early**  
-- **Boa Vista (RR)** had the longest delivery times (up to **92 days**)  
-- Delays are strongly linked to low review scores  
-- Higher-value items take longer but customers tolerate delays better  
+- **91.96%** delivered early  
+- **Boa Vista (RR)** had extreme delays (up to **92 days**)  
+- Long delivery strongly correlates with low reviews  
+- High-value orders take longer but reviews remain stable  
 
 ---
 
-# Review Translation (Python – VS Code)
+#  Review Translation (Python – VS Code)  
+[ Back to Top](#-table-of-contents)
 
-Although Power BI was used for the majority of the analysis, review comments were in **Portuguese** and required translation before performing sentiment analysis.
+Power BI cannot translate 50k+ text rows, handle API limits, or resume safely after failures.
 
-We used **Visual Studio Code + Python** to translate all review titles and messages.
+Python enabled:
+- Robust text cleaning  
+- Deep-translator (Google backend)  
+- Batch translation (500 rows)  
+- Resume-safe workflow  
+- Retry & rate-limit handling  
 
 Script location:  
-/scripts/python/translate_reviews.py
-
-
-### Why Python Was Needed  
-Power BI cannot:
-- Translate 50k+ text rows reliably  
-- Handle API limits  
-- Batch process text  
-- Resume translation after interruption  
-
-Python provided:
-- Robust text cleaning  
-- Deep-Translator (Google backend)  
-- Batch translation (500 rows at a time)  
-- Resume-safe workflow  
-- Automated error handling  
-
-Below is the exact script used (also stored in the repo):
-
-### 🔧 translate_reviews.py  
+ (ADD PYTHON SCRIPT LOCATION):
 ```python
 # (Full script included in scripts/python/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
 ```
 
-##  Key Findings Summary  
+## Key Findings Summary  
+[Back to Top](#)
 
-###  Customer Insights  
-- **22.27% of customers are at risk** (silent + vocal detractors).  
-- Negative reviews focus on **product defects, delivery delays, and cancellations**.  
-- Customer satisfaction **sharply declined in late 2018**.
-
----
-
-###  Delivery Insights  
-- **Delivery delay** is the main driver of negative reviews.  
-- Certain states (e.g., **Roraima – RR**) exhibit extremely long delivery times.  
-- High-value orders take longer but **customers tolerate delays better**.
+### Customer Insights  
+- 22.27% of customers are at risk.  
+- Negative reviews focus on defects, delays, and cancellations.  
+- Satisfaction declined sharply in late 2018.
 
 ---
 
-###  Product Insights  
-- **Electronics and furniture** categories dominate overall revenue.  
-- Freight cost is **strongly correlated** with product weight and dimensions.  
-- **Regional preferences** for product categories vary significantly across Brazil.
+### Delivery Insights  
+- Delivery delays are the main cause of negative reviews.  
+- Certain states (such as Roraima – RR) have extremely long delivery times.  
+- High-value orders take longer to deliver but maintain higher satisfaction.
 
 ---
 
-###  Sales Insights  
-- Sales peak during **holidays and seasonal events**.  
-- **Credit card payments** dominate transaction volume.  
-- Revenue displays **clear cyclical patterns** across months and years.
+### Product Insights  
+- Electronics and furniture dominate overall revenue.  
+- Freight cost is strongly correlated with product weight and dimensions.  
+- Regional product preferences differ significantly across Brazil.
 
 ---
 
-##  Recommendations  
-
-### 1. **Create a High-Value Order Rapid Response Team**  
-Focus on preventing dissatisfaction, especially in high-delay regions.
-
-### 2. **Proactive Outreach to At-Risk Customers**  
-Recover silent detractors before churn impacts revenue.
-
-### 3. **Strengthen Logistics in Chronic Delay Regions**  
-Boa Vista (RR) and other outlier states require targeted optimisation.
-
-### 4. **Automated Quality Alerts for Product Issues**  
-Use sentiment spikes to flag emerging product-related problems early.
+### Sales Insights  
+- Sales peak during holiday and seasonal periods.  
+- Credit card is the most commonly used payment method.  
+- Revenue displays clear cyclical and seasonal patterns.
 
 ---
 
-##  Tools & Technologies  
+## Recommendations  
+[Back to Top](#)
 
-### **Power BI**
+### 1. High-Value Order Rapid Response Team  
+Prioritise large, high-risk orders in slow-delivery regions.
+
+### 2. Proactive Outreach to At-Risk Customers  
+Prevent churn by recovering silent detractors early.
+
+### 3. Improve Logistics in Chronic Delay Regions  
+Focus particularly on Boa Vista (RR) and other outlier states.
+
+### 4. Automated Quality Alerts for Product Issues  
+Use negative sentiment spikes to detect emerging product defects early.
+
+---
+
+## Tools & Technologies  
+[Back to Top](#)
+
+### Power BI  
 - Star schema data modelling  
 - Power Query transformations  
-- DAX measures & calculated columns  
-- AI visuals (clustering, forecasting)  
-- Drill-through interactions and tooltips  
+- DAX measures and calculated columns  
+- Forecasting and clustering  
+- Drill-through interactions and insights  
 
-### **Python (Used Only for Review Translation)**
-- `pandas`, `numpy`  
-- `deep-translator` (Google backend)  
-- Batch processing  
-- Retry & rate-limit handling  
-
+### Python (used for review translation only)  
+- pandas, numpy  
+- deep-translator  
+- Batch translation  
+- Retry and rate-limit handling  
