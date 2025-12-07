@@ -2,10 +2,10 @@
 ### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**
 
 **Team Members & Roles**
-- **Xue** – Customer Analysis + NLP + Sentiment  
-- **Lina** – Delivery Performance Analysis  
-- **Rebecca** – Product Analysis  
-- **Bijal** – Sales Analysis  
+- **Xue** - Customer Analysis + NLP + Sentiment  
+- **Lina** - Delivery Performance Analysis  
+- **Rebecca** - Product Analysis  
+- **Bijal** - Sales Analysis  
 
 **Project Completion:** 9 December 2025  
 **Presentation Date:** 9 December 2025  
@@ -156,7 +156,7 @@ Python provided:
 
 Below is the exact script used (also stored in the repo):
 
-### 🔧 translate_reviews.py  
+### translate_reviews.py  
 ```python
 # (Full script included in scripts/python/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
@@ -177,7 +177,7 @@ Below is the exact script used (also stored in the repo):
 
 ---
 
-### 🛍 Product Insights  
+###  Product Insights  
 - **Electronics and furniture** categories dominate overall revenue.  
 - Freight cost is **strongly correlated** with product weight and dimensions.  
 - **Regional preferences** for product categories vary significantly across Brazil.
@@ -207,7 +207,7 @@ Use sentiment spikes to flag emerging product-related problems early.
 
 ---
 
-## 🛠 Tools & Technologies  
+##  Tools & Technologies  
 
 ### **Power BI**
 - Star schema data modelling  
