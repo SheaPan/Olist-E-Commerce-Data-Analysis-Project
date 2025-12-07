@@ -35,7 +35,7 @@
 
 ---
 
-# 📝 Project Overview  
+#  Project Overview  
 [Back to Top](#table-of-contents)
 
 This repository contains the end-to-end analysis of the **Olist E-commerce dataset**, a Brazilian marketplace with **100,000+ orders (2016–2018)**.
