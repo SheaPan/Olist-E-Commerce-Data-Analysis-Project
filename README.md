@@ -149,9 +149,9 @@ Python enabled:
 - Resume-safe workflow  
 - Retry & rate-limit handling  
 
-Script location:  
+Script location: 
 ```python
-# (Full script included in scripts/python/translate_reviews.py)
+# (Full script included in [translate_reviews.py](scripts/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
 ```
 
