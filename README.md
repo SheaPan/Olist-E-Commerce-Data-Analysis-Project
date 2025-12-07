@@ -22,7 +22,7 @@
 
 #  Olist E-Commerce Data Analytics Project  
 ### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**  
-[Back to Top](#top)(#📘-table-of-contents)
+[Back to Top](#top) (#-table-of-contents)
 
 **Team Members & Roles**
 - **Xue** – Customer Analysis + NLP + Sentiment  
