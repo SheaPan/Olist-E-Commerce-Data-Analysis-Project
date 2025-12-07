@@ -68,37 +68,6 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 
 ---
 
-/data
-/raw → Original datasets
-/cleaned → Cleaned & transformed datasets
-/dictionary → Data schema & definitions
-
-/reports
-/PowerBI → Final Power BI (.pbix) file
-/presentation → Final slide deck
-/written_report → Written documentation
-
-/analysis
-/customer → NLP, sentiment, segmentation
-/product → Category, freight, seasonal patterns
-/sales → Revenue, forecasting, payment trends
-/delivery → Delivery modelling + review correlation
-
-/dax → DAX measures & model schema
-
-/scripts
-/python → Translation script (VS Code)
-/powerquery → Power Query M scripts
-
-/assets
-/high_res_charts → Exported Power BI visuals
-
-README.md
-.gitignore
-
-
----
-
 #  Analysis Sections  
 [Back to Top](#table-of-contents)
 
