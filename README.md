@@ -78,12 +78,9 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 /scripts
 /python → Translation script (VS Code)
 /powerquery → Power Query M scripts
-/utils → Helper utilities
 
 /assets
 /high_res_charts → Exported Power BI visuals
-/team_photos
-/logos
 
 README.md
 .gitignore
