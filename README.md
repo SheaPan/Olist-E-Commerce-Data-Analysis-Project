@@ -140,6 +140,29 @@ We used **Visual Studio Code + Python** to translate all review titles and messa
 Script location:  
 /scripts/python/translate_reviews.py
 
+
+### Why Python Was Needed  
+Power BI cannot:
+- Translate 50k+ text rows reliably  
+- Handle API limits  
+- Batch process text  
+- Resume translation after interruption  
+
+Python provided:
+- Robust text cleaning  
+- Deep-Translator (Google backend)  
+- Batch translation (500 rows at a time)  
+- Resume-safe workflow  
+- Automated error handling  
+
+Below is the exact script used (also stored in the repo):
+
+### 🔧 translate_reviews.py  
+```python
+# (Full script included in scripts/python/translate_reviews.py)
+# Translates Portuguese reviews to English with retry logic and batching.
+
+
 ---
 
 ### Why Python Was Needed  
