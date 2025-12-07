@@ -64,7 +64,7 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 | [`analysis`](analysis/README.md) | Scripts and outputs for customer, product, sales, and delivery analyses. |
 | [`dax`](dax/README.md) | DAX measures, calculated columns, and data model definitions for Power BI. |
 | [`scripts`](scripts/README.md) | Python scripts (translation), Power Query scripts, and utility helpers. |
-| [`assets`](assets/README.md) | Static assets including charts, team photos, and logos used in dashboards or reports. |
+| [`assets`](assets/README.md) | Static assets including charts and reports. |
 
 ---
 
