@@ -1,61 +1,155 @@
-# DAX Measures & Calculated Columns Documentation
+# Olist Dataset – Tables and Columns
 
-This document contains all DAX measures and calculated columns used in the **Olist E-Commerce Power BI model**.
+This folder contains all raw and cleaned datasets used in the **Olist E-Commerce Data Analytics Project**.  
 
-It is organised by dataset/table for clarity.
-
----
-
-## Order Items Table (`olist_order_items_dataset`)
-
-### Measures
-
-| Measure Name                 | DAX Formula / Expression | Description / Purpose |
-|-------------------------------|------------------------|---------------------|
-| Total Revenue                | `SUM('olist_order_payments_dataset'[payment_value])` | Tracks the total money received from customers according to payment data. Useful for reconciling revenue from items with actual payments. |
-| Total Orders                 | `DISTINCTCOUNT('olist_order_payments_dataset'[order_id])` | Tracks order volume over time. Helps identify if growth comes from more orders or larger orders. |
-| AOV (Average Order Value)    | `DIVIDE([Total Revenue], [Total Orders], 0)` | Calculates average revenue per order. Useful for understanding customer spending behavior. |
-| Revenue by Category          | `SUMX('olist_order_items_dataset','olist_order_items_dataset'[item_price])` | Total revenue aggregated by product category. |
-| Revenue % of Total           | `DIVIDE([Revenue by Category], [Total Revenue], 0)` | Shows each category's share of total revenue. |
-| Total Freight Cost           | `SUM('olist_order_items_dataset'[freight_cost])` | Aggregates all freight costs. |
-| Orders per Month (optional)  | `COUNTROWS('olist_orders_dataset')` | Counts orders per month. |
+Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## Dates Table
+## 1. Customer Table (`olist_customers_dataset.csv`)
 
-### Calculated Table
+| Column                | Description                                | Usage |
+|-----------------------|--------------------------------------------|-------|
+| customer_id           | Unique customer identifier (links to orders) | Link orders to customers |
+| customer_unique_id    | Unique customer across multiple orders     | Identify repeat customers |
+| customer_zip_code     | ZIP code of the customer                    | Regional segmentation, mapping |
+| customer_city         | Customer city                              | Regional insights, mapping |
+| customer_state        | Customer state                             | State-level analysis, regional trends |
 
-| Table / Column | DAX Formula / Expression | Description |
-|----------------|------------------------|------------|
-| Dates          | `ADDCOLUMNS(CALENDAR(DATE(2016,1,1), DATE(2018,12,31)), "Year", YEAR([Date]), "Month Number", MONTH([Date]), "Month Name", FORMAT([Date], "MMMM"), "Year-Month", FORMAT([Date], "YYYY-MM"))` | Generates a full date table with year, month, and Year-Month columns for time intelligence. |
+**Used for:** Customer demographics, linking orders to locations, segmenting reviews by region.
 
 ---
 
-## Orders Table (`olist_orders_dataset`)
+## 2. Geolocation Table (`olist_geolocation_dataset.csv`)
 
-### Calculated Columns
+| Column                | Description                                | Usage |
+|-----------------------|--------------------------------------------|-------|
+| geolocation_zipcode    | ZIP code                                   | Map locations, delivery distance analysis |
+| latitude              | Geographic latitude                        | Mapping and distance calculations |
+| longitude             | Geographic longitude                       | Mapping and distance calculations |
+| city                  | City name                                  | Regional analysis |
+| state                 | State abbreviation                         | Regional analysis |
 
-| Column Name             | DAX Formula / Expression | Description / Purpose |
-|-------------------------|------------------------|---------------------|
-| Purchase Date           | `DATE(YEAR([order_purchase_timestamp]), MONTH([order_purchase_timestamp]), DAY([order_purchase_timestamp]))` | Extracts just the date part of the purchase timestamp. |
-| Delivery Time (Day)     | `DATEDIFF([order_approved_at],[order_delivered_customer_date], DAY)` | Calculates actual delivery duration in days. |
-| Delivery Time (Estimate DAY) | `DATEDIFF([order_approved_at],[order_estimated_delivery_date], DAY)` | Calculates estimated delivery duration in days. |
-| Delivery Late/Early     | `[Delivery Time (Estimate DAY)] - [Delivery Time (Day)]` | Difference between estimated and actual delivery times. |
-| Delivery Status         | `IF([Delivery Late/Early]>0,"Early",IF([Delivery Late/Early]=0,"On Time","Late"))` | Categorizes deliveries as Early, On Time, or Late. |
+**Used for:** Mapping customer/seller locations, delivery distance analysis, regional product popularity.
 
-### Measures
+---
 
-| Measure Name                     | DAX Formula / Expression | Description / Purpose |
-|----------------------------------|------------------------|---------------------|
-| Average Delivery Time by Seller Location (State) | `CALCULATE(AVERAGEX('olist_order_items_dataset', RELATED('olist_orders_dataset'[Delivery Time (Day)])))` | Computes average delivery time grouped by seller location/state. |
-| Average Review Score by State     | `AVERAGE('olist_order_reviews_dataset'[review_score])` | Computes mean review score per state. |
-| Count of Early Deliveries         | `CALCULATE(COUNTROWS('olist_orders_dataset'), 'olist_orders_dataset'[Delivery Status]="Early")` | Counts the number of early deliveries. |
-| Count of Late Deliveries          | `CALCULATE(COUNTROWS('olist_orders_dataset'), 'olist_orders_dataset'[Delivery Status]="Late")` | Counts the number of late deliveries. |
-| Count of On Time Deliveries       | `CALCULATE(COUNTROWS('olist_orders_dataset'), 'olist_orders_dataset'[Delivery Status]="On Time")` | Counts the number of on-time deliveries. |
+## 3. Order Items Table (`olist_order_items_dataset.csv`)
+
+| Column                 | Description                                | Usage |
+|------------------------|--------------------------------------------|-------|
+| order_id               | Links to orders table                      | Connect items to orders |
+| order_item_id          | Item sequence number                        | Track multiple items per order |
+| product_id             | Product purchased                          | Link products to orders |
+| seller_id              | Seller who sold the product                | Seller-level performance |
+| shipping_limit_date    | Cutoff date for seller shipping            | Delivery performance |
+| item_cost              | Product price                               | Revenue calculation |
+| freight_value          | Shipping cost                               | Freight analysis |
+| AvgOrderValue          | Pre-calculated average order value         | Customer spending insights |
+| Total Sales            | Total sales for this item                   | Revenue analysis |
+| total_cost             | Total cost                                  | Profit and margin analysis |
+| TotalOrders            | Number of orders for this item             | Order trend analysis |
+| TotalRevenue           | Total revenue                               | Sales and revenue analysis |
+
+**Used for:** Sales trend analysis, revenue calculation, product popularity, freight cost analysis, linking products to orders and sellers.
+
+---
+
+## 4. Order Payment Table (`olist_order_payments_dataset.csv`)
+
+| Column                 | Description                                | Usage |
+|------------------------|--------------------------------------------|-------|
+| order_id               | Links to orders table                       | Connect payments to orders |
+| payment_sequential     | Payment number for the order               | Multi-installment tracking |
+| payment_type           | e.g., credit card, voucher                 | Payment behavior analysis |
+| payment_installments   | Number of installments                     | Payment trend analysis |
+| payment_value          | Payment amount                             | Revenue analysis |
+| RevenueByPaymentType   | Revenue broken down by payment type        | Understand payment mix |
+| TotalPayment           | Total payment                              | Payment reconciliation |
+
+**Used for:** Payment trend analysis, forecasting, revenue by payment type.
+
+---
+
+## 5. Order Review Table (`olist_order_reviews_dataset.csv`)
+
+| Column                 | Description                                | Usage |
+|------------------------|--------------------------------------------|-------|
+| review_id              | Unique ID for review                        | Link review to order |
+| order_id               | Links to orders table                       | Connect review to order |
+| review_score           | Rating from 1–5                             | Customer satisfaction analysis |
+| review_comment_title   | Title of the review                          | Sentiment/topic analysis |
+| review_comment_message | Full review text                             | Sentiment/topic analysis |
+| review_creation_date   | Date customer wrote the review               | Time trend analysis |
+| review_answer_timestamp| When the review was answered                 | Customer service tracking |
+
+**Used for:** Customer satisfaction, sentiment analysis, clustering review text, linking reviews to products/delivery/sellers.
+
+---
+
+## 6. Orders Table (`olist_orders_dataset.csv`)
+
+| Column                       | Description                                | Usage |
+|-------------------------------|--------------------------------------------|-------|
+| order_id                     | Unique order identifier                     | Primary key for linking tables |
+| customer_id                  | Links to customer table                     | Connect orders to customers |
+| order_status                 | Status (delivered, shipped, canceled, etc.)| Order fulfillment analysis |
+| order_purchase_timestamp     | Time order was placed                       | Trend and seasonal analysis |
+| order_approved_at            | Payment approval timestamp                  | Payment workflow analysis |
+| order_delivered_carrier_date | When carrier received the package           | Delivery logistics analysis |
+| order_delivered_customer_date| When customer received the order            | Delivery performance |
+| order_estimated_delivery_date| Predicted delivery date                      | Compare actual vs estimated delivery |
+
+**Used for:** Delivery performance, linking customers to products and sellers, order timelines.
+
+---
+
+## 7. Product Table (`olist_products_dataset.csv`)
+
+| Column                   | Description                                | Usage |
+|---------------------------|--------------------------------------------|-------|
+| product_id               | Product ID                                  | Primary key |
+| product_category_name     | Product category                            | Category analysis |
+| product_name_length       | Name length                                 | Data quality / descriptive analysis |
+| product_description_length| Description length                           | Data quality / text analysis |
+| product_photos_qty        | Number of photos                            | Product listing completeness |
+| product_weight            | Weight                                      | Freight and shipping analysis |
+| product_length            | Length                                      | Freight and shipping analysis |
+| product_height            | Height                                      | Freight and shipping analysis |
+| product_width             | Width                                       | Freight and shipping analysis |
+
+**Used for:** Product analysis, shipping cost modeling, linking products to orders and reviews.
+
+---
+
+## 8. Sellers Table (`olist_sellers_dataset.csv`)
+
+| Column          | Description             | Usage |
+|-----------------|-------------------------|-------|
+| seller_id       | Unique seller identifier| Primary key |
+| seller_zip_code | ZIP code                | Regional insights |
+| seller_city     | Seller city             | Delivery performance analysis |
+| seller_state    | Seller state            | Regional sales and delivery trends |
+
+**Used for:** Delivery performance by seller, linking products to seller location, regional insights.
+
+---
+
+## 9. Product Category Translation (`product_category_name_translation.csv`)
+
+| Column                | Description                                | Usage |
+|-----------------------|--------------------------------------------|-------|
+| product_category_name | Category name in Portuguese                | Original category mapping |
+| product_category_name_english | Category name in English                | Standardized category name for reporting |
+
+**Used for:** Translating product categories to English for analysis and dashboards.
 
 ---
 
 ## Notes
 
-- All measures and calculated columns were created in **Power BI Desktop**.  
+- All tables can be linked via primary keys (e.g., `customer_id`, `order_id`, `product_id`, `seller_id`).  
+- Use the geolocation table for mapping and regional insights.  
+- Translation table ensures consistent naming in dashboards and reports.  
+- Keep this document updated if additional columns are derived or added.
+
