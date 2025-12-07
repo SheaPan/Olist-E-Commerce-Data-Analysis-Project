@@ -140,6 +140,8 @@ We used **Visual Studio Code + Python** to translate all review titles and messa
 Script location:  
 /scripts/python/translate_reviews.py
 
+---
+
 ### Why Python Was Needed  
 Power BI cannot:
 - Translate 50k+ text rows reliably  
