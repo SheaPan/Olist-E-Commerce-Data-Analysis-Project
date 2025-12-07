@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-#  Table of Contents
+# 📝 Table of Contents
 - [ Olist E-Commerce Data Analytics Project](#-olist-e-commerce-data-analytics-project)
 - [ Project Overview](#-project-overview)
 - [ Repository Structure](#-repository-structure)
@@ -20,7 +20,7 @@
 
 ---
 
-#  Olist E-Commerce Data Analytics Project  
+# 💸 Olist E-Commerce Data Analytics Project  
 ### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**  
 [Back to Top](#table-of-contents)
 
@@ -35,7 +35,7 @@
 
 ---
 
-#  Project Overview  
+# 📝 Project Overview  
 [Back to Top](#table-of-contents)
 
 This repository contains the end-to-end analysis of the **Olist E-commerce dataset**, a Brazilian marketplace with **100,000+ orders (2016–2018)**.
@@ -43,7 +43,7 @@ This repository contains the end-to-end analysis of the **Olist E-commerce datas
 The goal of this project was to deliver:
 
 ✔ A business-focused Power BI dashboard  
-✔ Insights into customers, sales, products, delivery performance  
+✔ Insights into customers, sales, products, and delivery performance  
 ✔ Clean and transformed datasets  
 ✔ A final written report & presentation  
 ✔ Python-based translation of Portuguese review text  
@@ -52,7 +52,7 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 
 ---
 
-#  Repository Structure & Folder Descriptions 
+# 📁 Repository Structure & Folder Descriptions 
 [Back to Top](#table-of-contents)
 
 ---
@@ -68,7 +68,7 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 
 ---
 
-#  Analysis Sections  
+# 📊 Analysis Sections  
 [Back to Top](#table-of-contents)
 
 ---
@@ -155,7 +155,7 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
 ```
 
-## Key Findings Summary  
+## 🔑 Key Findings Summary  
 [Back to Top](#table-of-contents)
 
 ### Customer Insights  
@@ -186,7 +186,7 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 
 ---
 
-## Recommendations  
+## 💡 Recommendations  
 [Back to Top](#table-of-contents)
 
 ### 1. High-Value Order Rapid Response Team  
@@ -203,7 +203,7 @@ Use negative sentiment spikes to detect emerging product defects early.
 
 ---
 
-## Tools & Technologies  
+## 🔧 Tools & Technologies  
 [Back to Top](#table-of-contents)
 
 ### Power BI  
@@ -213,8 +213,10 @@ Use negative sentiment spikes to detect emerging product defects early.
 - Forecasting and clustering  
 - Drill-through interactions and insights  
 
-### Python (used for review translation only)  
+### Python (used for review translation, sentiment analysis, customer aggregation, and keyword extraction)  
 - pandas, numpy  
 - deep-translator  
-- Batch translation  
-- Retry and rate-limit handling
+- Batch translation with retry and rate-limit handling  
+- VADER for sentiment analysis
+- Aggregated customers by review score and sentiment score
+- Extracted and summarised review keywords
