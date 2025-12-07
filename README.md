@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-# 📝 Table of Contents
+#  Table of Contents
 - [ Olist E-Commerce Data Analytics Project](#-olist-e-commerce-data-analytics-project)
 - [ Project Overview](#-project-overview)
 - [ Repository Structure](#-repository-structure)
@@ -20,7 +20,7 @@
 
 ---
 
-# 💸 Olist E-Commerce Data Analytics Project  
+#  Olist E-Commerce Data Analytics Project  
 ### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**  
 [Back to Top](#table-of-contents)
 
@@ -52,7 +52,7 @@ All modelling and analysis were done in **Power BI**, with **Python used only fo
 
 ---
 
-# 📁 Repository Structure & Folder Descriptions 
+#  Repository Structure & Folder Descriptions 
 [Back to Top](#table-of-contents)
 
 ---
@@ -155,7 +155,7 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
 ```
 
-## 🔑 Key Findings Summary  
+##  Key Findings Summary  
 [Back to Top](#table-of-contents)
 
 ### Customer Insights  
@@ -186,7 +186,7 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 
 ---
 
-## 💡 Recommendations  
+##  Recommendations  
 [Back to Top](#table-of-contents)
 
 ### 1. High-Value Order Rapid Response Team  
@@ -203,7 +203,7 @@ Use negative sentiment spikes to detect emerging product defects early.
 
 ---
 
-## 🔧 Tools & Technologies  
+##  Tools & Technologies  
 [Back to Top](#table-of-contents)
 
 ### Power BI  
