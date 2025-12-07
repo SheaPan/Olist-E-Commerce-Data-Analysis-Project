@@ -149,7 +149,5 @@ Below is a reference of all tables, columns, and their usage.
 ## Notes
 
 - All tables can be linked via primary keys (e.g., `customer_id`, `order_id`, `product_id`, `seller_id`).  
-- Use the geolocation table for mapping and regional insights.  
-- Translation table ensures consistent naming in dashboards and reports.  
-- Keep this document updated if additional columns are derived or added.
+
 
