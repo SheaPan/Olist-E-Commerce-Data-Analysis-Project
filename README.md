@@ -150,7 +150,6 @@ Python enabled:
 - Retry & rate-limit handling  
 
 Script location:  
- (ADD PYTHON SCRIPT LOCATION):
 ```python
 # (Full script included in scripts/python/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
