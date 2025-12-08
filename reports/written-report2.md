@@ -67,19 +67,19 @@ Dec 2017 | ██████ 6200
 
 ```
 Credit Card | █████████████████ 78.34%
-Boleto | ████ 17.92%
-Voucher | █ 2.37%
-Debit Card | █ 1.36%
+Boleto      | ████ 17.92%
+Voucher     | █ 2.37%
+Debit Card  | █ 1.36%
 ```
 **Insight:** Most revenue comes from **credit cards**; opportunity exists for voucher/debit card campaigns.
 
 ### Top Product Categories
 ```
-Watches & Gifts | █████ 213.64K
-Health & Beauty | ████ 144.07K
+Watches & Gifts      | █████ 213.64K
+Health & Beauty      | ████ 144.07K
 Computer Accessories | ████ 132.26K
-Sports & Leisure | ███ 117.08K
-Garden Tools | ██ 81.73K
+Sports & Leisure     | ███ 117.08K
+Garden Tools         | ██ 81.73K
 ```
 
 **Storytelling:** Focus marketing and bundling on **high-value categories**.
@@ -91,17 +91,17 @@ Garden Tools | ██ 81.73K
 ### Customer Segments
 ```
 Enthusiastic Advocates | ████ Highly satisfied
-Positive Patrons | ███ Generally happy
-At-Risk Customers | ██ 15.62% Quietly unhappy
-High-Risk Detractors | █ 6.65% Actively dissatisfied
+Positive Patrons       | ███ Generally happy
+At-Risk Customers      | ██ 15.62% Quietly unhappy
+High-Risk Detractors   | █ 6.65% Actively dissatisfied
 ```
 
 **Insight:** **~22% of customers are at risk**. Ji Paraná high-value accounts account for **72% of revenue at risk**.
 
 ### Satisfaction Trend
 ```
-2017: █████ Improved
-2018: ████ Stable
+2017:     █████ Improved
+2018:     ████ Stable
 End 2018: ██ Decline
 ```
 
@@ -113,17 +113,17 @@ End 2018: ██ Decline
 
 ### Delivery Performance
 ```
-Early | █████████████ 91.96%
-Late | ██ 6.58%
+Early   | █████████████ 91.96%
+Late    | ██ 6.58%
 On Time | █ 1.46%
 ```
 
 ### Delivery Times by State
 
 ```
-SP | █ 9 days
+SP           | █ 9 days
 Other states | ████ 25 days (avg)
-RR | █████████████████ 92 days
+RR           | █████████████████ 92 days
 ```
 
 
