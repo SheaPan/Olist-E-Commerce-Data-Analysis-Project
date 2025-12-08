@@ -56,8 +56,7 @@ Dec 2017 | ██████ 6200
 ```
 - 2017: +121% YoY  
 - 2018: +0.2% YoY
-
-- 
+ 
 **Interpretation:** Growth stabilized; sustaining it requires **smart market expansion**.
 
 ---
