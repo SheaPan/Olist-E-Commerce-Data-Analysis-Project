@@ -1,142 +1,155 @@
-# Olist E-commerce Data Storytelling Report
+# Sales Analysis Report – Olist E-commerce Dataset
 
-**Prepared by:** Bijal  
-**Date:** 09/12/25
-
----
-
-## Executive Summary
-
-Olist has grown into a leading Brazilian e-commerce platform, generating **R$16.01M in revenue from 99.44K orders** across 3,094 sellers. The platform demonstrates strong performance in **São Paulo** and other Southern/Southeastern states, with high-value categories like **Watches & Gifts** and **Health & Beauty** driving revenue.  
-
-However, regional delivery inefficiencies, late deliveries in low-value orders, and concentrated market exposure highlight opportunities for **geographic expansion, operational improvement, and strategic marketing**.  
-
-**Key Highlights:**
-- Total Revenue: R$16.01M  
-- Total Orders: 99.44K | Total Sellers: 3,094 | Total Cities: 5,995  
-- Payment Preference: Credit Card dominates (78.34%)  
-- Delivery Performance: 91.96% early, 6.58% late, 1.46% on time  
-- Revenue Concentration: São Paulo leads, Boa Vista (RR) has the longest delivery times  
-
-> **Narrative:** Olist’s growth story is strong, but operational challenges and regional concentration need to be addressed for sustainable, scalable expansion.
+**Prepared by:** B 
+**Date:** 09/09/25
 
 ---
 
-## 1. Sales Performance Story
+## 1. Executive Summary
 
-**Objective:** Understand revenue distribution, market concentration, and trends over time.
+This report provides a comprehensive analysis of the Olist e-commerce platform's sales performance across Brazil. By combining geographic, temporal, payment, and product-level insights, we uncover key drivers of revenue, customer behavior, and growth opportunities.
 
-**Key Metrics:**
-- **Revenue by State:** São Paulo dominates (R$1.24M), followed by Paraná, Minas Gerais, Rio de Janeiro, and Santa Catarina.  
-- **Revenue by Region:** Southern and Southeastern states dominate; Northern/Northeastern regions are underrepresented.  
-- **Average Review Scores:** ~4.1/5, indicating strong customer satisfaction.  
-- **Freight Costs:** Average R$25.42 per order, varying by region.
+**High-Level Findings:**
 
-**Revenue Over Time:**
-- Peak Month: November 2017 (7,544 orders; R$1.19M revenue)  
-- YoY Growth:  
-  - 2016: R$59.3K  
-  - 2017: R$7.25M (121% YoY)  
-  - 2018: R$8.7M (0.2% YoY)  
-- Forecast (post-2018): Predicted R$13.76M revenue (range: R$10.44M–R$17.07M)
+- **Revenue & Orders:** Olist generated **R$16.01M** from **99.44K orders** across **3,094 sellers**.  
+- **Top Markets:** São Paulo leads revenue contributions, followed by Paraná, Minas Gerais, Rio de Janeiro, and Santa Catarina.  
+- **Payment Trends:** Credit cards dominate (78.34%), highlighting customer preference for digital installment payments.  
+- **Product Performance:** Watches & Gifts, Health & Beauty, and Computer Accessories drive the highest revenue.  
+- **Growth Patterns:** Strong growth in 2017, stabilization in 2018, with forecasts predicting continued revenue increase.
 
-**Insights & Storytelling:**
-- São Paulo dominates revenue, but there is **untapped potential in Northern/Northeastern states**.  
-- Peak sales months show **seasonal opportunity for promotions**.  
-- Revenue growth shows a **strong upward trend in early years, followed by stabilization**, requiring strategic interventions to sustain growth.
+*Executive Insight:* The platform demonstrates a healthy mix of customer engagement, repeat purchases, and regional concentration. Strategic interventions in underperforming regions and diversification in payment methods can unlock additional growth.
 
 ---
 
-## 2. Customer Behavior & Satisfaction Story
+## 2. Sales Overview
 
-**Objective:** Link delivery performance and order value to customer satisfaction.
+**Objective:** Understand overall sales performance, regional contributions, and marketplace reach.
 
-**Delivery Insights:**
-- Early Deliveries: 91.96%  
-- Late Deliveries: 6.58%  
-- On-Time Deliveries: 1.46%  
-- Average Delivery Time: 24.9 days (excluding extremes)  
-- Longest delivery: Boa Vista (RR) – 3.69× the average  
-- Shortest delivery: São Paulo (SP) – 9 days  
+### Key Metrics
 
-**Delivery Impact on Reviews:**
-- Longer deliveries → lower review scores  
-- Higher-value orders take longer, but review scores remain higher than late low-value orders  
+| Metric          | Value       |
+|----------------|------------|
+| Total Sales     | R$16.01M   |
+| Total Orders    | 99.44K     |
+| Total Sellers   | 3,094      |
+| Total Cities    | 5,995      |
 
-**Narrative:**  
-> Customers receiving **high-value items** tolerate longer delivery times due to expectations, security measures, and specialized handling. In contrast, **low-value late deliveries** strongly reduce satisfaction, highlighting where operational improvements matter most.
+### Insights
 
----
+1. **Regional Concentration:**  
+   - São Paulo alone contributes **R$1.24M**, significantly higher than the next top state, Paraná (**R$0.2M**).  
+   - Southern and Southeastern states dominate revenue, suggesting economic concentration and better logistics infrastructure.
 
-## 3. Product & Payment Story
+2. **Customer Satisfaction:**  
+   - Average review score: **4.1/5**, indicating high customer satisfaction across multiple product categories.  
 
-**Objective:** Identify high-performing product categories and payment behaviors.
+3. **Logistics Costs:**  
+   - Average freight per order: **R$25.42**, varying by state, hinting at opportunities to optimize delivery costs in distant regions.
 
-**Top Product Categories by Revenue:**
-| Category | Revenue |
-|----------|---------|
-| Watches & Gifts | R$213.64K |
-| Health & Beauty | R$144.07K |
-| Computer Accessories | R$132.26K |
-| Sports & Leisure | R$117.08K |
-| Garden Tools | R$81.73K |
-
-**Payment Insights:**
-| Method | Revenue | Share |
-|--------|--------|-------|
-| Credit Card | R$12.54M | 78.34% |
-| Boleto | R$2.87M | 17.92% |
-| Voucher | R$379K | 2.37% |
-| Debit Card | R$218K | 1.36% |
-
-**Narrative:**  
-> Product revenue is concentrated in **high-demand categories**, and the dominance of credit cards suggests opportunities for **loyalty programs, installment plans, or promotions for alternative payment methods**.
+**Recommendation:**  
+Focus on **expanding seller recruitment and marketing in Northern and Northeastern states** to reduce regional revenue concentration and tap into new customer bases.
 
 ---
 
-## 4. Operational & Delivery Insights
+## 3. Revenue Over Time
 
-**Objective:** Highlight bottlenecks and areas for process improvement.
+**Objective:** Identify seasonal trends, growth patterns, and forecast future performance.
 
-**Key Findings:**
-- Most deliveries are early, but **6.58% are late**, concentrated in **Boa Vista (RR)**.  
-- Longer deliveries correlate with **lower customer reviews**, except for high-value items.  
-- Specialized handling for high-value items explains longer delivery times without negatively affecting satisfaction.
+### Monthly Trends
 
-**Narrative:**  
-> Operational inefficiencies in specific regions risk both **customer satisfaction and revenue**. Addressing these bottlenecks in low-performing areas should be a priority.
+- **Peak Month:** November 2017 (7,544 orders, R$1,194,882.8 revenue).  
+- **Stable Average Order Value:** R$160–R$167 during peak months, showing predictable spending behavior.  
+- **High-Revenue Categories:** Health & Beauty, Watches & Gifts, and Electronics consistently contribute the most.
 
----
+**Yearly Growth**
 
-## 5. Strategic Insights & Recommendations
+| Year | Revenue (R$)   | YoY Growth |
+|------|---------------|------------|
+| 2016 | 59,362.34     | -          |
+| 2017 | 7,249,746.73  | 121%       |
+| 2018 | 8,699,763.02  | 0.2%       |
 
-**1. Geographic Expansion:**  
-- Focus on Northern/Northeastern states to **balance revenue distribution** and unlock untapped markets.
+### Forecast (Post-2018)
 
-**2. Seasonal Campaigns:**  
-- Leverage peak months (November, December) for promotions and inventory management.
+- Predicted revenue: **R$13.76M**  
+- **Upper Bound:** R$17.07M | **Lower Bound:** R$10.44M  
 
-**3. Delivery Optimization:**  
-- Prioritize **late low-value orders**, especially in regions like Boa Vista (RR).  
-- Maintain high standards for high-value deliveries, ensuring customer satisfaction.
+**Executive Insight:**  
+The platform exhibits **strong initial growth**, followed by stabilization. Seasonal peaks, particularly during November, highlight **high-impact windows for marketing campaigns and inventory optimization**.
 
-**4. Product & Payment Strategy:**  
-- Promote **top-performing categories** (Watches & Gifts, Health & Beauty).  
-- Introduce incentives for **alternative payment methods** (debit, voucher).
-
-**5. Forecast Alignment & Operations:**  
-- Scale logistics and supply chain to handle **projected growth**.  
-- Monitor revenue deviations, delivery times, and customer satisfaction continuously.
+**Recommendation:**  
+Leverage peak sales periods, diversify product offerings, and deploy targeted promotions to maintain momentum.
 
 ---
 
-## 6. Conclusion: The Olist Story
+## 4. Payment & Product Analysis
 
-Olist’s data tells a clear story:  
+**Objective:** Understand customer payment behavior and product category performance to inform strategy.
 
-> “Olist is a thriving e-commerce platform with strong revenue in core regions, loyal customers, and high-performing product categories. Operational and regional challenges remain, particularly in delivery performance and market concentration. By addressing these bottlenecks, expanding into underserved regions, and leveraging seasonal trends, Olist can achieve sustainable, scalable growth while maintaining high customer satisfaction.”
+### Payment Preferences
+
+| Payment Method | Revenue (R$) | % of Total |
+|----------------|-------------|------------|
+| Credit Card    | 12,540,000  | 78.34%     |
+| Boleto         | 2,870,000   | 17.92%     |
+| Voucher        | 379,000     | 2.37%      |
+| Debit Card     | 218,000     | 1.36%      |
+
+**Insights:**  
+- **Credit card dominance** suggests customers prefer convenient, digital payments and may respond well to installment offers or loyalty rewards.  
+- **Low debit card and voucher adoption** signals untapped revenue potential via alternative payment incentives.
+
+### Top Product Categories
+
+| Category                | Revenue (R$) |
+|-------------------------|--------------|
+| Watches & Gifts         | 213,640      |
+| Health & Beauty         | 144,070      |
+| Computer Accessories    | 132,260      |
+| Sports & Leisure        | 117,080      |
+| Garden Tools            | 81,730       |
+
+**Insights:**  
+- Lifestyle, tech, and personal care dominate revenue streams.  
+- These categories present opportunities for **bundled offers, cross-selling, and promotions**.
+
+**Recommendation:**  
+- Promote high-performing categories with **targeted campaigns**.  
+- Introduce **flexible payment promotions** to capture potential debit card and voucher users.
 
 ---
 
-**End of Report**
+## 5. Key Insights & Strategic Implications
 
+1. **Regional Focus:** São Paulo is the largest contributor. Expanding in Northern and Northeastern states can unlock new markets.  
+2. **Seasonality:** Peak months indicate optimal timing for campaigns and inventory adjustments.  
+3. **Payment Trends:** Credit card dominance opens avenues for **installments, rewards, and loyalty programs**.  
+4. **Product Mix:** Focus on high-revenue categories while exploring adjacent products to increase average order value.  
+5. **Forecasting & Logistics:** Predicted growth necessitates proactive **supply chain scaling** and monitoring revenue deviations.
+
+---
+
+## 6. Recommendations
+
+- **Geographic Expansion:** Increase seller recruitment and marketing in underrepresented regions.  
+- **Seasonal Campaigns:** Align promotions with peak months, e.g., November, for maximum impact.  
+- **Payment Strategy:** Incentivize underused payment methods to diversify revenue streams.  
+- **Product Strategy:** Focus on top-performing categories, introduce complementary products, and consider bundles.  
+- **Operational Preparedness:** Scale supply chain, logistics, and inventory to meet forecasted growth.  
+
+---
+
+## 7. Visualization Placeholders
+
+> Include the following visualizations for executive dashboards:
+
+- **Revenue Heatmap by State**  
+- **Monthly Revenue Trend Line**  
+- **Payment Method Distribution Pie Chart**  
+- **Top Product Categories Bar Chart**  
+- **Yearly Revenue Growth & Forecast Plot**  
+
+---
+
+**Conclusion:**  
+Olist exhibits strong e-commerce performance with concentrated regional revenue, predictable seasonal peaks, and clear product winners. Strategic geographic expansion, payment diversification, and targeted promotions will maximize growth potential while maintaining customer satisfaction.
