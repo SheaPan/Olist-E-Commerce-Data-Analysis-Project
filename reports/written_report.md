@@ -46,9 +46,9 @@ By following this story, we can identify **high-impact interventions**, **preven
 **Interpretation:** Explosive growth in 2017 stabilized in 2018. The story: **growth has matured**, and sustaining it requires smarter market expansion, not just volume increase.
 
 Revenue Trend (R$M)
-2016 | *
-2017 | *********
-2018 | **********
+2016 | 59.36K
+2017 | 7.25M
+2018 | 8.70M
 
 
 ---
@@ -125,7 +125,7 @@ Other states | ********
 
 ### Operational Story
 - Boa Vista is a **bottleneck**, requiring deeper investigation.  
-- Delivery efficiency for low-value items should be prioritized to **protect reputation**.  
+- Delivery efficiency for low-value items should be prioritised to **protect reputation**.  
 - High-value items need **special handling**; customers are tolerant, but thresholds exist.
 
 ---
