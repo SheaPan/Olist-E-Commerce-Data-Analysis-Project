@@ -26,15 +26,12 @@ The story unfolds across four pillars: **Sales, Products, Customers, and Deliver
 - **Top State:** São Paulo (R$1.24M)
 
 ### Revenue by State (Top 5)
-São Paulo | █████████████████ 1.24M
+São Paulo       | ████████████████████ 1.24M
+Paraná          | ████                 0.2M
+Minas Gerais    | ███                  0.18M
+Rio de Janeiro  | ██                   0.12M
+Santa Catarina  | ██                   0.1M
 
-Paraná | ████ 0.2M
-
-Minas Gerais | ███ 0.18M
-
-Rio de Janeiro| ██ 0.12M
-
-Santa Catarina| ██ 0.1M
 
 **Insight:** São Paulo is a **revenue concentration point**. Small disruptions here impact thousands of customers.
 
