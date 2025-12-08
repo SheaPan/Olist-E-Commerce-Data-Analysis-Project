@@ -31,8 +31,8 @@
    - Investigate root causes in this state to isolate contributing factors.
 
 2. **Average Delivery Times:**  
-   - Excluding extreme cases, average delivery time is **24.9 days**.  
-   - Boa Vista (RR) deliveries are **3.69 times** longer than the average, indicating significant regional delays.
+   - Excluding extreme cases, average delivery time is **12.3 days**.  
+   - Boa Vista (RR) deliveries are **7.5 times** longer than the average, indicating significant regional delays.
 
 3. **Consider Order Value in Delivery Management:**  
    - Higher-value items take longer but generally do not reduce review scores.  
