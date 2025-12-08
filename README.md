@@ -173,8 +173,9 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 ---
 
 ### Product Insights  
-- Electronics and furniture dominate overall revenue.  
-- Freight cost is strongly correlated with product weight and dimensions.  
+- Watches & Gifts, and Computers dominate overall revenue.  
+- Freight cost increase with product weight/volume but show more variability at higher weights/volume.
+- Delivery delays are mostly unrelated to product characteristics.
 - Regional product preferences differ significantly across Brazil.
 
 ---
