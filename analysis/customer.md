@@ -1,8 +1,5 @@
 # Customer Analysis – Olist E-commerce Dataset
 
-**Prepared by:** Xue P  
-**Date:** 09/12/205  
-
 ## Introduction
 This project analyzes a real-world dataset of **98,000 customer feedback entries** to understand customer experience, identify high-risk groups, and provide actionable recommendations. The goal is to combine technical analysis with business insights to guide strategic actions.
 
