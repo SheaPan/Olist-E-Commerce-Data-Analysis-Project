@@ -27,9 +27,13 @@ The story unfolds across four pillars: **Sales, Products, Customers, and Deliver
 
 ### Revenue by State (Top 5)
 São Paulo | █████████████████ 1.24M
+
 Paraná | ████ 0.2M
+
 Minas Gerais | ███ 0.18M
+
 Rio de Janeiro| ██ 0.12M
+
 Santa Catarina| ██ 0.1M
 
 **Insight:** São Paulo is a **revenue concentration point**. Small disruptions here impact thousands of customers.
@@ -37,10 +41,14 @@ Santa Catarina| ██ 0.1M
 ### Seasonal Trends – Orders per Month
 
 Jan 2017 | ████ 4500
+
 Feb 2017 | ███ 4000
+
 Mar 2017 | ████ 4800
+
 ...
 Nov 2017 | █████████ 7544 <-- Peak
+
 Dec 2017 | ██████ 6200
 
 
@@ -48,7 +56,9 @@ Dec 2017 | ██████ 6200
 
 ### Yearly Growth
 2016 | 59.36K
+
 2017 | 7.25M
+
 2018 | 8.7M
 
 - 2017: +121% YoY  
@@ -62,17 +72,24 @@ Dec 2017 | ██████ 6200
 ### Payment Methods
 
 Credit Card | █████████████████ 78.34%
+
 Boleto | ████ 17.92%
+
 Voucher | █ 2.37%
+
 Debit Card | █ 1.36%
 
 **Insight:** Most revenue comes from **credit cards**; opportunity exists for voucher/debit card campaigns.
 
 ### Top Product Categories
 Watches & Gifts | █████ 213.64K
+
 Health & Beauty | ████ 144.07K
+
 Computer Accessories | ████ 132.26K
+
 Sports & Leisure | ███ 117.08K
+
 Garden Tools | ██ 81.73K
 
 **Storytelling:** Focus marketing and bundling on **high-value categories**.
@@ -83,15 +100,21 @@ Garden Tools | ██ 81.73K
 
 ### Customer Segments
 Enthusiastic Advocates | ████ Highly satisfied
+
 Positive Patrons | ███ Generally happy
+
 At-Risk Customers | ██ 15.62% Quietly unhappy
+
 High-Risk Detractors | █ 6.65% Actively dissatisfied
 
 **Insight:** **~22% of customers are at risk**. Ji Paraná high-value accounts account for **72% of revenue at risk**.
 
 ### Satisfaction Trend
+
 2017: █████ Improved
+
 2018: ████ Stable
+
 End 2018: ██ Decline
 
 **Storytelling:** Satisfaction drop signals **silent issues that can escalate into revenue loss**.
@@ -101,14 +124,20 @@ End 2018: ██ Decline
 ## 4. Delivery Analysis – Operational Efficiency
 
 ### Delivery Performance
+
 Early | █████████████ 91.96%
+
 Late | ██ 6.58%
+
 On Time | █ 1.46%
 
 
 ### Delivery Times by State
+
 SP | █ 9 days
+
 Other states | ████ 25 days (avg)
+
 RR | █████████████████ 92 days
 
 
