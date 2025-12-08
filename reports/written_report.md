@@ -139,7 +139,7 @@ Leverage peak sales periods, diversify product offerings, and deploy targeted pr
 
 ---
 
-## 7. Visualization Placeholders
+## 7. Visualisation Placeholders
 
 > Include the following visualizations for executive dashboards:
 
