@@ -125,13 +125,13 @@ Deliverables:
 Focus areas:
 - Delivery classification (Early / On-time / Late)  
 - Actual vs Estimated delivery  
-- Review score correlation  
+- Correlation with review scores 
 - State-level logistics performance  
-- Delay outlier states  
+- Delayed Outlier States  
 
 Key findings:
 - **91.96%** delivered early  
-- **Boa Vista (RR)** had extreme delays (up to **92 days**)  
+- **Boa Vista (RR)** had extreme delays (Average Delivery **92 days**)  
 - Long delivery strongly correlates with low reviews  
 - High-value orders take longer but reviews remain stable  
 
