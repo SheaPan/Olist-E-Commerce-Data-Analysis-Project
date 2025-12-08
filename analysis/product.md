@@ -1,4 +1,108 @@
 # Product Analysis Report – Olist E-commerce Dataset
 
-**Prepared by:** Rebecca
-**Date:** 09/12/25 
+# Olist Product Analysis
+
+This analysis covers Olist's 72 product categories over the period **October 2016 – September 2018**. It examines revenue, popularity, customer reviews, freight costs, and delivery performance to provide actionable insights.
+
+---
+
+## 1. Top Product Categories
+
+### Revenue Leaders
+Across the full sales period, the highest revenue categories are:
+
+| Category              | Revenue  |
+|-----------------------|----------|
+| Watches & Gifts       | 225,704  |
+| Computer Accessories  | 167,224  |
+| Health & Beauty       | 163,084  |
+
+**Quarterly Revenue Dynamics**
+
+- **Watches & Gifts** and **Computer Accessories** perform strongly in every quarter.  
+- **Health & Beauty** consistently ranks in the top 3 during **Q2, Q3, and Q4**.  
+- **Sports & Leisure** rises into the top 3 in **Q1**, replacing Health & Beauty, indicating early-year seasonal demand.
+
+### Popularity Leaders (Units Sold)
+Most frequently purchased categories:
+
+- Health & Beauty  
+- Housewares  
+- Sports & Leisure  
+
+**Quarterly patterns:**  
+
+- **Computer Accessories** lead in **Q1 and Q4**.  
+- **Health & Beauty** leads in **Q2 and Q3**.  
+
+**Key Insight:**  
+
+- Popularity does not always align with revenue.  
+- High-revenue categories often sell fewer but higher-priced items (e.g., Watches & Gifts).  
+- High-popularity categories sell high volumes of lower-priced products (e.g., Health & Beauty, Housewares).
+
+---
+
+## 2. Customer Reviews
+
+- Most product categories (**96%**) have average review scores above **3/5**, showing broad customer satisfaction.  
+- Underperforming categories include:  
+
+| Category               | Average Score |
+|------------------------|---------------|
+| DVDs/Blu-ray           | 1             |
+| Male Fashion Clothing  | 2.25          |
+| Construction Tools     | 3             |
+
+**Recommendation:**  
+Target underperforming categories with:
+
+- Product quality checks  
+- Seller audits  
+- Packaging improvements  
+- Enhanced product information (e.g., sizing guidance)
+
+---
+
+## 3. Freight Cost Drivers
+
+- Freight costs increase with **product weight and volume**, as expected.  
+- Variability rises for **larger/heavier items**, with outliers influenced by:  
+
+  - Shipping distance  
+  - Packaging behavior  
+  - Carrier pricing rules  
+  - Seller-specific logistics practices  
+
+**Recommendation:**  
+
+- Standardize packaging guidelines  
+- Review pricing rules for bulky items  
+- Investigate extreme outliers to remove inefficiencies
+
+---
+
+## 4. Delivery Delays
+
+- Most deliveries are **on time or early**.  
+- **Moderate delays** (under ~14 days) are not strongly linked to product weight/dimensions.  
+- **Long delays** (over 14 days) mostly affect **small, lightweight items**, suggesting operational or supplier-related issues.  
+
+**Recommendation:**  
+
+- Monitor delivery delays at the **seller/region level**, not by product type  
+- Implement **early-warning analytics** for unusual fulfillment times
+
+---
+
+## Overall Conclusions
+
+- **Revenue Drivers:** Watches & Gifts, Computer Accessories, Health & Beauty  
+- **Popularity Leaders (Units Sold):** Health & Beauty, Housewares, Sports & Leisure  
+- **Seasonal Patterns:** Sports & Leisure peaks in Q1; Computer Accessories in Q1 and Q4  
+- **Customer Satisfaction:** Dissatisfaction concentrated in a small set of categories  
+- **Freight Costs:** Increase with weight/volume but show operational variability at higher weights/volume  
+- **Delivery Delays:** Mostly unrelated to product characteristics; better monitored by seller/region
+
+---
+
