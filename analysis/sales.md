@@ -1,8 +1,5 @@
 # Sales Analysis Report – Olist E-commerce Dataset
 
-**Prepared by:** Bijal 
-**Date:** 09/12/25
-
 ---
 
 ## 1. Executive Summary
