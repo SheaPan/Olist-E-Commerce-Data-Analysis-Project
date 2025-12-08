@@ -196,7 +196,7 @@ Prioritise large, high-risk orders in slow-delivery regions.
 Prevent churn by recovering silent detractors early.
 
 ### 3. Improve Logistics in Chronic Delay Regions  
-Focus particularly on Boa Vista (RR) and other outlier states.
+Focus particularly on captial city Boa Vista (Roraima State(RR)) and other outlier states.
 
 ### 4. Automated Quality Alerts for Product Issues  
 Use negative sentiment spikes to detect emerging product defects early.
