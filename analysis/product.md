@@ -26,9 +26,9 @@ Across the full sales period, the highest revenue categories are:
 ### Popularity Leaders (Units Sold)
 Most frequently purchased categories:
 
-- Health & Beauty  
-- Housewares  
-- Sports & Leisure  
+- Health & Beauty   
+- Sports & Leisure
+- Computer Accessories
 
 **Quarterly patterns:**  
 
@@ -39,7 +39,7 @@ Most frequently purchased categories:
 
 - Popularity does not always align with revenue.  
 - High-revenue categories often sell fewer but higher-priced items (e.g., Watches & Gifts).  
-- High-popularity categories sell high volumes of lower-priced products (e.g., Health & Beauty, Housewares).
+- High-popularity categories ometimes sell high volumes of lower-priced products (e.g., Health & Beauty).
 
 ---
 
@@ -98,8 +98,8 @@ Target underperforming categories with:
 ## Overall Conclusions
 
 - **Revenue Drivers:** Watches & Gifts, Computer Accessories, Health & Beauty  
-- **Popularity Leaders (Units Sold):** Health & Beauty, Housewares, Sports & Leisure  
-- **Seasonal Patterns:** Sports & Leisure peaks in Q1; Computer Accessories in Q1 and Q4  
+- **Popularity Leaders (Units Sold):** Health & Beauty, Sports & Leisure, Computer Accessories 
+- **Seasonal Patterns:** Sports & Leisure revenue peaks in Q1; Computer Accessories unts sold are highest in Q1 and Q4  
 - **Customer Satisfaction:** Dissatisfaction concentrated in a small set of categories  
 - **Freight Costs:** Increase with weight/volume but show operational variability at higher weights/volume  
 - **Delivery Delays:** Mostly unrelated to product characteristics; better monitored by seller/region
