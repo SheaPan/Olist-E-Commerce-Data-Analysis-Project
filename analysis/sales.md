@@ -1,7 +1,7 @@
 # Sales Analysis Report – Olist E-commerce Dataset
 
-**Prepared by:** [Your Name]  
-**Date:** [Insert Date]  
+**Prepared by:** Bijal
+**Date:** 09/12/2025
 
 ---
 
