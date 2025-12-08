@@ -48,7 +48,7 @@ The goal of this project was to deliver:
 ✔ A final written report & presentation  
 ✔ Python-based translation of Portuguese review text  
 
-All modelling and analysis were done in **Power BI**, with **Python used only for translating review text**.
+All modelling and analysis were done in **Power BI**, with **Python used for translating, sentiment analysis, customer aggregation, and keyword extraction**.
 
 ---
 
