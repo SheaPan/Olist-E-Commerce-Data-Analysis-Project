@@ -10,7 +10,7 @@
 ### Delivery Times by State
 - Average delivery times across 20 states range from **9 days** (shortest) to **92 days** (longest).  
 - **Shortest delivery times:** São Paulo (SP)  
-- **Longest delivery times:** Boa Vista (RR)  
+- **Longest delivery times:** Roraima (RR)  
 
 ### Relationship Between Delivery Time, Order Value, and Reviews
 - Longer deliveries are associated with **lower average review scores**.  
@@ -27,7 +27,7 @@
 # Suggestions
 
 1. **Monitor Late Deliveries:**  
-   - Although the majority of deliveries are early, **~7% are late**, with Boa Vista (RR) having the highest percentage.  
+   - Although the majority of deliveries are early, **~7% are late**, with captial city Boa Vista (Roraima) having the highest percentage.  
    - Investigate root causes in this state to isolate contributing factors.
 
 2. **Average Delivery Times:**  
