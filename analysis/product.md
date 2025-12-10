@@ -4,7 +4,13 @@
 
 This analysis covers Olist's 72 product categories over the period **October 2016 – September 2018**. It examines product revenue, popularity, customer reviews, freight costs, and delivery performance to provide actionable insights.
 
-Portuguese product category names were translated into English, by creating a join between columns in the translation table and the Products table. Measures and calculated columns were used to used to answer key questions about the dataset.
+Portuguese product category names were translated into English, by creating a join between columns in the translation table and the Products table. Measures and calculated columns were used to used to answer key questions about the dataset. The aim was to discover:
+
+•	What product categories generate the highest revenue? Are there seasonal effects on product sales?
+•	Which product categories are most frequently purchased?
+•	Are certain product types associated with more negative reviews?
+•	How do product dimensions and weight relate to freight cost?
+•	Do heavy or large products lead to longer delivery delays?
 
 ---
 
