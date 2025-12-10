@@ -5,10 +5,10 @@
 - [ Project Overview](#-project-overview)
 - [ Repository Structure](#-repository-structure)
 - [ Analysis Sections](#-analysis-sections)
-  - [1️. Customer Analysis (Xue)](#1️-customer-analysis-xue)
-  - [2️. Product Analysis (Rebecca)](#2️-product-analysis-rebecca)
-  - [3️. Sales Analysis (Bijal)](#3️-sales-analysis-bijal)
-  - [4️. Delivery Analysis (Lina)](#4️-delivery-analysis-lina)
+  - [1️. Customer Analysis](#1️-customer-analysis)
+  - [2️. Product Analysis](#2️-product-analysis)
+  - [3️. Sales Analysis](#3️-sales-analysis)
+  - [4️. Delivery Analysis](#4️-delivery-analysis)
 - [ Review Translation (Python – VS Code)](#-review-translation-python--vs-code)
 - [ Key Findings Summary](#-key-findings-summary)
   - [ Customer Insights](#-customer-insights)
@@ -74,7 +74,7 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 
 ---
 
-## 1️. Customer Analysis (Xue)  
+## 1️. Customer Analysis
 Focus areas:
 - Portuguese → English translation (Python)
 - Sentiment analysis  
@@ -94,7 +94,7 @@ Deliverables:
 
 ---
 
-## 2️. Product Analysis (Rebecca)  
+## 2️. Product Analysis
 Focus areas:
 - Category performance  
 - Freight vs weight/dimensions  
@@ -109,7 +109,7 @@ Deliverables:
 
 ---
 
-## 3️. Sales Analysis (Bijal)  
+## 3️. Sales Analysis
 Focus areas:
 - Monthly & yearly revenue  
 - Power BI forecasting  
@@ -124,7 +124,7 @@ Deliverables:
 
 ---
 
-## 4️. Delivery Analysis (Lina)  
+## 4️. Delivery Analysis
 Focus areas:
 - Delivery classification (Early / On-time / Late)  
 - Actual vs Estimated delivery  
