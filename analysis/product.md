@@ -12,7 +12,7 @@ Portuguese product category names were translated into English, by creating a jo
 •	How do product dimensions and weight relate to freight cost?
 •	Do heavy or large products lead to longer delivery delays?
 
-Visualisations were created to assist with the analysis. These have been published on a dashboard in the PowerBI Service with screenshots provided in this analysis.
+Visualisations were created to assist with the analysis. These have been published on a dashboard in the PowerBI Service with screenshots provided here.
 ---
 
 <img width="622" height="349" alt="image" src="https://github.com/user-attachments/assets/e594a181-95c0-4fcc-87ff-657fb31fc361" />
