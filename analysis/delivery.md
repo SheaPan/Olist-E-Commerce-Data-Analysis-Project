@@ -30,7 +30,9 @@
   - Larger items (cars, sofas, refrigerators) require **specialized equipment** and cannot be easily automated through delivery processes. 
   - Customers of higher-value items may **expect longer delivery times** and are more tolerant of delays.
   - More **checkpoints and authorization** needed for higher value items, slowing down delivery.
-  - Roraima (RR) having the longest average delivery times due to all but one of their stores in located in the captial city, Boa Vista. Delivery to other parts of     the city will take longer.  
+  - Roraima (RR) having the longest average delivery times due to all but one of their stores in located in the captial city, Boa Vista. Delivery to other parts of     the city will take longer.
+ 
+  
 
   <img width="1287" height="720" alt="Reviews by State" src="https://github.com/user-attachments/assets/b9311bfc-3148-4ada-b66c-b71ab3c4f5f5" />
 
