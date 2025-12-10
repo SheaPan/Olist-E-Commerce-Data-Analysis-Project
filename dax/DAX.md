@@ -3,7 +3,7 @@
 This file contains all DAX used in the **Olist E-Commerce datasets**.  
 
 ---
-### **Table - `date_table`**
+## Table - `date_table`
 
 **Table:**
 - date_table = calendarauto()
@@ -27,7 +27,7 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
 - Month = FORMAT('date_table'[Date], "yyyy MMM")
 - MonthKey = (YEAR('date_table'[Date]) * 100) + MONTH('date_table'[Date])
 
-### **Table - `olist_order_item_dataset`**
+## Table - `olist_order_item_dataset`
 
 **New Columns:**
 - product_weight_g = RELATED(olist_products_dataset[product_weight_g])
@@ -84,7 +84,7 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
     [YoY Revenue],
     0)
 
-### **Table - `olist_order_payments_dataset`**
+## Table - `olist_order_payments_dataset`
 
 **New Measures:**
 - TotalPayment = SUM('olist_order_payments_dataset'[payment_value])
@@ -97,7 +97,7 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
     DISTINCTCOUNT('date_table'[Date])
   )
 
-### **Table - `olist_orders_dataset`**
+## Table - `olist_orders_dataset`
 
 **New Columns:**
 - Purchase Date = DATE(
@@ -135,7 +135,7 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
   ))
 
 
-### **Table - `olist_products_dataset`**
+## Table - `olist_products_dataset`
 
 **New Columns:**
 - ProductDensity_g_per_cm3 = DIVIDE(
@@ -148,10 +148,10 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
   olist_products_dataset[product_width_cm] *
   olist_products_dataset[product_length_cm]
 
-**New Measure: **
+**New Measure:**
 - Product_category_count = DISTINCTCOUNT(olist_products_dataset[product_category_name])
 
-### **Table - `olist_reviews_dataset`**
+## Table - `olist_reviews_dataset`
 
 **New Measure:**
 - Total Reviews = DISTINCTCOUNT(olist_reviews_dataset[review_id])
