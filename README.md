@@ -25,7 +25,7 @@
 [Back to Top](#table-of-contents)
 
 **Team Members & Roles**
-- **Bijal** – Overview  SalesAnalysis
+- **Bijal** – Overview & Sales Analysis
 - **Rebecca** – Product Analysis
 - **Lina** – Delivery Performance Analysis 
 - **Xue** – Customer Analysis + NLP + Sentiment  
