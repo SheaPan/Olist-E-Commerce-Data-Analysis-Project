@@ -9,8 +9,5 @@ This folder contains Python scripts and Power Query M scripts used in the projec
 - Includes batch translation, retry/error handling, and preprocessing.
 - Key file: `translate_reviews.py`
 
-### `/powerquery`
-- Contains Power Query M scripts used for data transformations in Power BI.
-
 ### `/utils`
 - Helper scripts and utilities supporting analysis or automation.
