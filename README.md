@@ -28,7 +28,7 @@
 - **Xue** – Customer Analysis + NLP + Sentiment  
 - **Lina** – Delivery Performance Analysis  
 - **Rebecca** – Product Analysis  
-- **Bijal** – Sales Analysis  
+- **Bijal** – Sales and Overview Analysis  
 
 **Project Completion:** 9 December 2025  
 **Presentation Date:** 9 December 2025  
