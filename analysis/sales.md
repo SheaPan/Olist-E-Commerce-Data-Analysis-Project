@@ -128,11 +128,53 @@ Leverage peak sales periods, diversify product offerings, and deploy targeted pr
 
 ## 6. Recommendations
 
-- **Geographic Expansion:** Increase seller recruitment and marketing in underrepresented regions.  
-- **Seasonal Campaigns:** Align promotions with peak months, e.g., November, for maximum impact.  
+- **Geographic Expansion:** Expand seller recruitment and marketing in underrepresented regions.  
+- **Seasonal Campaigns:** Align promotions with peak months, e.g., November (Black Friday), for maximum impact.  
 - **Payment Strategy:** Incentivize underused payment methods to diversify revenue streams.  
 - **Product Strategy:** Focus on top-performing categories, introduce complementary products, and consider bundles.  
 - **Operational Preparedness:** Scale supply chain, logistics, and inventory to meet forecasted growth.  
+
+---
+## 7. Sales Analysis Q&A
+
+**1. Why does São Paulo have much higher sales than other states?**  
+São Paulo has a larger population, more sellers, faster delivery, and a stronger online retail culture. Other states may have weaker logistics or lower platform awareness.
+
+**2. What makes you say there is room to grow in low-sales states?**  
+Many states show low order volume despite large populations. Olist can reach more customers through better marketing, more sellers, or faster delivery.
+
+**3. Recommended actions for low-sales regions:**  
+- Increase marketing or local partnerships.  
+- Recruit more local sellers.  
+- Improve delivery routes to reduce waiting times.  
+- Tailor offers to regional product preferences.
+
+**4. How reliable are the seasonal peaks?**  
+Patterns repeat across multiple years. Black Friday and Christmas consistently show spikes, making them reliable for planning.
+
+**5. How should Olist use the Black Friday peak?**  
+- Build campaigns earlier.  
+- Promote popular categories.  
+- Support seller stock planning.  
+- Improve delivery predictions to avoid delays.
+
+**6. Any risks in the sales data?**  
+Yes. Slow delivery in some states lowers review scores, and payment options are concentrated on credit cards, leaving potential revenue untapped.
+
+**7. How did you ensure accuracy?**  
+Data cleaning, correct table linking, checking for missing values, and cross-validation across visualisations.
+
+**8. Why do credit cards dominate?**  
+They allow instalments, which is preferred by Brazilian customers. Other methods offer less flexibility.
+
+**9. Main takeaway from sales analysis:**  
+Sales are strong in key states and during seasonal peaks. Opportunities lie in under-served regions and preparing for high-demand periods.
+
+**10. Data limitations:**  
+Dataset ends in 2018. Patterns are clear but current conditions may differ. Still, trends provide useful guidance for strategy.
+
+---
+
 
 ---
 
