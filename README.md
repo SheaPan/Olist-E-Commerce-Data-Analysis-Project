@@ -178,7 +178,6 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 - Watches & Gifts, and Computers dominate overall revenue.  
 - Freight cost increase with product weight/volume but show more variability at higher weights/volume.
 - Delivery delays are mostly unrelated to product characteristics.
-- Regional product preferences differ significantly across Brazil.
 
 ---
 
