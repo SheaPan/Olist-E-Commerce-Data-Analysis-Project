@@ -14,3 +14,12 @@ New Measures:
 - Total Revenue = SUM('olist_order_payments_dataset'[payment_value])
 - Total Orders = DISTINCTCOUNT('olist_order_payments_dataset'[order_id])
 - Total Items Ordered = SUM('olist_order_items_dataset'[order_item_id])
+- Total Freight Cost = SUM('olist_order_items_dataset'[freight_cost])
+- Total Items Ordered = SUM('olist_order_items_dataset'[order_item_id])
+- Rolling Avg Revenue = CALCULATE(AVERAGEX(
+        DATESINPERIOD('Dates'[Date], MAX('Dates'[Date]), -3, MONTH),
+        [Total Revenue]))
+- Revenue StdDev = STDEVX.P(
+    VALUES('Dates'[Year-Month]),
+    [Total Revenue])
+- Revenue Deviation = [Total Revenue] - [Rolling Avg Revenue]
