@@ -8,9 +8,15 @@
 - **1.46%** of deliveries were **On Time**  
 
 ### Delivery Times by State
-- Average delivery times across 20 states range from **9 days** (shortest) to **92 days** (longest).  
+- Average delivery times across 20 states range from **9 days** (shortest) to **92 days** (longest).
+- Average across all the states excluding Roraima is 12.3 days. 
 - **Shortest delivery times:** São Paulo (SP)  
-- **Longest delivery times:** Roraima (RR)  
+- **Longest delivery times:** Roraima (RR)
+
+  <img width="1300" height="730" alt="Delivery Time" src="https://github.com/user-attachments/assets/fe2e8d8f-2775-479f-871f-6e3ab6a9ace7" />
+  
+ Above shows a visual representation, of the delivery insights, including a pie chart for Delviery Performance, and a bar chart for Delivery Times by State.         Stores in states like Sao Paulo with larger customer bases and established practices have the shortest delivery times in the lower percentile, however, states that haven't got established practices, or much smaller customer bases have a correlation with longer delivery times. 
+
 
 ### Relationship Between Delivery Time, Order Value, and Reviews
 - Longer deliveries are associated with **lower average review scores**.  
@@ -21,6 +27,14 @@
   - Customers of higher-value items may **expect longer delivery times** and are more tolerant of delays.  
 - There exists a **threshold** beyond which even high-value items will negatively affect review scores if delivery takes too long.  
 - Low-value items delivered late see a **more pronounced drop in review scores**.
+
+  <img width="1287" height="720" alt="Reviews by State" src="https://github.com/user-attachments/assets/b9311bfc-3148-4ada-b66c-b71ab3c4f5f5" />
+
+  The larger bubbles on the bubble chart correlate to a longer delivery age, and the points along the y axis correlate to higher and lower reviews. We can see a      relationship between average delivery times and average review scores. 
+  
+  <img width="1307" height="732" alt="Reviews by Order Value" src="https://github.com/user-attachments/assets/5ee53802-a964-46f2-acfc-a7397d08f23d" />
+
+  The line graph shows the relationship between average order value, delivery status and review score. The cards beside the graph show the relationship between avergae order value and delviery status, whichs shows that and the average of value of orders amongst late deliveries is higher than those of early and on time deliveries.
 
 ---
 
