@@ -10,8 +10,8 @@
 ### Delivery Times by State
 - Average delivery times across 20 states range from **9 days** (shortest) to **92 days** (longest).
 - Average across all the states excluding Roraima is 12.3 days. 
-- **Shortest delivery times:** São Paulo (SP)  
-- **Longest delivery times:** Roraima (RR)
+- **Shortest delivery times:** São Paulo (SP) - 4.17 Avg Rating
+- **Longest delivery times:** Roraima (RR) - 3.58 Avg Rating
 
   <img width="1300" height="730" alt="Delivery Time" src="https://github.com/user-attachments/assets/fe2e8d8f-2775-479f-871f-6e3ab6a9ace7" />
   
