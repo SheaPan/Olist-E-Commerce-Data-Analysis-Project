@@ -63,6 +63,7 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 | [`reports`](reports/README.md) | Final outputs including Power BI dashboards, presentations, and written reports. |
 | [`analysis`](analysis/README.md) | Scripts and outputs for customer, product, sales, and delivery analyses. |
 | [`dax`](dax/README.md) | DAX measures, calculated columns, and data model definitions for Power BI. |
+| [`image`](./image) | Images of Power BI dashboard. |
 | [`scripts`](scripts/README.md) | Python scripts (translation), Power Query scripts, and utility helpers. |
 | [`assets`](assets/README.md) | Static assets including charts and reports. |
 
@@ -84,10 +85,12 @@ Focus areas:
 - Regional heatmaps  
 
 Deliverables:
-- Word clouds  
-- Sentiment distributions  
-- High-risk customer list  
-- PCA cluster plot  
+- Sentiment score
+- customer clusters, pointing out customers at risk
+- PCA cluster plot
+- 
+[Customer Analysis](./image/Customer%20Analysis.jpg)
+
 
 ---
 
