@@ -101,7 +101,7 @@ Overall, delivery delays are largely unrelated to physical product characteristi
 
 - **Revenue Drivers:** Watches & Gifts, Computer Accessories, Health & Beauty  
 - **Popularity Leaders (Units Sold):** Health & Beauty, Sports & Leisure, Computer Accessories 
-- **Seasonal Patterns:** Sports & Leisure revenue peaks in Q1; Computer Accessories unts sold are highest in Q1 and Q4  
+- **Seasonal Patterns:** Sports & Leisure revenue peaks in Q1; Computer Accessories units sold are highest in Q1 and Q4  
 - **Customer Satisfaction:** Dissatisfaction concentrated in a small set of categories  
 - **Freight Costs:** Increase with weight/volume but show operational variability at higher weights/volume  
 - **Delivery Delays:** Mostly unrelated to product characteristics; better monitored by seller/region
