@@ -3,12 +3,12 @@
 This file contains all DAX used in the **Olist E-Commerce datasets**.  
 
 ---
-**Table - `date_table`**
+### **Table - `date_table`**
 
-Table:
+**Table:**
 - date_table = calendarauto()
 
-New Columns:
+**New Columns:**
 - Year = YEAR('date_table'[Date])
 - Quarter = 'date_table'[Year] & " Q"
     & IF(
@@ -27,13 +27,13 @@ New Columns:
 - Month = FORMAT('date_table'[Date], "yyyy MMM")
 - MonthKey = (YEAR('date_table'[Date]) * 100) + MONTH('date_table'[Date])
 
-**Table - `olist_order_item_dataset`**
+### **Table - `olist_order_item_dataset`**
 
-New Columns:
+**New Columns:**
 - product_weight_g = RELATED(olist_products_dataset[product_weight_g])
 - ProductVolume_cm3 = RELATED(olist_products_dataset[ProductVolume_cm3])
 
-New Measures:
+**New Measures:**
 - Total Revenue = SUM('olist_order_payments_dataset'[payment_value])
 - Total Orders = DISTINCTCOUNT('olist_order_payments_dataset'[order_id])
 - Total Items Ordered = SUM('olist_order_items_dataset'[order_item_id])
@@ -84,9 +84,9 @@ New Measures:
     [YoY Revenue],
     0)
 
-**Table - `olist_order_payments_dataset`**
+### **Table - `olist_order_payments_dataset`**
 
-New Measures:
+**New Measures:**
 - TotalPayment = SUM('olist_order_payments_dataset'[payment_value])
 - Total Sales = SUM('olist_order_payments_dataset'[payment_value])
 - Sales Amt = SUM('olist_order_payments_dataset'[payment_value])
@@ -97,9 +97,9 @@ New Measures:
     DISTINCTCOUNT('date_table'[Date])
   )
 
-**Table - `olist_orders_dataset`**
+### **Table - `olist_orders_dataset`**
 
-New Columns:
+**New Columns:**
 - Purchase Date = DATE(
     YEAR([order_purchase_timestamp]),
     MONTH([order_purchase_timestamp]),
@@ -116,7 +116,7 @@ New Columns:
   IF('olist_orders_dataset'[Delivery Late/Early] = 0, "On Time", "Late")) 
 - Delivery Late/Early = 'olist_orders_dataset'[Delivery Time (Estimate DAY)] - 'olist_orders_dataset'[Delivery Time (Day)]
 
-New Measures:
+**New Measures:**
 - YoY Revenue = CALCULATE(
     [Total Revenue],
     DATEADD('Dates'[Date], -1, YEAR))
@@ -135,9 +135,9 @@ New Measures:
   ))
 
 
-**Table - `olist_products_dataset`**
+### **Table - `olist_products_dataset`**
 
-New Columns:
+**New Columns:**
 - ProductDensity_g_per_cm3 = DIVIDE(
     olist_products_dataset[product_weight_g],
     olist_products_dataset[ProductVolume_cm3],
@@ -148,12 +148,12 @@ New Columns:
   olist_products_dataset[product_width_cm] *
   olist_products_dataset[product_length_cm]
 
-New Measure: 
+**New Measure: **
 - Product_category_count = DISTINCTCOUNT(olist_products_dataset[product_category_name])
 
-**Table - `olist_reviews_dataset`**
+### **Table - `olist_reviews_dataset`**
 
-New Measure:
+**New Measure:**
 - Total Reviews = DISTINCTCOUNT(olist_reviews_dataset[review_id])
 - Negative Review Revenue = CALCULATE(
     'olist_order_items_dataset'[Total Revenue],
@@ -166,5 +166,3 @@ New Measure:
     [Negative Review Revenue],
     [Total Revenue],
     0)
-
-**Table - `olist_review_word_dataset`**
