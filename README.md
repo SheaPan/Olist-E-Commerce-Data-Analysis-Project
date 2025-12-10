@@ -89,7 +89,7 @@ Deliverables:
 - customer clusters, pointing out customers at risk
 - PCA cluster plot
 - 
-[Customer Analysis](./image/Customer%20Analysis.jpg)
+![Customer Analysis](./image/Customer%20Analysis.jpg)
 
 
 ---
