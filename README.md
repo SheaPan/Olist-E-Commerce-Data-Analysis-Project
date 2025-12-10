@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-# 📝 Table of Contents
+#  Table of Contents
 - [ Olist E-Commerce Data Analytics Project](#-olist-e-commerce-data-analytics-project)
 - [ Project Overview](#-project-overview)
 - [ Repository Structure](#-repository-structure)
@@ -20,7 +20,7 @@
 
 ---
 
-# 💸 Olist E-Commerce Data Analytics Project  
+#  Olist E-Commerce Data Analytics Project  
 ### **UK Data Analyst Bootcamp – Final Group Project (Group 2)**  
 [Back to Top](#table-of-contents)
 
@@ -35,10 +35,10 @@
 
 ---
 
-# 📝 Project Overview  
+#  Project Overview  
 [Back to Top](#table-of-contents)
 
-This repository contains the end-to-end analysis of the **Olist E-commerce dataset**, a Brazilian marketplace with **100,000+ orders (2016–2018)**.
+This repository contains the end-to-end analysis of the **Olist E-commerce dataset**, a Brazilian marketplace with **98,000+ orders (2016–2018)**.
 
 The goal of this project was to deliver:
 
@@ -48,11 +48,11 @@ The goal of this project was to deliver:
 ✔ A final written report & presentation  
 ✔ Python-based translation of Portuguese review text  
 
-All modelling and analysis were done in **Power BI**, with **Python used only for translating review text**.
+All modelling and analysis were done in **Power BI**, with **Python used for translating, sentiment analysis, customer aggregation, and keyword extraction**.
 
 ---
 
-# 📁 Repository Structure & Folder Descriptions 
+#  Repository Structure & Folder Descriptions 
 [Back to Top](#table-of-contents)
 
 ---
@@ -125,13 +125,13 @@ Deliverables:
 Focus areas:
 - Delivery classification (Early / On-time / Late)  
 - Actual vs Estimated delivery  
-- Review score correlation  
+- Correlation with review scores 
 - State-level logistics performance  
-- Delay outlier states  
+- Delayed Outlier States  
 
 Key findings:
 - **91.96%** delivered early  
-- **Boa Vista (RR)** had extreme delays (up to **92 days**)  
+- **Boa Vista (RR)** had extreme delays (Average Delivery **92 days**)  
 - Long delivery strongly correlates with low reviews  
 - High-value orders take longer but reviews remain stable  
 
@@ -155,7 +155,7 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 # Translates Portuguese reviews to English with retry logic and batching.
 ```
 
-## 🔑 Key Findings Summary  
+##  Key Findings Summary  
 [Back to Top](#table-of-contents)
 
 ### Customer Insights  
@@ -173,8 +173,9 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 ---
 
 ### Product Insights  
-- Electronics and furniture dominate overall revenue.  
-- Freight cost is strongly correlated with product weight and dimensions.  
+- Watches & Gifts, and Computers dominate overall revenue.  
+- Freight cost increase with product weight/volume but show more variability at higher weights/volume.
+- Delivery delays are mostly unrelated to product characteristics.
 - Regional product preferences differ significantly across Brazil.
 
 ---
@@ -186,7 +187,7 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 
 ---
 
-## 💡 Recommendations  
+##  Recommendations  
 [Back to Top](#table-of-contents)
 
 ### 1. High-Value Order Rapid Response Team  
@@ -196,14 +197,14 @@ Prioritise large, high-risk orders in slow-delivery regions.
 Prevent churn by recovering silent detractors early.
 
 ### 3. Improve Logistics in Chronic Delay Regions  
-Focus particularly on Boa Vista (RR) and other outlier states.
+Focus particularly on captial city Boa Vista (Roraima State(RR)) and other outlier states.
 
 ### 4. Automated Quality Alerts for Product Issues  
 Use negative sentiment spikes to detect emerging product defects early.
 
 ---
 
-## 🔧 Tools & Technologies  
+##  Tools & Technologies  
 [Back to Top](#table-of-contents)
 
 ### Power BI  
