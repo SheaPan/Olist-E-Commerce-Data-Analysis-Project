@@ -10,7 +10,6 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
 New Columns:
 - product_weight_g = RELATED(olist_products_dataset[product_weight_g])
 - ProductVolume_cm3 = RELATED(olist_products_dataset[ProductVolume_cm3])
-- DeliveryDelayDays = DATEDIFF( 'olist_orders_dataset'[order_estimated_delivery_date],'olist_orders_dataset'[order_delivered_customer_date],DAY)
 
 New Measures:
 - Total Revenue = SUM('olist_order_payments_dataset'[payment_value])
@@ -63,7 +62,6 @@ New Measures:
     [YoY Revenue],
     0)
 
-
 **Table - `olist_order_payments_dataset`**
 
 New Measures:
@@ -78,6 +76,42 @@ New Measures:
   )
 
 **Table - `olist_orders_dataset`**
+
+New Columns:
+- Purchase Date = DATE(
+    YEAR([order_purchase_timestamp]),
+    MONTH([order_purchase_timestamp]),
+    DAY([order_purchase_timestamp])
+  )
+- DeliveryDelayDays = DATEDIFF(
+    'olist_orders_dataset'[order_estimated_delivery_date],
+    'olist_orders_dataset'[order_delivered_customer_date],
+    DAY)
+- Delivery Time (Estimate DAY) = DATEDIFF('olist_orders_dataset'[order_approved_at], 'olist_orders_dataset'[order_estimated_delivery_date], DAY) 
+- Delivery Time (Day) = DATEDIFF('olist_orders_dataset'[order_approved_at],'olist_orders_dataset'[order_delivered_customer_date], DAY)
+- Delivery Status =
+  IF('olist_orders_dataset'[Delivery Late/Early] > 0, "Early",
+  IF('olist_orders_dataset'[Delivery Late/Early] = 0, "On Time", "Late")) 
+- Delivery Late/Early = 'olist_orders_dataset'[Delivery Time (Estimate DAY)] - 'olist_orders_dataset'[Delivery Time (Day)]
+
+New Measures:
+- YoY Revenue = CALCULATE(
+    [Total Revenue],
+    DATEADD('Dates'[Date], -1, YEAR))
+- Count of On Time Deliveries = CALCULATE(COUNTROWS('olist_orders_dataset'),'olist_orders_dataset'[Delivery Status] = "On Time")
+- Count of Late Deliveries = CALCULATE(COUNTROWS('olist_orders_dataset'), 'olist_orders_dataset'[Delivery Status] = "Late")
+- Count of Early Deliveries = CALCULATE(COUNTROWS('olist_orders_dataset'),'olist_orders_dataset'[Delivery Status] = "Early")
+- Avg Delivery Time = AVERAGEX(
+    'olist_orders_dataset',DATEDIFF(
+        'olist_orders_dataset'[order_approved_at],
+        'olist_orders_dataset'[order_delivered_customer_date],
+        DAY)
+  )
+- Average Review Score by State = AVERAGE( 'olist_reviews_dataset'[review_score])
+- Average Delivery Time by Seller Location(State) = CALCULATE (
+  AVERAGEX ('olist_order_items_dataset', RELATED ('olist_orders_dataset'[Delivery Time (Day)])
+  ))
+
 
 **Table - `olist_products_dataset`**
 Columns:
