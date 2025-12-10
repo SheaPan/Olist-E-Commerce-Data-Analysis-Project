@@ -16,7 +16,8 @@ Visualisations were created to assist with the analysis. These have been publish
 ---
 
 
-<img width="1772" height="997" alt="Screenshot 2025-12-10 131430" src="https://github.com/user-attachments/assets/6874b777-d156-485c-afa5-ab327f43a338" />
+<img width="1763" height="989" alt="Screenshot 2025-12-10 131810" src="https://github.com/user-attachments/assets/5ebd1dc3-07a3-4bfd-8e03-779fec5a4629" />
+
 
 
 ## 1. Top Product Categories
