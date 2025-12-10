@@ -5,6 +5,28 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
 ---
 **Table - `date_table`**
 
+Table:
+- date_table = calendarauto()
+
+New Columns:
+- Year = YEAR('date_table'[Date])
+- Quarter = 'date_table'[Year] & " Q"
+    & IF(
+        MONTH('date_table'[Date]) <= 3,
+        1,
+        IF(
+            MONTH('date_table'[Date]) <= 6,
+            2,
+            IF(
+                MONTH('date_table'[Date]) <= 9,
+                3,
+                4
+            )
+        )
+    )
+- Month = FORMAT('date_table'[Date], "yyyy MMM")
+- MonthKey = (YEAR('date_table'[Date]) * 100) + MONTH('date_table'[Date])
+
 **Table - `olist_order_item_dataset`**
 
 New Columns:
