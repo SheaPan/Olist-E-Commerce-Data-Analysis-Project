@@ -136,17 +136,5 @@ Leverage peak sales periods, diversify product offerings, and deploy targeted pr
 
 ---
 
-## 7. Visualisation Placeholders
-
-> Include the following visualisations for executive dashboards:
-
-- **Revenue Heatmap by State**  
-- **Monthly Revenue Trend Line**  
-- **Payment Method Distribution Pie Chart**  
-- **Top Product Categories Bar Chart**  
-- **Yearly Revenue Growth & Forecast Plot**  
-
----
-
 ## **Conclusion:**  
 Olist exhibits strong e-commerce performance with concentrated regional revenue, predictable seasonal peaks, and clear product winners. Strategic geographic expansion, payment diversification, and targeted promotions will maximize growth potential while maintaining customer satisfaction.
