@@ -24,7 +24,7 @@ To gain a deeper understanding of customers, we performed a **cluster analysis**
 Segmentation provides a foundation for identifying high-risk customers and potential advocates, helping focus business actions more effectively while demonstrating how sentiment analysis adds depth to traditional scores.
 
 ---
-Customer Analysis Dashboard
+**Customer Analysis Dashboard**
 
 ![Customer Analysis](../image/Customer%20Analysis.jpg)
 
