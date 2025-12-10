@@ -26,7 +26,7 @@ This report provides a comprehensive analysis of the Olist e-commerce platform's
 
 | Metric          | Value       |
 |----------------|------------|
-| Total Sales     | R$16.01M   |
+| Total Sales     | BR 16.01M   |
 | Total Orders    | 99.44K     |
 | Total Sellers   | 3,094      |
 | Total Cities    | 5,995      |
@@ -34,14 +34,14 @@ This report provides a comprehensive analysis of the Olist e-commerce platform's
 ### Insights
 
 1. **Regional Concentration:**  
-   - São Paulo alone contributes **R$1.24M**, significantly higher than the next top state, Paraná (**R$0.2M**).  
+   - São Paulo alone contributes **BR 1.24M**, significantly higher than the next top state, Paraná (**R$0.2M**).  
    - Southern and Southeastern states dominate revenue, suggesting economic concentration and better logistics infrastructure.
 
 2. **Customer Satisfaction:**  
    - Average review score: **4.1/5**, indicating high customer satisfaction across multiple product categories.  
 
 3. **Logistics Costs:**  
-   - Average freight per order: **R$25.42**, varying by state, hinting at opportunities to optimize delivery costs in distant regions.
+   - Average freight per order: **BR 25.42**, varying by state, hinting at opportunities to optimize delivery costs in distant regions.
 
 **Recommendation:**  
 Focus on **expanding seller recruitment and marketing in Northern and Northeastern states** to reduce regional revenue concentration and tap into new customer bases.
@@ -54,13 +54,13 @@ Focus on **expanding seller recruitment and marketing in Northern and Northeaste
 
 ### Monthly Trends
 
-- **Peak Month:** November 2017 (7,544 orders, R$1,194,882.8 revenue).  
+- **Peak Month:** November 2017 (7,544 orders, BR 1,194,882.8 revenue).  
 - **Stable Average Order Value:** R$160–R$167 during peak months, showing predictable spending behavior.  
 - **High-Revenue Categories:** Health & Beauty, Watches & Gifts, and Electronics consistently contribute the most.
 
 **Yearly Growth**
 
-| Year | Revenue (R$)   | YoY Growth |
+| Year | Revenue (BR)   | YoY Growth |
 |------|---------------|------------|
 | 2016 | 59,362.34     | -          |
 | 2017 | 7,249,746.73  | 121%       |
@@ -68,8 +68,8 @@ Focus on **expanding seller recruitment and marketing in Northern and Northeaste
 
 ### Forecast (Post-2018)
 
-- Predicted revenue: **R$13.76M**  
-- **Upper Bound:** R$17.07M | **Lower Bound:** R$10.44M  
+- Predicted revenue: **BR 13.76M**  
+- **Upper Bound:** BR17.07M | **Lower Bound:** BR 10.44M  
 
 **Executive Insight:**  
 The platform exhibits **strong initial growth**, followed by stabilization. Seasonal peaks, particularly during November, highlight **high-impact windows for marketing campaigns and inventory optimization**.
@@ -85,7 +85,7 @@ Leverage peak sales periods, diversify product offerings, and deploy targeted pr
 
 ### Payment Preferences
 
-| Payment Method | Revenue (R$) | % of Total |
+| Payment Method | Revenue (BR) | % of Total |
 |----------------|-------------|------------|
 | Credit Card    | 12,540,000  | 78.34%     |
 | Boleto         | 2,870,000   | 17.92%     |
