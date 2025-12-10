@@ -11,8 +11,9 @@ This folder contains analysis scripts, models, and outputs for different aspects
 
 ### `/product`
 - Product category analysis and trends.
+- Customer review scores by product category.
 - Freight cost vs. weight/dimensions analysis.
-- Regional product preferences and seasonal patterns.
+- Delivery delays vs. weight/dimensions.
 
 ### `/sales`
 - Sales analysis, revenue trends, forecasting, and payment method breakdowns.
