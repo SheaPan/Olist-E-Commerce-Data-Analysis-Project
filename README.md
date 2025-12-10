@@ -85,7 +85,10 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 - Satisfaction trends  
 
 **Deliverables:**
-- 
+- Customer segments analysis with a pie chart
+- Regional satisfaction analysis with a scatter chart
+- Customer review topics and keywords treemap
+- satisfaction trend over time line chart
 
 ---
 
