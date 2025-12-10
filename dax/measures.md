@@ -94,8 +94,18 @@ Below is a reference of all tables, columns, and their usage.
 **Used for:** Customer satisfaction, sentiment analysis, clustering review text, linking reviews to products/delivery/sellers.
 
 ---
+## 6. Order Review Table (`olist_reviews_dataset.csv`)
 
-## 6. Orders Table (`olist_orders_dataset.csv`)
+| Column                 | Description                                | Usage |
+|------------------------|--------------------------------------------|-------|
+| Theme             | topics of keywords in reviews                       | Sentiment/topic analysis |
+| Keywords               | Keywords in reviews                       | Sentiment/topic analysis |
+| Frequency           | Frequency of keywords in reviews                             | Sentiment/topic analysis |
+
+**Used for:** Customer satisfaction, sentiment analysis, clustering review text
+
+---
+## 7. Orders Table (`olist_orders_dataset.csv`)
 
 | Column                       | Description                                | Usage |
 |-------------------------------|--------------------------------------------|-------|
@@ -112,7 +122,7 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 7. Product Table (`olist_products_dataset.csv`)
+## 8. Product Table (`olist_products_dataset.csv`)
 
 | Column                   | Description                                | Usage |
 |---------------------------|--------------------------------------------|-------|
@@ -130,7 +140,7 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 8. Sellers Table (`olist_sellers_dataset.csv`)
+## 9. Sellers Table (`olist_sellers_dataset.csv`)
 
 | Column          | Description             | Usage |
 |-----------------|-------------------------|-------|
@@ -143,7 +153,7 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 9. Product Category Translation (`product_category_name_translation.csv`)
+## 10. Product Category Translation (`product_category_name_translation.csv`)
 
 | Column                | Description                                | Usage |
 |-----------------------|--------------------------------------------|-------|
