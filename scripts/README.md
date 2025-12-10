@@ -9,4 +9,4 @@ This folder holds Python files that collect keywords, group them, check sentimen
 | keywords_collection.py   | collects keywords from raw text |
 | keywords_group.py        | groups related keywords         |
 | sentiment_analysis.py    | checks the tone of reviews      |
-| translate_reviews.py     | portugese translates reviews              |
+| translate_reviews.py     | portugese translation               |
