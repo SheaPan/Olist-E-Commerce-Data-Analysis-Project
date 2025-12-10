@@ -6,6 +6,9 @@ This analysis covers Olist's 72 product categories over the period **October 201
 
 Portuguese product category names were translated into English, by creating a join between columns in the translation table and the Products table. Measures and calculated columns were used to used to answer key questions about the dataset.
 
+
+<img width="622" height="349" alt="image" src="https://github.com/user-attachments/assets/e594a181-95c0-4fcc-87ff-657fb31fc361" />
+
 ---
 
 ## 1. Top Product Categories
@@ -65,6 +68,9 @@ Target underperforming categories with:
 - Enhanced product information (e.g., sizing guidance)
 
 ---
+
+<img width="625" height="351" alt="image" src="https://github.com/user-attachments/assets/b30efe5d-91f4-404d-a596-ff797b09310d" />
+
 
 ## 3. Freight Cost Drivers
 
