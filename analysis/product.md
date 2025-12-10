@@ -6,10 +6,10 @@ This analysis covers Olist's 72 product categories over the period **October 201
 
 Portuguese product category names were translated into English, by creating a join between columns in the translation table and the Products table. Measures and calculated columns were used to used to answer key questions about the dataset.
 
+---
 
 <img width="622" height="349" alt="image" src="https://github.com/user-attachments/assets/e594a181-95c0-4fcc-87ff-657fb31fc361" />
 
----
 
 ## 1. Top Product Categories
 
