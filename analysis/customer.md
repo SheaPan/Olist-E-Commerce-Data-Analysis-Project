@@ -5,7 +5,7 @@ This project analyses a real-world dataset of **98,000 customer feedback entries
 
 ---
 
-## 1. Understanding Customer Segments: Cluster Analysis (Technical Foundation)
+## Understanding Customer Segments: Cluster Analysis (Technical Foundation)
 
 To gain a deeper understanding of customers, we performed a **cluster analysis** combining customer ratings and comment sentiment.
 
@@ -27,7 +27,7 @@ Segmentation provides a foundation for identifying high-risk customers and poten
 
 ![Customer Analysis](../image/Customer%20Analysis.jpg)
 
-## 2. Overall Risk Overview
+## 1. Overall Risk Overview
 
 ### Key Signals from the Dataset
 | Metric | Value | Insight |
@@ -46,7 +46,7 @@ Segmentation provides a foundation for identifying high-risk customers and poten
 
 ---
 
-## 3. High-Stakes Market: Core Risk Focus
+## 2. High-Stakes Market: Core Risk Focus
 
 - **Ji Paraná:** Only two customers, but extremely high-value orders. Represents **72.3% of risk revenue** — requires fast, personal attention.
 - **São Paulo (SP):** Largest market with an average satisfaction score of 0.51. Small issues here can scale quickly across thousands of customers.
@@ -56,7 +56,7 @@ An immediate, high-touch recovery effort is needed in Ji Paraná, while SP requi
 
 ---
 
-## 4. Drivers of Dissatisfaction
+## 3. Drivers of Dissatisfaction
 
 Analysis of high-risk customers reveals three main themes:
 
@@ -70,7 +70,7 @@ Analysis of high-risk customers reveals three main themes:
 
 ---
 
-## 5. Satisfaction Trend Over Time
+## 4. Satisfaction Trend Over Time
 
 - Satisfaction improved in 2017 and remained stable for a while.
 - A clear drop at the end of 2018 indicates underlying issues are affecting customers.
@@ -78,7 +78,7 @@ Analysis of high-risk customers reveals three main themes:
 
 ---
 
-## 6. Recommended Actions
+## Recommended Actions
 
 Based on insights from segmentation and risk analysis:
 
