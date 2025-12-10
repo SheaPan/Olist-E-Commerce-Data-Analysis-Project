@@ -38,6 +38,9 @@
    - Higher-value items take longer but generally do not reduce review scores.  
    - Specialized handling and security measures justify longer delivery times.  
    - For lower-value items, late deliveries **strongly impact review scores**, so prioritize efficiency for these shipments.
+   - Adding more staff to work on delivery for Roraima
+   - Changing delivery routes for a more effective delivery. 
+     
 
 4. **Threshold Awareness:**  
    - Ensure that even high-value orders do not exceed a delivery time threshold that negatively impacts customer satisfaction.
