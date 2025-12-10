@@ -1,13 +1,12 @@
 # Scripts Folder
 
-This folder contains Python scripts and Power Query M scripts used in the project.
+This folder holds Python files that collect keywords, group them, check sentiment, and translate reviews. It also has script folders that support translation and small helper tasks.
 
-## Subfolders
+## Files in This Folder
 
-### `/python`
-- Python scripts used primarily for review translation from Portuguese to English.
-- Includes batch translation, retry/error handling, and preprocessing.
-- Key file: `translate_reviews.py`
-
-### `/utils`
-- Helper scripts and utilities supporting analysis or automation.
+```text
+keywords_collection.py   collects keywords from raw text
+keywords_group.py        groups related keywords
+sentiment_analysis.py    checks the tone of reviews
+translate_reviews.py     translates reviews
+```
