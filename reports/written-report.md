@@ -1,8 +1,5 @@
 # Olist E-commerce Analysis Report
 
-**Prepared by:**B
-**Date:** 09/12/25  
-
 ---
 
 ## Executive Summary – The Story of Olist
