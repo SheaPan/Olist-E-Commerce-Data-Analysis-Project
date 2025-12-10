@@ -103,11 +103,10 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 
 22.27% of customers are at risk - over one in five.
 
-Recommendation:
-
 A Proactive Rescue Plan for At-Risk Customers (15.62%) - the easiest group to win back. The request is to reach out proactively, listen to concerns, fix issues quickly and personally.
 
 - High-Stakes Market: Core Risk Focus:
+
 Ji Paraná is a small place with only two customers, but because their orders are of very high value, they create the biggest financial risk (72.3% Risk Revenue) in the whole risk revenue amount. They need fast, personal attention.
 
 São Paulo (SP) is the biggest market and has an average satisfaction score (0.51) that looks “okay” at first. But small issues can scale quickly across thousands of customers.
@@ -119,7 +118,7 @@ A Rapid Response Team for High-Value Orders in high-risk markets, preventing neg
 Focus should be on the two main issues — product quality and delivery/shipping — and ensure that any problems are resolved promptly when they occur.
 
 - Satisfaction Trend Over Time:
-- 
+
 Satisfaction improved in 2017 and remained stable for a while. There is a clear drop at the end of 2018, indicating underlying issues are already affecting customers. If these issues are not addressed promptly, they could snowball into serious revenue and reputational risks.
 
 **Recommendation:**
