@@ -8,10 +8,6 @@ This folder contains all final deliverables, including Power BI dashboards, pres
 - The final Power BI `.pbix` file(s).
 - Contains all dashboards, visuals, and data models.
 
-### `/presentation`
-- Slide decks summarizing insights and recommendations.
-- Can be shared with stakeholders.
-
 ### `/written_report`
 - Written documentation detailing methodology, analysis, and key findings.
 - Includes explanations of customer, product, sales, and delivery insights.
