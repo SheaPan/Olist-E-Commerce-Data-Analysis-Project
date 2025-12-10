@@ -91,7 +91,7 @@ Target underperforming categories with:
 
 ## 3. Freight Cost Drivers
 
-- Freight costs increase with **product weight and volume**, as expected.  
+- Freight costs increase with **product weight and volume**, as expected. The scatter charts 'Large Products vs Freight Charge' and 'Heavy Products vs Freight Charge' demonstrate these findings. 
 - Variability arises for **larger/heavier items**. So two products with very similar higher weight or size can have very different shipping charges. Outliers may be influenced by:  
 
   - Shipping distance  
@@ -109,7 +109,9 @@ Target underperforming categories with:
 
 ## 4. Delivery Delays
 
-- Most deliveries are **on time or early**.  
+The scatter charts, 'Large Products vs Delivery Delay' and 'Heavy Products vs Delivery Day', visualise the delivery delay for product size and product weight, respectively. The black vertical line on the horizonatal axis, shows deliveries made on time. The area to the right of the line represents late deliveries.
+
+- Most deliveries are **on time or early**, regardless of product weight or size, as shown by the data points in the shaded areas of the charts.
 - **Moderate delays** (under ~14 days) happen across all product types and have little relation to weight or size. Operational or supplier issues may play a role.  
 - **Long delays** (over 14 days) -	Occur more rarely among bulky items. And mostly affect smaller, lightweight items, - but with a small sample size, it’s harder to draw meaningful conclusions.
 
