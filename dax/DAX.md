@@ -131,4 +131,18 @@ New Measure:
 
 **Table - `olist_reviews_dataset`**
 
+New Measure:
+- Total Reviews = DISTINCTCOUNT(olist_reviews_dataset[review_id])
+- Negative Review Revenue = CALCULATE(
+    'olist_order_items_dataset'[Total Revenue],
+    FILTER(
+        'olist_reviews_dataset',
+        'olist_reviews_dataset'[sentiment_category] = "Negative"
+    ))
+- Average Sentiment Score = AVERAGE(olist_reviews_dataset[sentiment_score])
+- % Negative Revenue = DIVIDE(
+    [Negative Review Revenue],
+    [Total Revenue],
+    0)
+
 **Table - `olist_review_word_dataset`**
