@@ -2,7 +2,7 @@
 
 # Olist Product Analysis
 
-This analysis covers Olist's 72 product categories over the period **October 2016 – September 2018**. It examines product revenue, popularity, customer reviews, freight costs, and delivery performance to provide actionable insights.
+This analysis covers Olist's 72 product categories over the period **October 2016 – September 2018**. It examines product revenue, popularity, customer reviews, freight costs, and delivery performance to provide actionable insights and business recommendations.
 
 Portuguese product category names were translated into English, by creating a join between columns in the translation table and the Products table. Measures and calculated columns were used to used to answer key questions about the dataset. The aim was to discover:
 
