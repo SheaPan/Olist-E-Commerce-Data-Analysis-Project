@@ -57,6 +57,10 @@ New Measures:
     'date_table',
     COALESCE([Total Items Ordered], 0)
   )
+- YoY % Growth = DIVIDE(
+    [Total Revenue] - [YoY Revenue],
+    [YoY Revenue],
+    0)
 
 **Table - `olist_order_payments_dataset`**
 
