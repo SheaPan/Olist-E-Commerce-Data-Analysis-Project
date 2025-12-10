@@ -5,16 +5,16 @@
 - [ Project Overview](#-project-overview)
 - [ Repository Structure](#-repository-structure)
 - [ Analysis Sections](#-analysis-sections)
-  - [1️. Customer Analysis](#1️-customer-analysis)
+  - [1️. Sales Analysis](#1️-sales-analysis)
   - [2️. Product Analysis](#2️-product-analysis)
-  - [3️. Sales Analysis](#3️-sales-analysis)
-  - [4️. Delivery Analysis](#4️-delivery-analysis)
+  - [3️. Delivery Analysis](#3️-delivery-analysis)
+  - [4️. Customer Analysis](#4️-customer-analysis)
 - [ Review Translation (Python – VS Code)](#-review-translation-python--vs-code)
 - [ Key Findings Summary](#-key-findings-summary)
-  - [ Customer Insights](#-customer-insights)
-  - [ Delivery Insights](#-delivery-insights)
-  - [ Product Insights](#-product-insights)
   - [ Sales Insights](#-sales-insights)
+  - [ Product Insights](#-product-insights)
+  - [ Delivery Insights](#-delivery-insights)
+  - [ Customer Insights](#-customer-insights)
 - [ Recommendations](#-recommendations)
 - [ Tools & Technologies](#-tools--technologies)
 
@@ -25,10 +25,10 @@
 [Back to Top](#table-of-contents)
 
 **Team Members & Roles**
+- **Bijal** – Overview  SalesAnalysis
+- **Rebecca** – Product Analysis
+- **Lina** – Delivery Performance Analysis 
 - **Xue** – Customer Analysis + NLP + Sentiment  
-- **Lina** – Delivery Performance Analysis  
-- **Rebecca** – Product Analysis  
-- **Bijal** – Sales and Overview Analysis  
 
 **Project Completion:** 9 December 2025  
 **Presentation Date:** 9 December 2025  
@@ -73,21 +73,19 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 
 ---
 
-## 1️. Customer Analysis
-**Focus areas:**
-- Portuguese → English translation (Python)
-- Sentiment analysis  
-- Topic extraction (negative reviews)  
-- K-means customer clustering  
-- Revenue-at-risk modelling 
-- Regional satisfaction 
-- Satisfaction trends  
+## 1️. Sales Analysis
+Focus areas:
+- Monthly & yearly revenue  
+- Power BI forecasting  
+- Payment behaviour trends  
+- AOV (Average Order Value)  
+- Customer retention + cohort analysis  
 
-**Deliverables:**
-- Customer segments analysis pie chart
-- Regional satisfaction analysis scatter chart
-- Customer review topics and keywords treemap
-- satisfaction trend line chart
+Deliverables:
+- Forecast visualisations  
+- Payment method analysis  
+- Revenue cycle charts  
+
 
 ---
 
@@ -107,22 +105,7 @@ Deliverables:
 
 ---
 
-## 3️. Sales Analysis
-Focus areas:
-- Monthly & yearly revenue  
-- Power BI forecasting  
-- Payment behaviour trends  
-- AOV (Average Order Value)  
-- Customer retention + cohort analysis  
-
-Deliverables:
-- Forecast visualisations  
-- Payment method analysis  
-- Revenue cycle charts  
-
----
-
-## 4️. Delivery Analysis
+## 3️. - Delivery Analysis
 Focus areas:
 - Delivery classification (Early / On-time / Late)  
 - Actual vs Estimated delivery  
@@ -134,7 +117,27 @@ Key findings:
 - **91.96%** delivered early  
 - **Roraima (RR)** had extreme delays (Average Delivery **92 days**)  
 - Long delivery strongly correlates with low reviews  
-- High-value orders take longer but reviews remain stable  
+- High-value orders take longer but reviews remain stable
+
+
+---
+
+## 4️. Customer Analysis
+**Focus areas:**
+- Portuguese → English translation (Python)
+- Sentiment analysis  
+- Topic extraction (negative reviews)  
+- K-means customer clustering  
+- Revenue-at-risk modelling 
+- Regional satisfaction 
+- Satisfaction trends  
+
+**Deliverables:**
+- Customer segments analysis pie chart
+- Regional satisfaction analysis scatter chart
+- Customer review topics and keywords treemap
+- satisfaction trend line chart
+
 
 ---
 
@@ -159,17 +162,10 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 ##  Key Findings Summary  
 [Back to Top](#table-of-contents)
 
-### Customer Insights  
-- 22.27% of customers are at risk.  
-- Negative reviews focus on defects, delays, and cancellations.  
-- Satisfaction declined sharply in late 2018.
-
----
-
-### Delivery Insights  
-- Delivery delays are the main cause of negative reviews.  
-- Certain states (such as Roraima – RR) have extremely long delivery times.  
-- High-value orders take longer to deliver but maintain higher satisfaction.
+### Sales Insights  
+- Sales peak during holiday and seasonal periods.  
+- Credit card is the most commonly used payment method.  
+- Revenue displays clear cyclical and seasonal patterns.
 
 ---
 
@@ -180,10 +176,17 @@ Script location: [translate_reviews.py](scripts/translate_reviews.py)
 
 ---
 
-### Sales Insights  
-- Sales peak during holiday and seasonal periods.  
-- Credit card is the most commonly used payment method.  
-- Revenue displays clear cyclical and seasonal patterns.
+### Delivery Insights  
+- Delivery delays are the main cause of negative reviews.  
+- Certain states (such as Roraima – RR) have extremely long delivery times.  
+- High-value orders take longer to deliver but maintain higher satisfaction.
+
+---
+
+### Customer Insights  
+- 22.27% of customers are at risk.  
+- Negative reviews focus on defects, delays, and cancellations.  
+- Satisfaction declined sharply in late 2018.
 
 ---
 
