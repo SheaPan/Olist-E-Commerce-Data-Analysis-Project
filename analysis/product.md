@@ -21,7 +21,7 @@ Across the full sales period, the highest revenue categories are:
 
 - **Watches & Gifts** and **Computer Accessories** perform strongly in every quarter.  
 - **Health & Beauty** consistently ranks in the top 3 during **Q2, Q3, and Q4**.  
-- **Sports & Leisure** rises into the top 3 in **Q1**, replacing Health & Beauty, indicating early-year seasonal demand.
+- **Sports & Leisure** rises into the top 3 in **Q1**, replacing Health & Beauty, indicating early-year seasonal demand, or new-year up-lift in customer spend on fitness-related products.
 
 ### Popularity Leaders (Units Sold)
 Most frequently purchased categories:
@@ -39,7 +39,7 @@ Most frequently purchased categories:
 
 - Popularity does not always align with revenue.  
 - High-revenue categories often sell fewer but higher-priced items (e.g., Watches & Gifts).  
-- High-popularity categories ometimes sell high volumes of lower-priced products (e.g., Health & Beauty).
+- High-popularity categories sometimes sell high volumes of lower-priced products (e.g., Health & Beauty).
 
 ---
 
@@ -67,7 +67,7 @@ Target underperforming categories with:
 ## 3. Freight Cost Drivers
 
 - Freight costs increase with **product weight and volume**, as expected.  
-- Variability rises for **larger/heavier items**, with outliers influenced by:  
+- Variability arises for **larger/heavier items**. So two products with very similar higher weight or size can have very different shipping charges. Outliers may be influenced by:  
 
   - Shipping distance  
   - Packaging behavior  
@@ -85,8 +85,10 @@ Target underperforming categories with:
 ## 4. Delivery Delays
 
 - Most deliveries are **on time or early**.  
-- **Moderate delays** (under ~14 days) are not strongly linked to product weight/dimensions.  
-- **Long delays** (over 14 days) mostly affect **small, lightweight items**, suggesting operational or supplier-related issues.  
+- **Moderate delays** (under ~14 days) happen across all product types and have little relation to weight or size. Operational or supplier issues may play a role.  
+- **Long delays** (over 14 days) -	Occur more rarely among bulky items. And mostly affect smaller, lightweight items, - but with a small sample size, it’s harder to draw meaningful conclusions.
+
+Overall, delivery delays are largely unrelated to physical product characteristics.
 
 **Recommendation:**  
 
