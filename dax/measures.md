@@ -34,7 +34,24 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 3. Order Items Table (`olist_order_items_dataset.csv`)
+## 3. Orders Table (`olist_orders_dataset.csv`)
+
+| Column                       | Description                                | Usage |
+|-------------------------------|--------------------------------------------|-------|
+| order_id                     | Unique order identifier                     | Primary key for linking tables |
+| customer_id                  | Links to customer table                     | Connect orders to customers |
+| order_status                 | Status (delivered, shipped, cancelled, etc.)| Order fulfilment analysis |
+| order_purchase_timestamp     | Time order was placed                       | Trend and seasonal analysis |
+| order_approved_at            | Payment approval timestamp                  | Payment workflow analysis |
+| order_delivered_carrier_date | When carrier received the package           | Delivery logistics analysis |
+| order_delivered_customer_date| When customer received the order            | Delivery performance |
+| order_estimated_delivery_date| Predicted delivery date                      | Compare actual vs estimated delivery |
+
+**Used for:** Delivery performance, linking customers to products and sellers, and order timelines.
+
+---
+
+## 4. Order Items Table (`olist_order_items_dataset.csv`)
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
@@ -55,7 +72,7 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 4. Order Payment Table (`olist_order_payments_dataset.csv`)
+## 5. Order Payment Table (`olist_order_payments_dataset.csv`)
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
@@ -71,7 +88,7 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 5. Order Review Table (`olist_reviews_dataset.csv`)
+## 6. Order Review Table (`olist_reviews_dataset.csv`)
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
@@ -94,7 +111,7 @@ Below is a reference of all tables, columns, and their usage.
 **Used for:** Customer satisfaction, sentiment analysis, clustering review text, linking reviews to products/delivery/sellers.
 
 ---
-## 6. Order Review Table (`olist_reviews_dataset.csv`)
+## 7. Order Review Table (`olist_reviews_dataset.csv`)
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
@@ -103,22 +120,6 @@ Below is a reference of all tables, columns, and their usage.
 | Frequency           | Frequency of keywords in reviews                             | Sentiment/topic analysis |
 
 **Used for:** Customer satisfaction, sentiment analysis, clustering review text
-
----
-## 7. Orders Table (`olist_orders_dataset.csv`)
-
-| Column                       | Description                                | Usage |
-|-------------------------------|--------------------------------------------|-------|
-| order_id                     | Unique order identifier                     | Primary key for linking tables |
-| customer_id                  | Links to customer table                     | Connect orders to customers |
-| order_status                 | Status (delivered, shipped, cancelled, etc.)| Order fulfilment analysis |
-| order_purchase_timestamp     | Time order was placed                       | Trend and seasonal analysis |
-| order_approved_at            | Payment approval timestamp                  | Payment workflow analysis |
-| order_delivered_carrier_date | When carrier received the package           | Delivery logistics analysis |
-| order_delivered_customer_date| When customer received the order            | Delivery performance |
-| order_estimated_delivery_date| Predicted delivery date                      | Compare actual vs estimated delivery |
-
-**Used for:** Delivery performance, linking customers to products and sellers, and order timelines.
 
 ---
 
