@@ -5,6 +5,7 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
 ---
 
 **Table - `olist_order_item_dataset`**
+
 New Columns:
 - product_weight_g = RELATED(olist_products_dataset[product_weight_g])
 - ProductVolume_cm3 = RELATED(olist_products_dataset[ProductVolume_cm3])
