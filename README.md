@@ -68,7 +68,7 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 
 ---
 
-# 📊 Analysis Sections  
+# Analysis Sections  
 [Back to Top](#table-of-contents)
 
 ---
@@ -84,8 +84,9 @@ Focus areas:
 Deliverables:
 - Forecast visualisations  
 - Payment method analysis  
-- Revenue cycle charts  
+- Revenue cycle charts
 
+Sales Analysis location: [analysis/sales.md](analysis/sales.md) 
 
 ---
 
