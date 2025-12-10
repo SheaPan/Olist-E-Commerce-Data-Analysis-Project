@@ -131,7 +131,7 @@ Focus areas:
 
 Key findings:
 - **91.96%** delivered early  
-- **Boa Vista (RR)** had extreme delays (Average Delivery **92 days**)  
+- **Roraima (RR)** had extreme delays (Average Delivery **92 days**)  
 - Long delivery strongly correlates with low reviews  
 - High-value orders take longer but reviews remain stable  
 
