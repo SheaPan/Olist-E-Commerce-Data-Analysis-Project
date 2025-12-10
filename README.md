@@ -85,7 +85,9 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 - Satisfaction trends  
 
 **Deliverables:**
+
 - Overall Risk Overview:
+- 
 | Metric | Value | Insight|
 |--------|-------------|-------------|
 | Total Customer Feedback | 98,000 | Strong customer voice, but high volume of reported issues |
@@ -93,10 +95,12 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 | Revenue at Risk | 12.4% | More than 1 in 10 Brazilian Reals could be affected by negative experiences |
 
 - Customer Risk Breakdown:
+- 
 | Risk Group | % of Customers | Description|
 |--------|-------------|-------------|
 | High-Risk Detractors | 6.65% | Actively unhappy, giving low scores and negative comments, damaging reputation |
 | At-Risk Customers | 15.62% | Silent but dissatisfied, giving low score and no comments, likely to leave |
+
 22.27% of customers are at risk - over one in five.
 
 **Recommendation:**
