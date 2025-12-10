@@ -10,6 +10,7 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
 New Columns:
 - product_weight_g = RELATED(olist_products_dataset[product_weight_g])
 - ProductVolume_cm3 = RELATED(olist_products_dataset[ProductVolume_cm3])
+- DeliveryDelayDays = DATEDIFF( 'olist_orders_dataset'[order_estimated_delivery_date],'olist_orders_dataset'[order_delivered_customer_date],DAY)
 
 New Measures:
 - Total Revenue = SUM('olist_order_payments_dataset'[payment_value])
@@ -61,6 +62,7 @@ New Measures:
     [Total Revenue] - [YoY Revenue],
     [YoY Revenue],
     0)
+
 
 **Table - `olist_order_payments_dataset`**
 
