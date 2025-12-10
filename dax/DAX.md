@@ -114,20 +114,19 @@ New Measures:
 
 
 **Table - `olist_products_dataset`**
-Columns:
 
+New Columns:
 - ProductDensity_g_per_cm3 = DIVIDE(
     olist_products_dataset[product_weight_g],
     olist_products_dataset[ProductVolume_cm3],
     BLANK()
-)
+  )
+- ProductVolume_cm3 =
+  olist_products_dataset[product_height_cm] *
+  olist_products_dataset[product_width_cm] *
+  olist_products_dataset[product_length_cm]
 
-- ProductVolume_cm3 = 
-olist_products_dataset[product_height_cm] *
-olist_products_dataset[product_width_cm] *
-olist_products_dataset[product_length_cm]
-
-Measure: 
+New Measure: 
 - Product_category_count = DISTINCTCOUNT(olist_products_dataset[product_category_name])
 
 **Table - `olist_reviews_dataset`**
