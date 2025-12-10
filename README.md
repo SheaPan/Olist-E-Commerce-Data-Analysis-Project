@@ -94,16 +94,17 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 
 ## 2️. Product Analysis
 Focus areas:
-- Category performance  
-- Freight vs weight/dimensions  
-- Regional preferences  
-- Seasonal trends  
-- Product features influencing reviews  
+- Category performance and seasonal trends  
+- Customer review scores by product category
+- Freight vs weight/dimensions
+- Delivery delays vs weight/dimensions
+
 
 Deliverables:
-- Category revenue charts  
-- Freight cost modelling  
-- Regional demand heatmaps  
+- Category revenue & popularity charts
+- Customer review score analysis
+- Freight cost and delivery delays modelling in relation to product dimensions
+
 
 ---
 
