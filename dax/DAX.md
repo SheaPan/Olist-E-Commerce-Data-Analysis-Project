@@ -17,13 +17,46 @@ New Measures:
 - Total Items Ordered = SUM('olist_order_items_dataset'[order_item_id])
 - Total Freight Cost = SUM('olist_order_items_dataset'[freight_cost])
 - Total Items Ordered = SUM('olist_order_items_dataset'[order_item_id])
-- Rolling Avg Revenue = CALCULATE(AVERAGEX(
+- Rolling Avg Revenue = CALCULATE(
+  AVERAGEX(
         DATESINPERIOD('Dates'[Date], MAX('Dates'[Date]), -3, MONTH),
-        [Total Revenue]))
+        [Total Revenue])
+  )
 - Revenue StdDev = STDEVX.P(
     VALUES('Dates'[Year-Month]),
     [Total Revenue])
 - Revenue Deviation = [Total Revenue] - [Rolling Avg Revenue]
+- Revenue by Category = SUM('olist_order_items_dataset'[item_price])
+- Revenue % of Total = DIVIDE([Revenue by Category], [Total Orders], 0)
+- Profit = olist_order_items_dataset[Total Revenue] - olist_order_items_dataset[Total Freight Cost]
+- Outlier Magnitude = ABS([Revenue Deviation])
+- Outlier Flag =
+  VAR Deviation = [Revenue Deviation]
+  VAR Threshold = 1.5 * [Revenue StdDev]
+  RETURN
+    IF(
+        ABS(Deviation) > Threshold,
+        "Outlier",
+        "Normal"
+    )
+- Is Outlier =
+  IF(
+    ABS([Revenue Deviation]) >
+    (1.5 * STDEVX.P(VALUES('Dates'[Date]), [Total Revenue])),
+    "Outlier",
+    "Normal"
+  )
+- AvgOrderValue = DIVIDE([Total Revenue], [Total Orders], 0)
+- AvgFreightPerProduct =
+- AVERAGEX(
+    VALUES('olist_order_items_dataset'[product_id]),
+    CALCULATE(AVERAGE('olist_order_items_dataset'[freight_cost]))
+  )
+- Average Items per Day =
+  AVERAGEX(
+    'date_table',
+    COALESCE([Total Items Ordered], 0)
+  )
 
 **Table - `olist_order_payments_dataset`**
 
