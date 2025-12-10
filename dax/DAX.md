@@ -3,6 +3,7 @@
 This file contains all DAX used in the **Olist E-Commerce datasets**.  
 
 ---
+**Table - `date_table`**
 
 **Table - `olist_order_item_dataset`**
 
@@ -23,3 +24,13 @@ New Measures:
     VALUES('Dates'[Year-Month]),
     [Total Revenue])
 - Revenue Deviation = [Total Revenue] - [Rolling Avg Revenue]
+
+**Table - `olist_order_payments_dataset`**
+
+**Table - `olist_orders_dataset`**
+
+**Table - `olist_products_dataset`**
+
+**Table - `olist_reviews_dataset`**
+
+**Table - `olist_review_word_dataset`**
