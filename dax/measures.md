@@ -30,7 +30,7 @@ Below is a reference of all tables, columns, and their usage.
 | city                  | City name                                  | Regional analysis |
 | state                 | State abbreviation                         | Regional analysis |
 
-**Used for:** Mapping customer/seller locations, delivery distance analysis, regional product popularity.
+**Used for:** Mapping customer/seller locations, delivery distance analysis, and regional product popularity.
 
 ---
 
@@ -67,7 +67,7 @@ Below is a reference of all tables, columns, and their usage.
 | RevenueByPaymentType   | Revenue broken down by payment type        | Understand payment mix |
 | TotalPayment           | Total payment                              | Payment reconciliation |
 
-**Used for:** Payment trend analysis, forecasting, revenue by payment type.
+**Used for:** Payment trend analysis, forecasting, and revenue by payment type.
 
 ---
 
@@ -93,14 +93,14 @@ Below is a reference of all tables, columns, and their usage.
 |-------------------------------|--------------------------------------------|-------|
 | order_id                     | Unique order identifier                     | Primary key for linking tables |
 | customer_id                  | Links to customer table                     | Connect orders to customers |
-| order_status                 | Status (delivered, shipped, canceled, etc.)| Order fulfillment analysis |
+| order_status                 | Status (delivered, shipped, cancelled, etc.)| Order fulfilment analysis |
 | order_purchase_timestamp     | Time order was placed                       | Trend and seasonal analysis |
 | order_approved_at            | Payment approval timestamp                  | Payment workflow analysis |
 | order_delivered_carrier_date | When carrier received the package           | Delivery logistics analysis |
 | order_delivered_customer_date| When customer received the order            | Delivery performance |
 | order_estimated_delivery_date| Predicted delivery date                      | Compare actual vs estimated delivery |
 
-**Used for:** Delivery performance, linking customers to products and sellers, order timelines.
+**Used for:** Delivery performance, linking customers to products and sellers, and order timelines.
 
 ---
 
@@ -118,7 +118,7 @@ Below is a reference of all tables, columns, and their usage.
 | product_height            | Height                                      | Freight and shipping analysis |
 | product_width             | Width                                       | Freight and shipping analysis |
 
-**Used for:** Product analysis, shipping cost modeling, linking products to orders and reviews.
+**Used for:** Product analysis, shipping cost modelling, linking products to orders and reviews.
 
 ---
 
@@ -131,7 +131,7 @@ Below is a reference of all tables, columns, and their usage.
 | seller_city     | Seller city             | Delivery performance analysis |
 | seller_state    | Seller state            | Regional sales and delivery trends |
 
-**Used for:** Delivery performance by seller, linking products to seller location, regional insights.
+**Used for:** Delivery performance by seller, linking products to seller location, and regional insights.
 
 ---
 
