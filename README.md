@@ -85,44 +85,7 @@ All modelling and analysis were done in **Power BI**, with **Python used for tra
 - Satisfaction trends  
 
 **Deliverables:**
-
-- Overall Risk Overview:
-
-| Metric | Value | Insight|
-|--------|-------------|-------------|
-| Total Customer Feedback | 98,000 | Strong customer voice, but high volume of reported issues |
-| Overall Satisfaction | 0.54 (range from -1 to 1) | Apperas good, but masks significant risks |
-| Revenue at Risk | 12.4% | More than 1 in 10 Brazilian Reals could be affected by negative experiences |
-
-- Customer Risk Breakdown:
-
-| Risk Group | % of Customers | Description|
-|--------|-------------|-------------|
-| High-Risk Detractors | 6.65% | Actively unhappy, giving low scores and negative comments, damaging reputation |
-| At-Risk Customers | 15.62% | Silent but dissatisfied, giving low score and no comments, likely to leave |
-
-22.27% of customers are at risk - over one in five.
-
-- High-Stakes Market: Core Risk Focus:
-
-Ji Paraná is a small place with only two customers, but because their orders are of very high value, they create the biggest financial risk (72.3% Risk Revenue) in the whole risk revenue amount. They need fast, personal attention.
-
-São Paulo (SP) is the biggest market and has an average satisfaction score (0.51) that looks “okay” at first. But small issues can scale quickly across thousands of customers.
-
-- Drivers of Dissatisfaction:
-
-Focus should be on the two main issues — product quality and delivery/shipping — and ensure that any problems are resolved promptly when they occur.
-
-- Satisfaction Trend Over Time:
-
-Satisfaction improved in 2017 and remained stable for a while. There is a clear drop at the end of 2018, indicating underlying issues are already affecting customers. If these issues are not addressed promptly, they could snowball into serious revenue and reputational risks.
-
-**Recommendation:**
-- A Proactive Rescue Plan for At-Risk Customers (15.62%) - the easiest group to win back. The request is to reach out proactively, listen to concerns, fix issues quickly and personally.
-- A Rapid Response Team for High-Value Orders in high-risk markets, preventing negative experiences before they happen. The request is to track high-value orders closely, resolve delivery issues in real time, and protect revenue.
-- Steadily improve product quality, delivery issues and customer service to reverse the declining satisfaction. Monitor satisfaction monthly and validate improvements in real outcomes, ensuring issues are shrinking. By combining technical customer segmentation, overall risk analysis, market focus, driver identification, and trend monitoring, these actions can effectively protect revenue and rebuild customer trust.
-
-![Customer Analysis](./image/Customer%20Analysis.jpg)
+- 
 
 ---
 
