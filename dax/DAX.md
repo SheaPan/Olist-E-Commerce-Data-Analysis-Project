@@ -60,6 +60,17 @@ New Measures:
 
 **Table - `olist_order_payments_dataset`**
 
+New Measures:
+- TotalPayment = SUM('olist_order_payments_dataset'[payment_value])
+- Total Sales = SUM('olist_order_payments_dataset'[payment_value])
+- Sales Amt = SUM('olist_order_payments_dataset'[payment_value])
+- Revenue by Item = SUM('olist_order_items_dataset'[item_price])
+- Average Daily Sales =
+  DIVIDE(
+    [Total Sales],
+    DISTINCTCOUNT('date_table'[Date])
+  )
+
 **Table - `olist_orders_dataset`**
 
 **Table - `olist_products_dataset`**
