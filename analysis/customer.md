@@ -25,7 +25,7 @@ Segmentation provides a foundation for identifying high-risk customers and poten
 
 ---
 
-![Customer Analysis](./image/Customer%20Analysis.jpg)
+![Customer Analysis](../image/CustomerAnalysis.jpg)
 
 ## 2. Overall Risk Overview
 
