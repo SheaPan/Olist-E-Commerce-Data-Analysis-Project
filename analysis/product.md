@@ -12,10 +12,11 @@ Portuguese product category names were translated into English, by creating a jo
 •	How do product dimensions and weight relate to freight cost?
 •	Do heavy or large products lead to longer delivery delays?
 
-Visualisations were created to assist with the analysis. These have been published on a dashboard in the PowerBI Service with screenshots provided here.
+Visualisations were created to assist with the analysis. These have been published to a dashboard in the PowerBI Service. Screenshots are provided here.
 ---
 
-<img width="622" height="349" alt="image" src="https://github.com/user-attachments/assets/e594a181-95c0-4fcc-87ff-657fb31fc361" />
+
+<img width="1772" height="997" alt="Screenshot 2025-12-10 131430" src="https://github.com/user-attachments/assets/6874b777-d156-485c-afa5-ab327f43a338" />
 
 
 ## 1. Top Product Categories
@@ -86,7 +87,7 @@ Target underperforming categories with:
 
 ---
 
-<img width="625" height="351" alt="image" src="https://github.com/user-attachments/assets/b30efe5d-91f4-404d-a596-ff797b09310d" />
+<img width="1764" height="990" alt="Screenshot 2025-12-10 131629" src="https://github.com/user-attachments/assets/23d40904-203d-4788-bfbf-601e9ef2b556" />
 
 
 ## 3. Freight Cost Drivers
