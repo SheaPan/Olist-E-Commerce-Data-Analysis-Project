@@ -1,7 +1,7 @@
 # Customer Analysis – Olist E-commerce Dataset
 
 ## Introduction
-This project analyzes a real-world dataset of **98,000 customer feedback entries** to understand customer experience, identify high-risk groups, and provide actionable recommendations. The goal is to combine technical analysis with business insights to guide strategic actions.
+This project analyses a real-world dataset of **98,000 customer feedback entries** to understand customer experience, identify high-risk groups, and provide actionable recommendations. The goal is to combine technical analysis with business insights to guide strategic actions.
 
 ---
 
@@ -24,6 +24,7 @@ To gain a deeper understanding of customers, we performed a **cluster analysis**
 Segmentation provides a foundation for identifying high-risk customers and potential advocates, helping focus business actions more effectively while demonstrating how sentiment analysis adds depth to traditional scores.
 
 ---
+![Customer Analysis](./image/Customer%20Analysis.jpg)
 
 ## 2. Overall Risk Overview
 
@@ -50,7 +51,7 @@ Segmentation provides a foundation for identifying high-risk customers and poten
 - **São Paulo (SP):** Largest market with an average satisfaction score of 0.51. Small issues here can scale quickly across thousands of customers.
 
 **Insight:**  
-Immediate, high-touch recovery effort is needed in Ji Paraná, while SP requires sustained, structural improvements to lift satisfaction and secure long-term revenue.
+An immediate, high-touch recovery effort is needed in Ji Paraná, while SP requires sustained, structural improvements to lift satisfaction and secure long-term revenue.
 
 ---
 
@@ -71,7 +72,7 @@ Analysis of high-risk customers reveals three main themes:
 ## 5. Satisfaction Trend Over Time
 
 - Satisfaction improved in 2017 and remained stable for a while.
-- Clear drop at the end of 2018 indicates underlying issues are affecting customers.
+- A clear drop at the end of 2018 indicates underlying issues are affecting customers.
 - If unaddressed, these issues could snowball into serious revenue and reputational risks.
 
 ---
