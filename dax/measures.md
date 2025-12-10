@@ -71,17 +71,25 @@ Below is a reference of all tables, columns, and their usage.
 
 ---
 
-## 5. Order Review Table (`olist_order_reviews_dataset.csv`)
+## 5. Order Review Table (`olist_reviews_dataset.csv`)
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
 | review_id              | Unique ID for review                        | Link review to order |
 | order_id               | Links to orders table                       | Connect review to order |
 | review_score           | Rating from 1–5                             | Customer satisfaction analysis |
-| review_comment_title   | Title of the review                          | Sentiment/topic analysis |
-| review_comment_message | Full review text                             | Sentiment/topic analysis |
+| review_title   | Title of the review                          | Sentiment/topic analysis |
+| review_message | Full review text                             | Sentiment/topic analysis |
+| sentiment_score | Rating from -1 to 1               | Sentiment/topic analysis |
+| sentiment_category | Postive, Negtive and Neutual                | Sentiment/topic analysis |
+| cluster_category | Customer segment based on sentiment score                | Customer segment analysis |
+| cluster_characteristic | Description of different customer cluster group                | Customer segment analysis |
 | review_creation_date   | Date customer wrote the review               | Time trend analysis |
 | review_answer_timestamp| When the review was answered                 | Customer service tracking |
+| Total Reviews | Total number of reviews                 | Review reconciliation |
+| Average Sentiment Score | Average of sentiment score | Sentiment/topic analysis |
+| Negative Review Revenue | Revenue from negative reviews | Revenue at risk modelling |
+| % Negative Revenue | Percentage of revenue from negative reviews in all revenue| Revenue at risk modelling |
 
 **Used for:** Customer satisfaction, sentiment analysis, clustering review text, linking reviews to products/delivery/sellers.
 
