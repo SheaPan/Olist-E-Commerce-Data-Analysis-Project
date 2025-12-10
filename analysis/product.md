@@ -29,11 +29,15 @@ Across the full sales period, the highest revenue categories are:
 | Computer Accessories  | 167,224  |
 | Health & Beauty       | 163,084  |
 
+These categories are represented by the longest bars on the 'Top 5 Product Categories by Order' bar chart.
+
 **Quarterly Revenue Dynamics**
 
 - **Watches & Gifts** and **Computer Accessories** perform strongly in every quarter.  
 - **Health & Beauty** consistently ranks in the top 3 during **Q2, Q3, and Q4**.  
 - **Sports & Leisure** rises into the top 3 in **Q1**, replacing Health & Beauty, indicating early-year seasonal demand, or new-year up-lift in customer spend on fitness-related products.
+
+The filter on the dashboard can be used to visualise the quarterly revenue dynamics in the bar chart.
 
 ### Popularity Leaders (Units Sold)
 Most frequently purchased categories:
@@ -42,10 +46,14 @@ Most frequently purchased categories:
 - Sports & Leisure
 - Computer Accessories
 
+These categories are represented by the longest bars on the 'Top 5 Product Categories by Popularity' bar chart.
+
 **Quarterly patterns:**  
 
 - **Computer Accessories** lead in **Q1 and Q4**.  
 - **Health & Beauty** leads in **Q2 and Q3**.  
+
+The filter on the dashboard can be used to visualise the quarterly dynamics in the bar chart.
 
 **Key Insight:**  
 
@@ -65,6 +73,8 @@ Most frequently purchased categories:
 | DVDs/Blu-ray           | 1             |
 | Male Fashion Clothing  | 2.25          |
 | Construction Tools     | 3             |
+
+These categories are shown in the 'Product Categories with the Lowest Revenue Score' bar chart.
 
 **Recommendation:**  
 Target underperforming categories with:
