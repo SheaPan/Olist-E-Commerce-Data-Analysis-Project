@@ -1,0 +1,133 @@
+table olist_products_dataset
+	lineageTag: 32114217-3113-483c-bd47-8678e52d0ed3
+
+	measure Product_category_count = DISTINCTCOUNT(olist_products_dataset[product_category_name])
+		formatString: 0
+		lineageTag: 07c28045-9f7e-4ea0-bb5b-62f589a48323
+
+	column product_id
+		dataType: string
+		lineageTag: ae423cc5-56a1-4f4a-b4da-7b195a6d9710
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name_lenghth
+		dataType: int64
+		formatString: 0
+		lineageTag: 39db5d5a-a445-4fe2-a036-ef0d1d03384e
+		summarizeBy: none
+		sourceColumn: product_name_lenghth
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_description_lenghth
+		dataType: int64
+		formatString: 0
+		lineageTag: ad347bc3-d45b-4b5e-95fd-09bf41cc0325
+		summarizeBy: none
+		sourceColumn: product_description_lenghth
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_photos_qty
+		dataType: int64
+		formatString: 0
+		lineageTag: 40488641-97d2-4bd2-bd53-1b883a5dccd6
+		summarizeBy: none
+		sourceColumn: product_photos_qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_weight_g
+		dataType: int64
+		formatString: 0
+		lineageTag: 5335e83f-dfb1-4ecf-adef-be81d0211dd4
+		summarizeBy: none
+		sourceColumn: product_weight_g
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_length_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: 70e60c19-9107-449b-87d5-d1feb3229335
+		summarizeBy: none
+		sourceColumn: product_length_cm
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_height_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b4faeda-871e-4575-8883-3de8f859c167
+		summarizeBy: none
+		sourceColumn: product_height_cm
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_width_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: dcbd47b1-44ff-41dc-bf9e-5cc892c337b9
+		summarizeBy: none
+		sourceColumn: product_width_cm
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_category_name
+		dataType: string
+		lineageTag: 7883eda7-344f-438b-9c6f-bb53e414d763
+		summarizeBy: none
+		sourceColumn: product_category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductVolume_cm3 =
+			
+			olist_products_dataset[product_height_cm] *
+			olist_products_dataset[product_width_cm] *
+			olist_products_dataset[product_length_cm]
+		formatString: 0
+		lineageTag: 0b547bac-3d56-4404-b994-38f425bc6bf5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductDensity_g_per_cm3 =
+			DIVIDE(
+			    olist_products_dataset[product_weight_g],
+			    olist_products_dataset[ProductVolume_cm3],
+			    BLANK()
+			)
+		lineageTag: 68d559dc-a127-4ebe-b4d6-e6a1288df94c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition olist_products_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\olist_products_dataset.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_id", type text}, {"product_category_name", type text}, {"product_name_lenght", Int64.Type}, {"product_description_lenght", Int64.Type}, {"product_photos_qty", Int64.Type}, {"product_weight_g", Int64.Type}, {"product_length_cm", Int64.Type}, {"product_height_cm", Int64.Type}, {"product_width_cm", Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each true),
+				    #"Replaced Value" = Table.ReplaceValue(#"Filtered Rows","",null,Replacer.ReplaceValue,{"product_category_name"}),
+				    #"Removed Bottom Rows" = Table.RemoveLastN(#"Replaced Value",1),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Bottom Rows",{{"product_description_lenght", "product_description_lenghth"}, {"product_name_lenght", "product_name_lenghth"}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"product_category_name"}, product_category_name_translation, {"product_category_name"}, "product_category_name_translation", JoinKind.LeftOuter),
+				    #"Expanded product_category_name_translation" = Table.ExpandTableColumn(#"Merged Queries", "product_category_name_translation", {"product_category_name_english"}, {"product_category_name_translation.product_category_name_english"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Expanded product_category_name_translation",{{"product_category_name_translation.product_category_name_english", "product_category_name_english"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns1",{"product_category_name"}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Removed Columns",{{"product_category_name_english", "product_category_name"}})
+				in
+				    #"Renamed Columns2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

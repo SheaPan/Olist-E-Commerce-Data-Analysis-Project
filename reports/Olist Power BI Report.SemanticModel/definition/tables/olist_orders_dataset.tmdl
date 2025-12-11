@@ -1,0 +1,248 @@
+table olist_orders_dataset
+	lineageTag: 5eada4b0-1ab6-41d0-a294-fc498f82454f
+
+	measure InsightHint = "Hover here to reveal valuable insights"
+		lineageTag: 0636f693-1a3e-494e-acff-30319582bb0c
+
+	measure 'Count of On Time Deliveries' = ```
+			
+			CALCULATE(COUNTROWS('olist_orders_dataset'),'olist_orders_dataset'[Delivery Status] = "On Time") 
+			```
+		formatString: 0
+		lineageTag: 3ad41809-4e86-4e70-8f23-511955659da4
+
+	measure 'Count of Late Deliveries' = ```
+			
+			
+			CALCULATE(COUNTROWS('olist_orders_dataset'), 'olist_orders_dataset'[Delivery Status] = "Late") 
+			```
+		formatString: 0
+		lineageTag: 22a101f6-28b1-4377-8fd0-6267999a4aed
+
+	measure 'Count of Early Deliveries' = ```
+			
+			
+			CALCULATE(COUNTROWS('olist_orders_dataset'),'olist_orders_dataset'[Delivery Status] = "Early") 
+			```
+		formatString: 0
+		lineageTag: 1264f2fc-1a1c-4b72-8b13-614d5e459bae
+
+	measure 'Average Review Score by State' = ```
+			
+			
+			AVERAGE( 'olist_reviews_dataset'[review_score]) 
+			```
+		lineageTag: 4de5a01b-11b3-4985-bcab-bbdcfd7c9dab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Delivery Time by Seller Location(State)' = ```
+			
+			
+			CALCULATE (AVERAGEX ('olist_order_items_dataset', RELATED ('olist_orders_dataset'[Delivery Time (Day)]))) 
+			```
+		lineageTag: 154577ce-012f-46c0-982d-618ab288b451
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Delivery Time' = ```
+			
+			AVERAGEX(
+			    'olist_orders_dataset',
+			    DATEDIFF(
+			        'olist_orders_dataset'[order_approved_at],
+			        'olist_orders_dataset'[order_delivered_customer_date],
+			        DAY
+			    )
+			)
+			
+			```
+		lineageTag: b0c25013-73b8-432b-88af-27277113a734
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YoY Revenue' = ```
+			
+			CALCULATE(
+			    [Total Revenue],
+			    DATEADD('Dates'[Date], -1, YEAR)
+			)
+			
+			```
+		lineageTag: 46bc8a93-6236-4f49-b42b-20595105ed44
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_id
+		dataType: string
+		lineageTag: 06cd72b1-5f9d-402f-99ca-a5e86b0672be
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: 505caa69-fbd3-4802-91d4-1b78e9a4823d
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: ab1e1ed7-92be-4300-941b-55635d7613cb
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_purchase_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4420ce75-26e2-4bbe-af52-b2e0983d03c2
+		summarizeBy: none
+		sourceColumn: order_purchase_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_approved_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f03751b6-b5e3-427a-9381-7a8b54391dc7
+		summarizeBy: none
+		sourceColumn: order_approved_at
+
+		variation Variation
+			isDefault
+			relationship: becae6ff-4493-4ce4-912b-c4466893df63
+			defaultHierarchy: LocalDateTable_5ba4b3eb-82c1-47e9-89ab-821dc20f96d4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_carrier_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ae4dc890-0302-4d64-84b8-7b3f0c2525ad
+		summarizeBy: none
+		sourceColumn: order_delivered_carrier_date
+
+		variation Variation
+			isDefault
+			relationship: 13b48f29-154c-4431-b19f-1ff88a4789f5
+			defaultHierarchy: LocalDateTable_e15aa571-1835-47b1-8b2c-b233158be589.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_customer_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8f7e58a2-27d3-43b9-a24a-d5d095e201b1
+		summarizeBy: none
+		sourceColumn: order_delivered_customer_date
+
+		variation Variation
+			isDefault
+			relationship: 4de380d6-a5a7-43c4-9d7c-7fd197e94019
+			defaultHierarchy: LocalDateTable_fb3f7894-4132-434c-b263-e580aec0003a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_estimated_delivery_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1a102424-f625-44f6-87c1-11e857d84afc
+		summarizeBy: none
+		sourceColumn: order_estimated_delivery_date
+
+		variation Variation
+			isDefault
+			relationship: e96fe4b0-437b-48ad-ba91-de2dad5045ec
+			defaultHierarchy: LocalDateTable_aa1c5fc5-d276-4430-8d93-255edbe2a1a5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryDelayDays =
+			
+			DATEDIFF(
+			    'olist_orders_dataset'[order_estimated_delivery_date],
+			    'olist_orders_dataset'[order_delivered_customer_date],
+			    DAY
+			)
+		formatString: 0
+		lineageTag: e906f1a3-ff5c-4783-86be-97497652d4a3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column 'Purchase Date' =
+			DATE(
+			    YEAR([order_purchase_timestamp]),
+			    MONTH([order_purchase_timestamp]),
+			    DAY([order_purchase_timestamp])
+			)
+		formatString: General Date
+		lineageTag: 2e7cbdf5-4e42-4ccf-8bf1-4d0e146802bb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Time (Estimate DAY)' = ```
+			
+			DATEDIFF('olist_orders_dataset'[order_approved_at], 'olist_orders_dataset'[order_estimated_delivery_date], DAY) 
+			```
+		formatString: 0
+		lineageTag: 4cf231f3-4a46-4356-88e7-1a6da3f07ed3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Time (Day)' = ```
+			DATEDIFF('olist_orders_dataset'[order_approved_at],'olist_orders_dataset'[order_delivered_customer_date], DAY) 
+			```
+		formatString: 0
+		lineageTag: b87f031e-5800-4f1a-8ba5-57f1f2a9354f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Late/Early' = ```
+			
+			'olist_orders_dataset'[Delivery Time (Estimate DAY)] - 'olist_orders_dataset'[Delivery Time (Day)]  
+			```
+		formatString: 0
+		lineageTag: da6262f9-4ff6-44ac-91aa-2608034c172b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Status' = ```
+			
+			IF('olist_orders_dataset'[Delivery Late/Early] > 0, "Early",   
+			IF('olist_orders_dataset'[Delivery Late/Early] = 0, "On Time", "Late")) 
+			```
+		lineageTag: dc88221f-d3e4-45f3-b41f-e74cb263538f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition olist_orders_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\olist_orders_dataset.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", type text}, {"customer_id", type text}, {"order_status", type text}, {"order_purchase_timestamp", type datetime}, {"order_approved_at", type datetime}, {"order_delivered_carrier_date", type datetime}, {"order_delivered_customer_date", type datetime}, {"order_estimated_delivery_date", type datetime}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"order_status", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"order_status", Text.Clean, type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Cleaned Text", each [order_id] <> null and [order_id] <> ""),
+				    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each [customer_id] <> null and [customer_id] <> ""),
+				    #"Filtered Rows2" = Table.SelectRows(#"Filtered Rows1", each [order_id] <> null and [order_id] <> ""),
+				    #"Filtered Rows3" = Table.SelectRows(#"Filtered Rows2", each [customer_id] <> null and [customer_id] <> "")
+				in
+				    #"Filtered Rows3"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

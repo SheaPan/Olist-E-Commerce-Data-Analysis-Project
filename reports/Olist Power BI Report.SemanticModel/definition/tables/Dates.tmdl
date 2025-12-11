@@ -1,0 +1,65 @@
+table Dates
+	lineageTag: bd0e8af5-273a-4f21-9fa7-24757805b0f1
+
+	column Date
+		formatString: General Date
+		lineageTag: f84f7296-5aba-43bd-affe-8d3855614ea3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 0cd911f0-e82b-4060-8ff4-13a8b2de70ac
+			defaultHierarchy: LocalDateTable_c54e583f-5196-4a67-b863-4e64ce630ae5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: a3813131-e74a-4107-9600-9a11d5d47fe0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: 94958e45-3ef1-4de0-8dad-50cd9ea1cefd
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: 5ec8480b-bdf9-4c1c-b254-8c61f0125f6b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month
+		lineageTag: 8f206f8c-1486-48b8-b499-8f1c69a3967d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year-Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dates = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR (DATE(2016,1,1), DATE(2018,12,31)),
+				    "Year", YEAR([Date]),
+				    "Month Number", MONTH([Date]),
+				    "Month Name", FORMAT([Date], "MMMM"),
+				    "Year-Month", FORMAT([Date], "YYYY-MM")
+				)
+
+	annotation PBI_Id = 52514080d189431bac88e0ec0a293e63
+

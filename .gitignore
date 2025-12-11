@@ -1,0 +1,14 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Ignore the compiled Power BI files, as we track the source code
+*.pbix
+*.pbit
+
+# Ignore Power BI Desktop internal cache/settings
+.pbi/
+*.json.artifact
+
+# Ignore general system files
+*.DS_Store
+Thumbs.db

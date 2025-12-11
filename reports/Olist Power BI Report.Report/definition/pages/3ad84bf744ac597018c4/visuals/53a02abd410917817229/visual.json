@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "53a02abd410917817229",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 240,
+    "width": 320,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Are Our Customers at Risk?",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#c480a7"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customer Risk:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " ~22% fall into unsafe categories"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "High-Risk Market:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " State JP (lowest satisfaction) drives highest risk due to high-value orders, while SP as the largest market needs attention to prevent problems."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Main Drivers:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Product quality & delivery/shipping"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Trend:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Satisfaction dropped in the middle of 2018 → underlying issues impacting customers"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Future Suggestion:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Prioritize rapid-response for high-value orders and proactive support for at-risk customers"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

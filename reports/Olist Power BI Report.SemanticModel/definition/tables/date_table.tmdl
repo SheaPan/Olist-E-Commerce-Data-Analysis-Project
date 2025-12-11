@@ -1,0 +1,73 @@
+table date_table
+	lineageTag: 78115cf8-77eb-4ba4-bab5-32e7dae6f8d6
+
+	column Date
+		formatString: General Date
+		lineageTag: d5eca852-2e9e-4d16-b0d4-127b736bd8b1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: c33d1697-42cb-46cd-9a89-bce12553496b
+			defaultHierarchy: LocalDateTable_b68ce6d1-b216-4336-bad6-422df45ca519.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month =
+			
+			FORMAT('date_table'[Date], "yyyy MMM")
+		lineageTag: 74352003-b690-4fac-96a1-5f8bd27b095c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = ```
+			YEAR('date_table'[Date])
+			
+			```
+		formatString: 0
+		lineageTag: c0cc96c7-1927-4107-914e-a901480375c2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter =
+			
+			'date_table'[Year] & " Q"
+			    & IF(
+			        MONTH('date_table'[Date]) <= 3,
+			        1,
+			        IF(
+			            MONTH('date_table'[Date]) <= 6,
+			            2,
+			            IF(
+			                MONTH('date_table'[Date]) <= 9,
+			                3,
+			                4
+			            )
+			        )
+			    )
+		lineageTag: 85666207-db6f-43b7-b02a-84ab6a5d57de
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthKey =
+			
+			(YEAR('date_table'[Date]) * 100) + MONTH('date_table'[Date])
+		formatString: 0
+		lineageTag: 1f11de07-3c67-4d60-be51-f9dd21168942
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition date_table = calculated
+		mode: import
+		source =
+				
+				calendarauto()
+
+	annotation PBI_Id = 6f194b89d07f46538ea7c4e36e280ba4
+

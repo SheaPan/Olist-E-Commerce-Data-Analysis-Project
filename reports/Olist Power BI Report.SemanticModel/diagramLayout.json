@@ -1,0 +1,177 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 1369.710477725079
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 346.99467076074427,
+            "y": 2484.0962081511434
+          },
+          "nodeIndex": "olist_customers_dataset",
+          "nodeLineageTag": "14adb862-84a5-453e-8bff-feeb4997f56c",
+          "size": {
+            "height": 279,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1001.59469867491,
+            "y": 2497.958875562188
+          },
+          "nodeIndex": "olist_geolocation_dataset",
+          "nodeLineageTag": "45ece232-e8d9-4ca6-9961-24e5d2a0d625",
+          "size": {
+            "height": 229,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 666.38268695096042,
+            "y": 2142.5962081511434
+          },
+          "nodeIndex": "olist_order_items_dataset",
+          "nodeLineageTag": "65e07b25-86e9-4cdc-b54c-95a82428bf2a",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 351.81333705522212,
+            "y": 1781.2908649548049
+          },
+          "nodeIndex": "olist_order_payments_dataset",
+          "nodeLineageTag": "e4b1c043-1853-460a-a10d-1d868b7a1a80",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 344.576249864857,
+            "y": 2084.6671916686905
+          },
+          "nodeIndex": "olist_orders_dataset",
+          "nodeLineageTag": "5eada4b0-1ab6-41d0-a294-fc498f82454f",
+          "size": {
+            "height": 298.51052537532428,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 669.38268695096042,
+            "y": 1762.3348660713714
+          },
+          "nodeIndex": "olist_products_dataset",
+          "nodeLineageTag": "32114217-3113-483c-bd47-8678e52d0ed3",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1005.2320312638656,
+            "y": 2154.505541298382
+          },
+          "nodeIndex": "olist_sellers_dataset",
+          "nodeLineageTag": "0e495bd8-5005-4002-97ec-c6c0764d2609",
+          "size": {
+            "height": 227,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 1831.1359813932113
+          },
+          "nodeIndex": "Dates",
+          "nodeLineageTag": "bd0e8af5-273a-4f21-9fa7-24757805b0f1",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 10.615815047648994,
+            "y": 2113.3135215242532
+          },
+          "nodeIndex": "olist_reviews_dataset",
+          "nodeLineageTag": "deeb0001-63a9-4e34-a59d-c8c11bb904ba",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 2.3131123449464752,
+            "y": 2462.0557569739944
+          },
+          "nodeIndex": "olist_review_word_dataset",
+          "nodeLineageTag": "eca031fc-0d5a-4187-ad9d-8c031275a92b",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 741.55114737514725,
+            "y": 2755.4013000369123
+          },
+          "nodeIndex": "location",
+          "nodeLineageTag": "71460b44-40db-4231-bee4-a6c1f984f551",
+          "size": {
+            "height": 186.7447373123382,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1289.2320312638656,
+            "y": 1077.3505409960633
+          },
+          "nodeIndex": "date_table",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 67.89756047895726,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

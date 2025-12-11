@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "f7e0d1b9111c0b010d56",
+  "displayName": "Delivery Time",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

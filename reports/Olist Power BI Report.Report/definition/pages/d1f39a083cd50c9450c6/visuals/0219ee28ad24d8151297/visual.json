@@ -1,0 +1,230 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0219ee28ad24d8151297",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 240,
+    "width": 320,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Conclusions of All:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#c480a7"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "São Paulo",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " leads sales; other smaller regions have untapped growth opportunities.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "Peak seasons",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " (e.g., Black Friday) offer higher revenue potential.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "High-value",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": " items",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " (e.g., Watches & Gifts, Computers) drive revenue. Everyday products also sell frequently.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "Shipping delays",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " are largely unrelated to physical product characteristics.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "Most",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " late deliveries",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " come from ",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "Roraima",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "; longer delivery times lower reviews.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "A few ",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "unhappy customers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " can significantly impact revenue.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

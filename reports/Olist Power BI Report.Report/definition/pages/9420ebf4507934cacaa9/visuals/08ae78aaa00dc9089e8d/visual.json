@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "08ae78aaa00dc9089e8d",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 10000,
+    "height": 720,
+    "width": 160,
+    "tabOrder": 10012
+  },
+  "visualGroup": {
+    "displayName": "Left bar",
+    "groupMode": "ScaleMode"
+  }
+}

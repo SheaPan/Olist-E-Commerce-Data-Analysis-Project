@@ -1,0 +1,86 @@
+table olist_geolocation_dataset
+	lineageTag: 45ece232-e8d9-4ca6-9961-24e5d2a0d625
+
+	column geolocation_zip_code_prefix
+		dataType: string
+		lineageTag: b6471f36-1f1f-47f3-ba34-86d32b52bd0f
+		summarizeBy: none
+		sourceColumn: geolocation_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column geolocation_lat
+		dataType: double
+		lineageTag: 1a3cbd47-eefa-4467-bd6d-bd1856fbacbe
+		summarizeBy: sum
+		sourceColumn: geolocation_lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column geolocation_lng
+		dataType: double
+		lineageTag: 6fa25a27-e2d5-4183-afe1-e661fffe3c99
+		summarizeBy: sum
+		sourceColumn: geolocation_lng
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column geolocation_city
+		dataType: string
+		lineageTag: c9c5b5e3-de22-402b-837e-bd9113856ba4
+		summarizeBy: none
+		sourceColumn: geolocation_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column geolocation_state
+		dataType: string
+		lineageTag: 2771eca2-b179-46b3-9cd9-ee999760a531
+		summarizeBy: none
+		sourceColumn: geolocation_state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition olist_geolocation_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\olist_geolocation_dataset.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"geolocation_zip_code_prefix", Int64.Type}, {"geolocation_lat", type number}, {"geolocation_lng", type number}, {"geolocation_city", type text}, {"geolocation_state", type text}}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type",{{"geolocation_city", Text.Proper, type text}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Capitalized Each Word",{{"geolocation_city", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"geolocation_city", Text.Clean, type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Cleaned Text","São Paulo","Sao Paulo",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value",{{"geolocation_zip_code_prefix", type text}}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Changed Type1","Á","A",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","ã","a",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","ç","c",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","é","e",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","í","i",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","ú","u",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","ê","e",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Ó","O",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","á","a",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","ó","o",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","ô","o",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","Sao Luiz Do Paraitinga","Sao Luis Do Paraitinga",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","â","a",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","Sao Joao Do Pau D%26Apos%3Balho","Sao Joao Do Pau D‘Alho",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","Sao Joao Do Pau D Alho","Sao Joao Do Pau D‘Alho",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value15","Sao Joao Do Pau Dalho","Sao Joao Do Pau D‘Alho",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value17" = Table.ReplaceValue(#"Replaced Value16","´Teresopolis","Teresopolis",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value18" = Table.ReplaceValue(#"Replaced Value17","...Arraial Do Cabo","Arraial Do Cabo",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value19" = Table.ReplaceValue(#"Replaced Value18","4º Centenario","4O. Centenario",Replacer.ReplaceText,{"geolocation_city"}),
+				    #"Replaced Value20" = Table.ReplaceValue(#"Replaced Value19","* Cidade","Cidade",Replacer.ReplaceText,{"geolocation_city"})
+				in
+				    #"Replaced Value20"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

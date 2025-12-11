@@ -1,0 +1,106 @@
+relationship 2007dd5e-287d-44c8-af0b-c6355528e983
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_order_items_dataset.shipping_limit_date
+	toColumn: LocalDateTable_e8ae9157-837c-401d-8ea4-d887e0e6ef04.Date
+
+relationship becae6ff-4493-4ce4-912b-c4466893df63
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_orders_dataset.order_approved_at
+	toColumn: LocalDateTable_5ba4b3eb-82c1-47e9-89ab-821dc20f96d4.Date
+
+relationship 13b48f29-154c-4431-b19f-1ff88a4789f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_orders_dataset.order_delivered_carrier_date
+	toColumn: LocalDateTable_e15aa571-1835-47b1-8b2c-b233158be589.Date
+
+relationship 4de380d6-a5a7-43c4-9d7c-7fd197e94019
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_orders_dataset.order_delivered_customer_date
+	toColumn: LocalDateTable_fb3f7894-4132-434c-b263-e580aec0003a.Date
+
+relationship e96fe4b0-437b-48ad-ba91-de2dad5045ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_orders_dataset.order_estimated_delivery_date
+	toColumn: LocalDateTable_aa1c5fc5-d276-4430-8d93-255edbe2a1a5.Date
+
+relationship AutoDetected_85112d73-a045-49ea-8b9b-b0fc07ac266b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: olist_orders_dataset.customer_id
+	toColumn: olist_customers_dataset.customer_id
+
+relationship AutoDetected_4f56dfae-4a90-4e6e-9857-81074dba5a3d
+	crossFilteringBehavior: bothDirections
+	fromColumn: olist_order_items_dataset.order_id
+	toColumn: olist_orders_dataset.order_id
+
+relationship AutoDetected_681ec343-3799-4b34-8241-3d965caf510c
+	fromColumn: olist_order_payments_dataset.order_id
+	toColumn: olist_orders_dataset.order_id
+
+relationship AutoDetected_44ea6324-3181-448d-8865-593b9b52ba64
+	fromColumn: olist_order_items_dataset.product_id
+	toColumn: olist_products_dataset.product_id
+
+relationship AutoDetected_e26bb225-4ef0-4573-ac8a-ee95fddfe2ef
+	fromColumn: olist_order_items_dataset.seller_id
+	toColumn: olist_sellers_dataset.seller_id
+
+relationship 0fb0ed7c-eda2-8959-13cf-c9ac93b70a47
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: olist_geolocation_dataset.geolocation_zip_code_prefix
+	toColumn: olist_sellers_dataset.seller_zip_code_prefix
+
+relationship d396bd33-b393-2bf6-1641-0d3e224a57a2
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: olist_geolocation_dataset.geolocation_zip_code_prefix
+	toColumn: olist_customers_dataset.customer_zip_code_prefix
+
+relationship 0cd911f0-e82b-4060-8ff4-13a8b2de70ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dates.Date
+	toColumn: LocalDateTable_c54e583f-5196-4a67-b863-4e64ce630ae5.Date
+
+relationship 9f01642b-9b28-4766-85e8-7d9e8f695a16
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_reviews_dataset.review_creation_date
+	toColumn: LocalDateTable_00cc6722-4644-45c7-9b27-1ae228fa6fd3.Date
+
+relationship 4b4db25f-5c67-4d04-9faa-499e1c7c3d4b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: olist_reviews_dataset.review_answer_timestamp
+	toColumn: LocalDateTable_5ab73f0f-fae8-478a-bfb2-35b478f90e69.Date
+
+relationship AutoDetected_26595ce3-476f-4188-87b1-28ffae4d87c3
+	fromColumn: olist_reviews_dataset.order_id
+	toColumn: olist_orders_dataset.order_id
+
+relationship 7bd7acb4-516e-5901-2a79-eebb0501cbea
+	fromColumn: olist_orders_dataset.'Purchase Date'
+	toColumn: Dates.Date
+
+relationship 118dbc57-c9a9-d1a3-f62a-20602f305ab1
+	crossFilteringBehavior: bothDirections
+	fromColumn: olist_geolocation_dataset.geolocation_city
+	toColumn: location.geolocation_city
+
+relationship adfce98a-5acf-5061-ade4-ea9668038381
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: olist_customers_dataset.customer_city
+	toColumn: location.City
+
+relationship c33d1697-42cb-46cd-9a89-bce12553496b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: date_table.Date
+	toColumn: LocalDateTable_b68ce6d1-b216-4336-bad6-422df45ca519.Date
+
+relationship 8ea824fb-2d6b-1e86-91f6-d1b0ad0f0078
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: olist_orders_dataset.order_purchase_timestamp
+	toColumn: Dates.Date
+

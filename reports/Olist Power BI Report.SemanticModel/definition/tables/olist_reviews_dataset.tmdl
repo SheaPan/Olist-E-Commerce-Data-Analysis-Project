@@ -1,0 +1,167 @@
+table olist_reviews_dataset
+	lineageTag: deeb0001-63a9-4e34-a59d-c8c11bb904ba
+
+	measure 'Average Score' = AVERAGE(olist_reviews_dataset[sentiment_score])
+		lineageTag: 0a3a54b5-6c60-4c8c-9b94-4f7a538aa795
+
+	measure 'Total Reviews' = DISTINCTCOUNT(olist_reviews_dataset[review_id])
+		formatString: 0
+		lineageTag: a8f3e4d8-abd6-4fdf-9a53-fc681a68df43
+
+	measure 'Negative Review Revenue' =
+			
+			CALCULATE(
+			    'olist_order_items_dataset'[Total Revenue],
+			    FILTER(
+			        'olist_reviews_dataset',
+			        'olist_reviews_dataset'[sentiment_category] = "Negative"
+			    )
+			)
+		lineageTag: 4ecd09a6-2926-4f99-977f-5ae9d9b5f5bb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Negative Revenue' =
+			
+			DIVIDE(
+			    [Negative Review Revenue],
+			    [Total Revenue],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b25edc8e-2e3a-40a7-8999-e44f6a179514
+
+	measure '% of Customer' =
+			
+			DIVIDE(
+			    COUNTROWS(olist_reviews_dataset),
+			    CALCULATE(
+			        COUNTROWS(olist_reviews_dataset),
+			        ALLSELECTED(olist_reviews_dataset)
+			    )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7bf0e89d-ef41-4d26-988d-88d359d9f4a0
+
+	column review_id
+		dataType: string
+		lineageTag: 91c920a0-bc02-412e-a5d5-e707b7b9fe59
+		summarizeBy: none
+		sourceColumn: review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		lineageTag: ba6dde7c-0fa9-4413-8480-2802100a0862
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_score
+		dataType: int64
+		formatString: 0
+		lineageTag: 5028814b-a73e-4ea1-a72b-6c51c8841657
+		summarizeBy: sum
+		sourceColumn: review_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_creation_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0a9d5af8-9135-4206-ad19-782310e78b69
+		summarizeBy: none
+		sourceColumn: review_creation_date
+
+		variation Variation
+			isDefault
+			relationship: 9f01642b-9b28-4766-85e8-7d9e8f695a16
+			defaultHierarchy: LocalDateTable_00cc6722-4644-45c7-9b27-1ae228fa6fd3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_answer_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6aa30c81-30d9-4213-a4e0-ba55e3fc7535
+		summarizeBy: none
+		sourceColumn: review_answer_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 4b4db25f-5c67-4d04-9faa-499e1c7c3d4b
+			defaultHierarchy: LocalDateTable_5ab73f0f-fae8-478a-bfb2-35b478f90e69.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_title
+		dataType: string
+		lineageTag: 558db1c9-00fe-4c41-b02c-61612a613d29
+		summarizeBy: none
+		sourceColumn: review_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_message
+		dataType: string
+		lineageTag: bc674dfb-d1ff-4ed7-8cd1-1d0c1530e5fc
+		summarizeBy: none
+		sourceColumn: review_message
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentiment_score
+		dataType: double
+		lineageTag: 91a8caf4-0246-4003-919d-f80767f36dfd
+		summarizeBy: sum
+		sourceColumn: sentiment_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sentiment_category
+		dataType: string
+		lineageTag: a46cfec1-c488-4d1b-b537-364723cb093c
+		summarizeBy: none
+		sourceColumn: sentiment_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column cluster_label
+		dataType: string
+		lineageTag: 8c025905-8157-4756-890a-33c3cb189fce
+		summarizeBy: none
+		sourceColumn: cluster_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column cluster_characteristic
+		dataType: string
+		lineageTag: 3d9ff5e0-184e-4eff-820e-874f58f99857
+		summarizeBy: none
+		sourceColumn: cluster_characteristic
+
+		annotation SummarizationSetBy = Automatic
+
+	partition olist_reviews_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\spec\olist_reviews_dataset.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"review_id_x", type text}, {"order_id", type text}, {"review_score", Int64.Type}, {"review_creation_date", type datetime}, {"review_answer_timestamp", type datetime}, {"review_title", type text}, {"review_message", type text}, {"vader_sentiment_compound", type number}, {"sentiment_category", type text}, {"cluster_label", type text}, {"cluster_characteristic", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"review_id_x", "review_id"}, {"vader_sentiment_compound", "sentiment_score"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns","Extreme Detractors","High-Risk Detractors",Replacer.ReplaceText,{"cluster_label"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Disappointed Neutrals","At-Risk Customers",Replacer.ReplaceText,{"cluster_label"}),
+				    #"Removed Blank Rows" = Table.SelectRows(#"Replaced Value1", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Blank Rows", {"review_id"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

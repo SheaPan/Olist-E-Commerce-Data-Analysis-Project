@@ -1,0 +1,95 @@
+table olist_order_payments_dataset
+	lineageTag: e4b1c043-1853-460a-a10d-1d868b7a1a80
+
+	measure TotalPayment = SUM('olist_order_payments_dataset'[payment_value])
+		lineageTag: ad6c9d25-1b01-45d9-80c6-a4b2dec54533
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue by Item' = SUM('olist_order_items_dataset'[item_price])
+		lineageTag: 1c5921f5-3d13-4fd6-9cbd-fdd23b4d8ccf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales Amt' = SUM('olist_order_payments_dataset'[payment_value])
+		lineageTag: d24a1aec-083d-45a4-99de-69768d1e3b44
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Sales' = SUM('olist_order_payments_dataset'[payment_value])
+		lineageTag: 80b658d3-a223-435f-bfe4-d93a4564407a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Daily Sales' = ```
+			
+			DIVIDE(
+			    [Total Sales],
+			    DISTINCTCOUNT('date_table'[Date])
+			)
+			
+			```
+		formatString: #,0.0
+		lineageTag: 743e933b-a4b8-4ed5-b28f-115c6b3f1107
+
+	column order_id
+		dataType: string
+		lineageTag: 84bea263-11fa-49b6-84f8-2643bdc06f17
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_sequential
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f2f9831-7207-4d26-b4b3-c6beca99bcc4
+		summarizeBy: sum
+		sourceColumn: payment_sequential
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_type
+		dataType: string
+		lineageTag: 12e6b872-f09e-44e0-a5c9-ce096e384f9b
+		summarizeBy: none
+		sourceColumn: payment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_installments
+		dataType: int64
+		formatString: 0
+		lineageTag: 13b2b6dd-0b03-4bfd-bb8c-442914c45264
+		summarizeBy: sum
+		sourceColumn: payment_installments
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_value
+		dataType: double
+		lineageTag: 8e6aea0a-d11b-4cec-948d-4b9e4295932f
+		summarizeBy: sum
+		sourceColumn: payment_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition olist_order_payments_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\olist_order_payments_dataset.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", type text}, {"payment_sequential", Int64.Type}, {"payment_type", type text}, {"payment_installments", Int64.Type}, {"payment_value", type number}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"payment_type", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"payment_type", Text.Clean, type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Cleaned Text", each [order_id] <> null and [order_id] <> "")
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

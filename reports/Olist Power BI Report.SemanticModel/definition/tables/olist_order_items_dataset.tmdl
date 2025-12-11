@@ -1,0 +1,268 @@
+table olist_order_items_dataset
+	lineageTag: 65e07b25-86e9-4cdc-b54c-95a82428bf2a
+
+	measure 'Total Revenue' = SUM('olist_order_payments_dataset'[payment_value])
+		lineageTag: 83ba4c86-3b5f-423d-9e29-505296baa693
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Orders' = DISTINCTCOUNT('olist_order_payments_dataset'[order_id])
+		formatString: 0
+		lineageTag: f717bb0d-79cf-4649-8b07-5334979bb28f
+
+	measure AvgOrderValue = DIVIDE([Total Revenue], [Total Orders], 0)
+		formatString: #,0.00
+		lineageTag: a3487181-0c5f-4b9c-b2e9-61bf07ed99b2
+
+	measure AvgFreightPerProduct =
+			
+			AVERAGEX(
+			    VALUES('olist_order_items_dataset'[product_id]),
+			    CALCULATE(AVERAGE('olist_order_items_dataset'[freight_cost]))
+			)
+		lineageTag: e8a0866b-b1fd-4e8e-b0a8-bd7e346add74
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sum of Order Item ID' = ```
+			
+			SUM('olist_order_items_dataset'[order_item_id])
+			
+			```
+		lineageTag: eafebcad-0a58-4948-8031-07c36a4efd77
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue % of Total' = DIVIDE([Revenue by Category], [Total Orders], 0)
+		lineageTag: b5a6a7e6-e6a8-4474-8125-8f3a4115d2f9
+
+	measure Profit = olist_order_items_dataset[Total Revenue] - olist_order_items_dataset[Total Freight Cost]
+		lineageTag: 10e8029e-a943-4a48-abd4-29cb7295f890
+
+	measure 'Total Freight Cost' = SUM('olist_order_items_dataset'[freight_cost])
+		lineageTag: 20c4145a-33cd-40ae-8c6e-dee1da907057
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Measure
+		lineageTag: 6392ed2b-c7e6-4f31-b3d7-cf272288b516
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure 'Revenue by Category' = SUM('olist_order_items_dataset'[item_price])
+		lineageTag: 1527f1e7-f281-4726-a1b6-20ec6caae13f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Items Ordered' =
+			
+			SUM('olist_order_items_dataset'[order_item_id])
+		formatString: 0
+		lineageTag: c1b8fe64-e30f-4d4b-aa35-27802c05e082
+
+	measure 'Average Items per Day' = ```
+			
+			AVERAGEX(
+			    'date_table',
+			    COALESCE([Total Items Ordered], 0)
+			)
+			
+			```
+		lineageTag: 9cf77514-dd49-481d-adc3-8a19b30317ba
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YoY % Growth' =
+			
+			DIVIDE(
+			    [Total Revenue] - [YoY Revenue],
+			    [YoY Revenue],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e79d6d80-f576-400d-8ea1-97e9b2b6a748
+
+	measure 'Rolling Avg Revenue' = ```
+			
+			CALCULATE(
+			    AVERAGEX(
+			        DATESINPERIOD('Dates'[Date], MAX('Dates'[Date]), -3, MONTH),
+			        [Total Revenue]
+			    )
+			)
+			
+			```
+		lineageTag: 5ed88cfe-7885-41bc-8e0b-5036e9c7a0e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Deviation' = ```
+			
+			[Total Revenue] - [Rolling Avg Revenue]
+			
+			```
+		lineageTag: 6aea17ed-6a06-49f1-aaec-71baf59b1695
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Is Outlier' = ```
+			
+			IF(
+			    ABS([Revenue Deviation]) >
+			    (1.5 * STDEVX.P(VALUES('Dates'[Date]), [Total Revenue])),
+			    "Outlier",
+			    "Normal"
+			)
+			
+			```
+		lineageTag: 699a54dc-f372-4b31-a9fe-35ad3c66f0c7
+
+	measure 'Outlier Flag' = ```
+			
+			VAR Deviation = [Revenue Deviation]
+			VAR Threshold = 1.5 * [Revenue StdDev]
+			RETURN
+			    IF(
+			        ABS(Deviation) > Threshold,
+			        "Outlier",
+			        "Normal"
+			    )
+			
+			```
+		lineageTag: c8a4248e-9d9f-4719-939f-05dec17b7de5
+
+	measure 'Revenue StdDev' = ```
+			
+			STDEVX.P(
+			    VALUES('Dates'[Year-Month]),
+			    [Total Revenue]
+			)
+			
+			```
+		lineageTag: 821bc7b7-04a8-47ea-9219-76beaf896dfe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Outlier Magnitude' = ```
+			
+			ABS([Revenue Deviation])
+			
+			```
+		lineageTag: a789a85d-188f-482e-80c9-da16a0c9b0b1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_id
+		dataType: string
+		lineageTag: 28d3a00a-4e98-491b-ae6c-dfc6ac687a4e
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_item_id
+		dataType: string
+		lineageTag: db2e0a7b-4939-4ed5-bcd5-f843208690be
+		summarizeBy: none
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: a4c55624-0d63-485e-93bd-7ecf858fe567
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		lineageTag: 02ea1b45-0ef3-44a0-90f7-e17a5aaeae9e
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_limit_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7a44c98a-461c-42f8-a031-34acc43aab66
+		summarizeBy: none
+		sourceColumn: shipping_limit_date
+
+		variation Variation
+			isDefault
+			relationship: 2007dd5e-287d-44c8-af0b-c6355528e983
+			defaultHierarchy: LocalDateTable_e8ae9157-837c-401d-8ea4-d887e0e6ef04.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column item_price
+		dataType: double
+		lineageTag: 486e52d8-3d03-4ca9-b8b2-614e49d3fae2
+		summarizeBy: sum
+		sourceColumn: item_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column freight_cost
+		dataType: double
+		lineageTag: d031aa2f-fe5a-40f0-a1f5-73b6941eca70
+		summarizeBy: sum
+		sourceColumn: freight_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_cost
+		dataType: double
+		lineageTag: f260c402-f883-4004-a8f0-3e2580748b70
+		summarizeBy: sum
+		sourceColumn: total_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_weight_g =
+			
+			RELATED(olist_products_dataset[product_weight_g])
+		formatString: 0
+		lineageTag: b9f14f8e-4c77-4884-9fea-ec0e25946c88
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column ProductVolume_cm3 = RELATED(olist_products_dataset[ProductVolume_cm3])
+		formatString: 0
+		lineageTag: a8bc9706-3a03-43ac-84f0-cf33316d3e21
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	partition olist_order_items_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\olist_order_items_dataset.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", type text}, {"order_item_id", Int64.Type}, {"product_id", type text}, {"seller_id", type text}, {"shipping_limit_date", type datetime}, {"price", type number}, {"freight_value", type number}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Changed Type", {"price"}),
+				    #"Removed Duplicates1" = Table.Distinct(#"Removed Duplicates", {"order_id", "order_item_id"}),
+				    #"Removed Blank Rows" = Table.SelectRows(#"Removed Duplicates1", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Blank Rows",{{"price", "item_price"}, {"freight_value", "freight_cost"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "total_cost", each [item_price]+[freight_cost]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"total_cost", type number}, {"order_item_id", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type1", each [order_id] <> null and [order_id] <> ""),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Filtered Rows",{{"item_price", type number}, {"freight_cost", type number}, {"total_cost", type number}})
+				in
+				    #"Changed Type2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0e35e83326d6e70b7134",
+  "position": {
+    "x": 824,
+    "y": 24,
+    "z": 8000,
+    "height": 104,
+    "width": 440,
+    "tabOrder": 22000
+  },
+  "visualGroup": {
+    "displayName": "Time filter",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

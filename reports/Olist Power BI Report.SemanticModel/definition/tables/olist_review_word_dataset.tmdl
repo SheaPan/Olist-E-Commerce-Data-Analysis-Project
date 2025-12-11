@@ -1,0 +1,63 @@
+table olist_review_word_dataset
+	lineageTag: eca031fc-0d5a-4187-ad9d-8c031275a92b
+
+	column Theme
+		dataType: string
+		lineageTag: 0dc986f1-734b-4055-a569-ac7113b4f6d8
+		summarizeBy: none
+		sourceColumn: Theme
+
+		annotation SummarizationSetBy = Automatic
+
+	column Keywords
+		dataType: string
+		lineageTag: 5083ddd3-da9b-4ca9-bab3-ab5433390132
+		summarizeBy: none
+		sourceColumn: Keywords
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sentiment_Category
+		dataType: string
+		lineageTag: 0ffc86bf-8a56-4daa-8e6a-37d8caf0a0f4
+		summarizeBy: none
+		sourceColumn: Sentiment_Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frequency
+		dataType: int64
+		formatString: 0
+		lineageTag: e83fe37d-dac3-48c6-bd51-7a91d5d41aba
+		summarizeBy: sum
+		sourceColumn: Frequency
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Sentiment_Category Hierarchy'
+		lineageTag: 20abf308-a185-4f85-abda-20a50e3e92f6
+
+		level Sentiment_Category
+			lineageTag: d2b50f6a-a68a-4c1d-ae7d-f59e4777c032
+			column: Sentiment_Category
+
+		level Theme
+			lineageTag: 2c9b7f8b-a292-4601-99d3-e009973d80d6
+			column: Theme
+
+		level Keywords
+			lineageTag: c0703e05-0e07-4b28-aac9-c6d39a3d7872
+			column: Keywords
+
+	partition olist_review_word_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\spec\olist_review_word_dataset.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Theme", type text}, {"Keywords", type text}, {"Sentiment_Category", type text}, {"Frequency", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

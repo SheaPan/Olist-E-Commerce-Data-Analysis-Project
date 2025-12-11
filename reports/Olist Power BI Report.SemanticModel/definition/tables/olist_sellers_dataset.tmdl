@@ -1,0 +1,57 @@
+table olist_sellers_dataset
+	lineageTag: 0e495bd8-5005-4002-97ec-c6c0764d2609
+
+	column seller_id
+		dataType: string
+		lineageTag: 6c92338d-f9bf-4161-b23a-ea3aade8e2e0
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_zip_code_prefix
+		dataType: string
+		lineageTag: c295a392-0139-4aa2-b688-bc7669b2bfb3
+		summarizeBy: none
+		sourceColumn: seller_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_city
+		dataType: string
+		lineageTag: 1613f9ca-3981-49e7-80a4-1fafe647b304
+		summarizeBy: none
+		sourceColumn: seller_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_state
+		dataType: string
+		lineageTag: c90ece56-42ba-4720-b72b-4b8fae62baad
+		summarizeBy: none
+		sourceColumn: seller_state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition olist_sellers_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\olist_sellers_dataset.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"seller_id", type text}, {"seller_zip_code_prefix", Int64.Type}, {"seller_city", type text}, {"seller_state", type text}}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type",{{"seller_city", Text.Proper, type text}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Capitalized Each Word",{{"seller_city", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"seller_city", Text.Clean, type text}}),
+				    #"Trimmed Text1" = Table.TransformColumns(#"Cleaned Text",{{"seller_state", Text.Trim, type text}}),
+				    #"Cleaned Text1" = Table.TransformColumns(#"Trimmed Text1",{{"seller_state", Text.Clean, type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Cleaned Text1", each [seller_id] <> null and [seller_id] <> ""),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Filtered Rows",{{"seller_zip_code_prefix", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type1",1)
+				in
+				    #"Removed Top Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

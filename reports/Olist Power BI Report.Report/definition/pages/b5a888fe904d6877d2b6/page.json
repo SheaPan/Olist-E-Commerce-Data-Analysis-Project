@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "b5a888fe904d6877d2b6",
+  "displayName": "State Overview",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "dbd6e9f13d6b54a5b525",
+    "type": "Default",
+    "parameters": []
+  }
+}

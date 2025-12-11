@@ -1,0 +1,95 @@
+table location
+	lineageTag: 71460b44-40db-4231-bee4-a6c1f984f551
+
+	column geolocation_city
+		lineageTag: 8dec726d-4c99-4c75-bf11-3b65273aef28
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: olist_geolocation_dataset[geolocation_city]
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		lineageTag: 095d702d-c7e2-402c-b2a7-b657a4d4226e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [City]
+
+		annotation SummarizationSetBy = Automatic
+
+	column state = ```
+			
+			MAXX(
+			    FILTER(
+			        olist_geolocation_dataset, 
+			        olist_geolocation_dataset[geolocation_city] = location[City]
+			    ),
+			    olist_geolocation_dataset[geolocation_state]
+			)
+			
+			```
+		lineageTag: 1b0a6a65-a1e7-4bf1-a135-7b9f9917dc37
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column new_state =
+			
+			"BR" & location[state]
+		lineageTag: 925406cd-03a8-46ad-a4dc-e58878786e30
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_state = ```
+			
+			SWITCH(
+			    TRUE(),
+			    location[state] = "AC", "Acre",
+			    location[state] = "AL", "Alagoas",
+			    location[state] = "AP", "Amapá",
+			    location[state] = "AM", "Amazonas",
+			    location[state] = "BA", "Bahia",
+			    location[state] = "CE", "Ceará",
+			    location[state] = "DF", "Distrito Federal",
+			    location[state] = "ES", "Espírito Santo",
+			    location[state] = "GO", "Goiás",
+			    location[state] = "MA", "Maranhão",
+			    location[state] = "MT", "Mato Grosso",
+			    location[state] = "MS", "Mato Grosso do Sul",
+			    location[state] = "MG", "Minas Gerais",
+			    location[state] = "PA", "Pará",
+			    location[state] = "PB", "Paraíba",
+			    location[state] = "PR", "Paraná",
+			    location[state] = "PE", "Pernambuco",
+			    location[state] = "PI", "Piauí",
+			    location[state] = "RJ", "Rio de Janeiro",
+			    location[state] = "RN", "Rio Grande do Norte",
+			    location[state] = "RS", "Rio Grande do Sul",
+			    location[state] = "RO", "Rondônia",
+			    location[state] = "RR", "Roraima",
+			    location[state] = "SC", "Santa Catarina",
+			    location[state] = "SP", "São Paulo",
+			    location[state] = "SE", "Sergipe",
+			    location[state] = "TO", "Tocantins",
+			    "Unknown"
+			)
+			
+			```
+		lineageTag: e7176413-a912-4f25-b177-e3c1e6346e47
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition location = calculated
+		mode: import
+		source =
+				
+				SUMMARIZE(
+				    olist_geolocation_dataset, olist_geolocation_dataset[geolocation_city], "City", DISTINCT(
+				        olist_geolocation_dataset[geolocation_city]
+				    )
+				)
+
+	annotation PBI_Id = a2e1b689b6f94b87ba8f477c1e742f64
+

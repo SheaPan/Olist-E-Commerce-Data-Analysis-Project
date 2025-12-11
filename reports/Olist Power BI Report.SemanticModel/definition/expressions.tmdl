@@ -1,0 +1,16 @@
+expression product_category_name_translation =
+		let
+		    Source = Csv.Document(File.Contents("D:\Study\Data Analytics Programme\Final Project\product_category_name_translation.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}}),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_category_name", type text}, {"product_category_name_english", type text}}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","_"," ",Replacer.ReplaceText,{"product_category_name_english"}),
+		    #"Capitalized Each Word" = Table.TransformColumns(#"Replaced Value",{{"product_category_name_english", Text.Proper, type text}})
+		in
+		    #"Capitalized Each Word"
+	lineageTag: 80f4b86f-fb92-4426-bbaa-c3ead6af99e6
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
