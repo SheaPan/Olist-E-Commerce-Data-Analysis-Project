@@ -16,7 +16,11 @@
 
 ![Delivery Time Dashboard](5_Delivery%20Time.jpg)
 
+**Delivery - Reviews by State**
+
 ![Delivery-Reviews by State Dashboard](6_Delivery-Reviews%20by%20State.jpg)
+
+**Delivery - Reviews by Order Value**
 
 ![Delivery-Reviews by Order Value Dashboard](7_Delivery-Reviews%20by%20Order%20Value.png)
 
