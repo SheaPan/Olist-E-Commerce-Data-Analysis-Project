@@ -49,33 +49,23 @@ This project aims to analyse the Olist E-commerce Dataset to extract **actionabl
 
 ## 📁 Folder Structure
 
-- [ Olist E-Commerce Data Analytics Project](#-olist-e-commerce-data-analytics-project)
-- [ Analysis Sections](#-analysis-sections)
-  - [1️. Sales Analysis](#1️-sales-analysis)
-  - [2️. Product Analysis](#2️-product-analysis)
-  - [3️. Delivery Analysis](#3️-delivery-analysis)
-  - [4️. Customer Analysis](#4️-customer-analysis)
-- [ Review Translation (Python – VS Code)](#-review-translation-python--vs-code)
-- [ Key Findings Summary](#-key-findings-summary)
-  - [ Sales Insights](#-sales-insights)
-  - [ Product Insights](#-product-insights)
-  - [ Delivery Insights](#-delivery-insights)
-  - [ Customer Insights](#-customer-insights)
-- [ Recommendations](#-recommendations)
-- [ Tools & Technologies](#-tools--technologies)
+* [data/](#)
+* [reports/](#)
+    * [Analysis Writing Report/](#reports/Analysis%20Writing%20Report/)
+        * [README.md](#reports/Analysis%20Writing%20Report/README.md)
+        * [customer.md](#reports/Analysis%20Writing%20Report/customer.md)
+        * [delivery.md](#reports/Analysis%20Writing%20Report/delivery.md)
+        * [product.md](#reports/Analysis%20Writing%20Report/product.md)
+        * [sales.md](#reports/Analysis%20Writing%20Report/sales.md)
+    * [Power BI Dashboard File/](#reports/Power%20BI%20Dashboard%20File/)
+    * [Power BI Dashboard Image/](#reports/Power%20BI%20Dashboard%20Image/)
+    * [Project Proposal.docx](#reports/Project%20Proposal.docx)
+    * [README.md](#reports/README.md)
+* [scripts/](#)
+* [.gitignore](#.gitignore)
+* [LICENSE](#LICENSE)
+* [README.md](#README.md)
 
----
-
-| Folder | Description |
-|--------|-------------|
-| [`data`](data/README.md) | Raw datasets for analysis. |
-| [`reports`](reports/README.md) | Final outputs including Power BI dashboards, presentations, and written reports. |
-| [`analysis`](analysis/README.md) | Scripts and outputs for customer, product, sales, and delivery analyses. |
-| [`dax`](dax/README.md) | DAX measures, calculated columns, and data model definitions for Power BI. |
-| [`scripts`](scripts/README.md) | Python scripts (translation), Power Query scripts, and utility helpers. |
-| [`assets`](assets/README.md) | Static assets including charts and reports. |
-
----
 
 ## 📊 Analysis Sections  
 
