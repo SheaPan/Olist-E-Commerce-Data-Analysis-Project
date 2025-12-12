@@ -60,10 +60,7 @@ This project aims to analyse the Olist E-commerce Dataset to extract **actionabl
     * [Power BI Dashboard File/](#reports/Power%20BI%20Dashboard%20File/)
     * [Power BI Dashboard Image/](#reports/Power%20BI%20Dashboard%20Image/)
     * [Project Proposal.docx](#reports/Project%20Proposal.docx)
-    * [README.md](#reports/README.md)
 * [scripts/](#)
-* [.gitignore](#.gitignore)
-* [LICENSE](#LICENSE)
 * [README.md](#README.md)
 
 
