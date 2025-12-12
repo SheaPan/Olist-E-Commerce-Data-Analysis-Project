@@ -1,10 +1,8 @@
 # Product Analysis Report – Olist E-commerce Dataset
 
-# Olist Product Analysis
-
 This analysis covers Olist's 72 product categories over the period **October 2016 – September 2018**. It examines product revenue, popularity, customer reviews, freight costs, and delivery performance to provide actionable insights and business recommendations.
 
-Portuguese product category names were translated into English, by creating a join between columns in the translation table and the products table. Measures and calculated columns were used to used to answer key questions about the dataset. The aim was to discover:
+Portuguese product category names were translated into English by creating a join between columns in the translation table and the products table. Measures and calculated columns were used to answer key questions about the dataset. The aim was to discover:
 
 •	What product categories generate the highest revenue? Are there seasonal effects on product sales?
 •	Which product categories are most frequently purchased?
@@ -13,12 +11,8 @@ Portuguese product category names were translated into English, by creating a jo
 •	Do heavy or large products lead to longer delivery delays?
 
 Visualisations were created to assist with the analysis. These have been published to a dashboard in the PowerBI Service. Screenshots are provided here.
----
 
-
-<img width="1763" height="989" alt="Screenshot 2025-12-10 131810" src="https://github.com/user-attachments/assets/5ebd1dc3-07a3-4bfd-8e03-779fec5a4629" />
-
-
+![Product Analysis](../Power%20BI%20Dashboard%20Image/3_Product%20Overview.jpg)
 
 ## 1. Top Product Categories
 
@@ -88,7 +82,7 @@ Target underperforming categories with:
 
 ---
 
-<img width="1764" height="990" alt="Screenshot 2025-12-10 131629" src="https://github.com/user-attachments/assets/23d40904-203d-4788-bfbf-601e9ef2b556" />
+![Product Analysis](../Power%20BI%20Dashboard%20Image/4_Product%20Dimensions.jpg)
 
 
 ## 3. Freight Cost Drivers
@@ -97,13 +91,13 @@ Target underperforming categories with:
 - Variability arises for **larger/heavier items**. So two products with very similar higher weight or size can have very different shipping charges. Outliers may be influenced by:  
 
   - Shipping distance  
-  - Packaging behavior  
+  - Packaging behaviour  
   - Carrier pricing rules  
   - Seller-specific logistics practices  
 
 **Recommendation:**  
 
-- Standardize packaging guidelines  
+- Standardise packaging guidelines  
 - Review pricing rules for bulky items  
 - Investigate extreme outliers to remove inefficiencies
 
@@ -111,7 +105,7 @@ Target underperforming categories with:
 
 ## 4. Delivery Delays
 
-The scatter charts, 'Large Products vs Delivery Delay' and 'Heavy Products vs Delivery Day', visualise the delivery delay for product size and product weight, respectively. The black vertical line on the horizonatal axis, shows deliveries made on time. The area to the right of the line represents late deliveries.
+The scatter charts, 'Large Products vs Delivery Delay' and 'Heavy Products vs Delivery Day', visualise the delivery delay for product size and product weight, respectively. The black vertical line on the horizontal axis shows deliveries made on time. The area to the right of the line represents late deliveries.
 
 - Most deliveries are **on time or early**, regardless of product weight or size, as shown by the data points in the shaded areas of the charts.
 - **Moderate delays** (under ~14 days) happen across all product types and have little relation to weight or size. Operational or supplier issues may play a role.  
@@ -132,7 +126,7 @@ Overall, delivery delays are largely unrelated to physical product characteristi
 - **Popularity Leaders (Units Sold):** Health & Beauty, Sports & Leisure, Computer Accessories 
 - **Seasonal Patterns:** Sports & Leisure revenue peaks in Q1; Computer Accessories units sold are highest in Q1 and Q4  
 - **Customer Satisfaction:** Dissatisfaction concentrated in a small set of categories  
-- **Freight Costs:** Increase with weight/volume but show operational variability at higher weights/volume  
+- **Freight Costs:** Increase with weight/volume but show operational variability at higher weights/volumes  
 - **Delivery Delays:** Mostly unrelated to product characteristics; better monitored by seller/region
 
 ---
