@@ -4,15 +4,15 @@
 
 ## 1. Executive Summary
 
-This report provides a comprehensive analysis of the Olist e-commerce platform's sales performance across Brazil. By combining geographic, temporal, payment, and product-level insights, we uncover key drivers of revenue, customer behavior, and growth opportunities.
+This report provides a comprehensive analysis of the Olist e-commerce platform's sales performance across Brazil. By combining geographic, temporal, payment, and product-level insights, we uncover key drivers of revenue, customer behaviour, and growth opportunities.
 
 **High-Level Findings:**
 
 - **Revenue & Orders:** Olist generated **R$16.01M** from **99.44K orders** across **3,094 sellers**.  
 - **Top Markets:** São Paulo leads revenue contributions, followed by Paraná, Minas Gerais, Rio de Janeiro, and Santa Catarina.  
-- **Payment Trends:** Credit cards dominate (78.34%), highlighting customer preference for digital installment payments.  
+- **Payment Trends:** Credit cards dominate (78.34%), highlighting customer preference for digital instalment payments.  
 - **Product Performance:** Watches & Gifts, Health & Beauty, and Computer Accessories drive the highest revenue.  
-- **Growth Patterns:** Strong growth in 2017, stabilization in 2018, with forecasts predicting continued revenue increase.
+- **Growth Patterns:** Strong growth in 2017, stabilisation in 2018, with forecasts predicting continued revenue increase.
 
 *Executive Insight:* The platform demonstrates a healthy mix of customer engagement, repeat purchases, and regional concentration. Strategic interventions in underperforming regions and diversification in payment methods can unlock additional growth.
 
@@ -76,7 +76,7 @@ Focus on **expanding seller recruitment and marketing in Northern and Northeaste
 - **Upper Bound:** BR17.07M | **Lower Bound:** BR 10.44M  
 
 **Executive Insight:**  
-The platform exhibits **strong initial growth**, followed by stabilization. Seasonal peaks, particularly during November, highlight **high-impact windows for marketing campaigns and inventory optimization**.
+The platform exhibits **strong initial growth**, followed by stabilisation. Seasonal peaks, particularly during November, highlight **high-impact windows for marketing campaigns and inventory optimisation**.
 
 **Recommendation:**  
 Leverage peak sales periods, diversify product offerings, and deploy targeted promotions to maintain momentum.
@@ -85,7 +85,7 @@ Leverage peak sales periods, diversify product offerings, and deploy targeted pr
 
 ## 4. Payment & Product Analysis
 
-**Objective:** Understand customer payment behavior and product category performance to inform strategy.
+**Objective:** Understand customer payment behaviour and product category performance to inform strategy.
 
 ### Payment Preferences
 
@@ -97,7 +97,7 @@ Leverage peak sales periods, diversify product offerings, and deploy targeted pr
 | Debit Card     | 218,000     | 1.36%      |
 
 **Insights:**  
-- **Credit card dominance** suggests customers prefer convenient, digital payments and may respond well to installment offers or loyalty rewards.  
+- **Credit card dominance** suggests customers prefer convenient, digital payments and may respond well to instalment offers or loyalty rewards.  
 - **Low debit card and voucher adoption** signals untapped revenue potential via alternative payment incentives.
 
 ### Top Product Categories
@@ -172,15 +172,12 @@ Data cleaning, correct table linking, checking for missing values, and cross-val
 They allow instalments, which is preferred by Brazilian customers. Other methods offer less flexibility.
 
 **9. Main takeaway from sales analysis:**  
-Sales are strong in key states and during seasonal peaks. Opportunities lie in under-served regions and preparing for high-demand periods.
+Sales are strong in key states and during seasonal peaks. Opportunities lie in underserved regions and in preparing for high-demand periods.
 
 **10. Data limitations:**  
-Dataset ends in 2018. Patterns are clear but current conditions may differ. Still, trends provide useful guidance for strategy.
-
----
-
+The dataset ends in 2018. Patterns are clear, but current conditions may differ. Still, trends provide useful guidance for strategy.
 
 ---
 
 ## **Conclusion:**  
-Olist exhibits strong e-commerce performance with concentrated regional revenue, predictable seasonal peaks, and clear product winners. Strategic geographic expansion, payment diversification, and targeted promotions will maximize growth potential while maintaining customer satisfaction.
+Olist exhibits strong e-commerce performance with concentrated regional revenue, predictable seasonal peaks, and clear product winners. Strategic geographic expansion, payment diversification, and targeted promotions will maximise growth potential while maintaining customer satisfaction.
