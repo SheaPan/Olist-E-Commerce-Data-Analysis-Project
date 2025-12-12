@@ -111,7 +111,7 @@ Below is a reference of all tables, columns, and their usage.
 **Used for:** Customer satisfaction, sentiment analysis, clustering review text, linking reviews to products/delivery/sellers.
 
 ---
-## 7. Order Review Table (`olist_reviews_dataset.csv`)
+## 7. Order Review Table (`olist_review__word_dataset.csv`)
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
@@ -167,6 +167,6 @@ Below is a reference of all tables, columns, and their usage.
 
 ## Notes
 
-- All tables can be linked via primary keys (e.g., `customer_id`, `order_id`, `product_id`, `seller_id`).  
+- All tables (except `olist_review__word_dataset.csv`) can be linked via primary keys (e.g., `customer_id`, `order_id`, `product_id`, `seller_id`).  
 
 
