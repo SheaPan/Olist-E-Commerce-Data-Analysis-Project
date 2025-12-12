@@ -49,18 +49,18 @@ This project aims to analyse the Olist E-commerce Dataset to extract **actionabl
 
 ## 📁 Folder Structure
 
-* [data/](#)
-* [reports/](#)
-    * [Analysis Writing Report/](#reports/Analysis%20Writing%20Report/)
-        * [customer.md](#reports/Analysis%20Writing%20Report/customer.md)
-        * [delivery.md](#reports/Analysis%20Writing%20Report/delivery.md)
-        * [product.md](#reports/Analysis%20Writing%20Report/product.md)
-        * [sales.md](#reports/Analysis%20Writing%20Report/sales.md)
-    * [Power BI Dashboard File/](#reports/Power%20BI%20Dashboard%20File/)
-    * [Power BI Dashboard Image/](#reports/Power%20BI%20Dashboard%20Image/)
-    * [Project Proposal.docx](#reports/Project%20Proposal.docx)
-* [scripts/](#)
-* [README.md](#README.md)
+* [data/](./data)
+* [reports/](./reports)
+    * [Analysis Writing Report/](./reports/Analysis%20Writing%20Report/)
+        * [customer.md](./reports/Analysis%20Writing%20Report/customer.md)
+        * [delivery.md](./reports/Analysis%20Writing%20Report/delivery.md)
+        * [product.md](./reports/Analysis%20Writing%20Report/product.md)
+        * [sales.md](./reports/Analysis%20Writing%20Report/sales.md)
+    * [Power BI Dashboard File/](./reports/Power%20BI%20Dashboard%20File/)
+    * [Power BI Dashboard Image/](./reports/Power%20BI%20Dashboard%20Image/)
+    * [Project Proposal.docx](./reports/Project%20Proposal.docx)
+* [scripts/](./scripts)
+* [README.md](./README.md)
 
 
 ## 📊 Analysis Sections  
