@@ -83,7 +83,7 @@ Insights:
 - Credit card is the most commonly used payment method.  
 - Revenue displays clear cyclical and seasonal patterns.
 
-Sales Analysis location: [Analysis Writing Report/sales.md](./reports/Analysis%20Writing%20Report/sales.md) 
+Sales Analysis location: [sales.md](./reports/Analysis%20Writing%20Report/sales.md) 
 
 ### 2️. Product Analysis
 Focus areas:
@@ -102,7 +102,7 @@ Insights:
 - Freight cost increases with product weight/volume, but shows more variability at higher weights/volumes.
 - Delivery delays are mostly unrelated to product characteristics.
 
-Product Analysis location: [analysis/Product.md](analysis/sales.md) 
+Product Analysis location: [product.md](./reports/Analysis%20Writing%20Report/product.md) 
 
 ### 3️. - Delivery Analysis
 Focus areas:
@@ -123,7 +123,7 @@ Insights:
 - Certain states (such as Roraima – RR) have extremely long delivery times.  
 - High-value orders take longer to deliver but maintain higher satisfaction.
 
-Delivery Analysis location: [analysis/Delivery.md](analysis/sales.md) 
+Delivery Analysis location: [delivery.md](./reports/Analysis%20Writing%20Report/delivery.md) 
 
 ### 4️. Customer Analysis
 **Focus areas:**
@@ -147,7 +147,7 @@ Insights:
 - Negative reviews focus on product quality, delivery delays, and cancellations.  
 - Satisfaction declined sharply in late 2018.
 
-Customer Analysis location: [analysis/sales.md](analysis/sales.md) 
+Customer Analysis location: [customer.md](./reports/Analysis%20Writing%20Report/customer.md) 
 
 ###  Recommendations  
 
@@ -165,7 +165,6 @@ Use negative sentiment spikes to detect emerging product defects early.
 
 
 ## 🔧 Tools & Technologies  
-[Back to Top](#table-of-contents)
 
 ### Power BI  
 - Star schema data modelling  
@@ -189,8 +188,8 @@ Python enabled:
 - Resume-safe workflow  
 - Retry & rate-limit handling
 
-Script location: [translate_reviews.py](scripts/translate_reviews.py)
+Script location: [scripts](scripts/)
 ```python
-# (Full script included in (scripts/translate_reviews.py)
+# (Full script included in (scripts)
 # Translates Portuguese reviews to English with retry logic and batching.
 ```
