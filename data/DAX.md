@@ -27,6 +27,56 @@ This file contains all DAX used in the **Olist E-Commerce datasets**.
 - Month = FORMAT('date_table'[Date], "yyyy MMM")
 - MonthKey = (YEAR('date_table'[Date]) * 100) + MONTH('date_table'[Date])
 
+## Table - `location`
+
+**Table:**
+- location = SUMMARIZE(
+  olist_geolocation_dataset, olist_geolocation_dataset[geolocation_city], "City", DISTINCT(
+  olist_geolocation_dataset[geolocation_city]))
+  
+**New Columns:**
+- full_state = 
+SWITCH(
+    TRUE(),
+    location[state] = "AC", "Acre",
+    location[state] = "AL", "Alagoas",
+    location[state] = "AP", "Amapá",
+    location[state] = "AM", "Amazonas",
+    location[state] = "BA", "Bahia",
+    location[state] = "CE", "Ceará",
+    location[state] = "DF", "Distrito Federal",
+    location[state] = "ES", "Espírito Santo",
+    location[state] = "GO", "Goiás",
+    location[state] = "MA", "Maranhão",
+    location[state] = "MT", "Mato Grosso",
+    location[state] = "MS", "Mato Grosso do Sul",
+    location[state] = "MG", "Minas Gerais",
+    location[state] = "PA", "Pará",
+    location[state] = "PB", "Paraíba",
+    location[state] = "PR", "Paraná",
+    location[state] = "PE", "Pernambuco",
+    location[state] = "PI", "Piauí",
+    location[state] = "RJ", "Rio de Janeiro",
+    location[state] = "RN", "Rio Grande do Norte",
+    location[state] = "RS", "Rio Grande do Sul",
+    location[state] = "RO", "Rondônia",
+    location[state] = "RR", "Roraima",
+    location[state] = "SC", "Santa Catarina",
+    location[state] = "SP", "São Paulo",
+    location[state] = "SE", "Sergipe",
+    location[state] = "TO", "Tocantins",
+    "Unknown"
+)
+- new_state = "BR" & location[state]
+- state = 
+MAXX(
+    FILTER(
+        olist_geolocation_dataset, 
+        olist_geolocation_dataset[geolocation_city] = location[City]
+    ),
+    olist_geolocation_dataset[geolocation_state]
+)
+
 ## Table - `olist_order_item_dataset`
 
 **New Columns:**
