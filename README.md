@@ -52,7 +52,6 @@ This project aims to analyse the Olist E-commerce Dataset to extract **actionabl
 * [data/](#)
 * [reports/](#)
     * [Analysis Writing Report/](#reports/Analysis%20Writing%20Report/)
-        * [README.md](#reports/Analysis%20Writing%20Report/README.md)
         * [customer.md](#reports/Analysis%20Writing%20Report/customer.md)
         * [delivery.md](#reports/Analysis%20Writing%20Report/delivery.md)
         * [product.md](#reports/Analysis%20Writing%20Report/product.md)
