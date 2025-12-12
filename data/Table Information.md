@@ -2,6 +2,10 @@
 
 This folder contains a reference to all tables, columns, and their usage.
 
+Datasets Model:
+
+![Datasets Model](Datasets%20Model.png)
+
 ---
 
 ## 1. Customer Table (`olist_customers_dataset.csv`)
