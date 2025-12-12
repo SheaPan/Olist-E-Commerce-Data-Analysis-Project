@@ -188,8 +188,38 @@ Python enabled:
 - Resume-safe workflow  
 - Retry & rate-limit handling
 
+## 💻 How to Run the Script
+
 Script location: [scripts](scripts/)
+
+1. Ensure Python 3 is installed
+2. Install required libraries:
+
 ```python
-# (Full script included in (scripts)
-# Translates Portuguese reviews to English with retry logic and batching.
+pip install pandas numpy nltk scikit-learn deep-translator
+```
+
+3. Install NLTK data:
+
+```python
+import nltk
+nltk.download('vader_lexicon')
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+
+4. Navigate to the `Olist-E-Commerce-Data-Analytics-Project` folder:
+
+```
+cd Olist-E-Commerce-Data-Analytics-Project
+```
+
+5. Run the scripts for each question individually:
+
+```
+python source_code/translate_reviews.py
+python source_code/sentiment_analysis.py
+python source_code/keywords_collection.py
+python source_code/keywords_group.py
 ```
