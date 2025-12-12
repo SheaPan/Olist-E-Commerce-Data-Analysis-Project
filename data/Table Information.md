@@ -62,11 +62,7 @@ Below is a reference of all tables, columns, and their usage.
 | shipping_limit_date    | Cutoff date for seller shipping            | Delivery performance |
 | item_cost              | Product price                               | Revenue calculation |
 | freight_value          | Shipping cost                               | Freight analysis |
-| AvgOrderValue          | Pre-calculated average order value         | Customer spending insights |
-| Total Sales            | Total sales for this item                   | Revenue analysis |
-| total_cost             | Total cost                                  | Profit and margin analysis |
-| TotalOrders            | Number of orders for this item             | Order trend analysis |
-| TotalRevenue           | Total revenue                               | Sales and revenue analysis |
+
 
 **Used for:** Sales trend analysis, revenue calculation, product popularity, freight cost analysis, linking products to orders and sellers.
 
@@ -81,8 +77,6 @@ Below is a reference of all tables, columns, and their usage.
 | payment_type           | e.g., credit card, voucher                 | Payment behavior analysis |
 | payment_installments   | Number of installments                     | Payment trend analysis |
 | payment_value          | Payment amount                             | Revenue analysis |
-| RevenueByPaymentType   | Revenue broken down by payment type        | Understand payment mix |
-| TotalPayment           | Total payment                              | Payment reconciliation |
 
 **Used for:** Payment trend analysis, forecasting, and revenue by payment type.
 
@@ -95,23 +89,28 @@ Below is a reference of all tables, columns, and their usage.
 | review_id              | Unique ID for review                        | Link review to order |
 | order_id               | Links to orders table                       | Connect review to order |
 | review_score           | Rating from 1–5                             | Customer satisfaction analysis |
-| review_title   | Title of the review                          | Sentiment/topic analysis |
-| review_message | Full review text                             | Sentiment/topic analysis |
+| review_title (Portugese version)   | Title of the review                          | Sentiment/topic analysis |
+| review_message (Portugese version)| Full review text                             | Sentiment/topic analysis |
+| review_creation_date   | Date customer wrote the review               | Time trend analysis |
+| review_answer_timestamp| When the review was answered                 | Customer service tracking |
+
+**New columns added through Python**
+
+| Column                 | Description                                | Usage |
+|------------------------|--------------------------------------------|-------|
+| review_title (English version)   | Title of the review                          | Sentiment/topic analysis |
+| review_message (English version)| Full review text                             | Sentiment/topic analysis |
 | sentiment_score | Rating from -1 to 1               | Sentiment/topic analysis |
 | sentiment_category | Postive, Negtive and Neutual                | Sentiment/topic analysis |
 | cluster_category | Customer segment based on sentiment score                | Customer segment analysis |
 | cluster_characteristic | Description of different customer cluster group                | Customer segment analysis |
-| review_creation_date   | Date customer wrote the review               | Time trend analysis |
-| review_answer_timestamp| When the review was answered                 | Customer service tracking |
-| Total Reviews | Total number of reviews                 | Review reconciliation |
-| Average Sentiment Score | Average of sentiment score | Sentiment/topic analysis |
-| Negative Review Revenue | Revenue from negative reviews | Revenue at risk modelling |
-| % Negative Revenue | Percentage of revenue from negative reviews in all revenue| Revenue at risk modelling |
 
 **Used for:** Customer satisfaction, sentiment analysis, clustering review text, linking reviews to products/delivery/sellers.
 
 ---
-## 7. Order Review Table (`olist_review__word_dataset.csv`)
+## 7. Order Review Table (`olist_review__word_dataset.csv`) 
+
+**New table added through Python**
 
 | Column                 | Description                                | Usage |
 |------------------------|--------------------------------------------|-------|
