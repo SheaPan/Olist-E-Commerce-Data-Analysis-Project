@@ -44,8 +44,12 @@ This project aims to analyse the Olist E-commerce Dataset to extract **actionabl
 
 ## 🔗 Database Schema, Table Structure & Entity Relationship Overview
 
+This folder contains datasets schema and model, table information, and all DAX calculations used in this project.
 
-
+* [data/](./data)
+    * [Datasets Model](./data/Datasets%20Model%20.png)
+    * [Table Information](./data/Table%20Information.md)
+    * [Dax](./data/Dax.md)
 
 ## 📁 Folder Structure
 
