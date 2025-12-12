@@ -10,11 +10,9 @@ Portuguese product category names were translated into English by creating a joi
 •	How do product dimensions and weight relate to freight cost?
 •	Do heavy or large products lead to longer delivery delays?
 
-Visualisations were created to assist with the analysis. These have been published to a dashboard in the PowerBI Service. Screenshots are provided here.
+## 1. Top Product Categories
 
 ![Product Analysis](../Power%20BI%20Dashboard%20Image/3_Product%20Overview.jpg)
-
-## 1. Top Product Categories
 
 ### Revenue Leaders
 Across the full sales period, the highest revenue categories are:
@@ -82,10 +80,12 @@ Target underperforming categories with:
 
 ---
 
-![Product Analysis](../Power%20BI%20Dashboard%20Image/4_Product%20Dimensions.jpg)
+
 
 
 ## 3. Freight Cost Drivers
+
+![Product Analysis](../Power%20BI%20Dashboard%20Image/4_Product%20Dimensions.jpg)
 
 - Freight costs increase with **product weight and volume**, as expected. The scatter charts 'Large Products vs Freight Charge' and 'Heavy Products vs Freight Charge' demonstrate these findings. 
 - Variability arises for **larger/heavier items**. So two products with very similar higher weight or size can have very different shipping charges. Outliers may be influenced by:  
