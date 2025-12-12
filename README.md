@@ -97,7 +97,7 @@ Insights:
 - Credit card is the most commonly used payment method.  
 - Revenue displays clear cyclical and seasonal patterns.
 
-Sales Analysis location: [analysis/sales.md](analysis/sales.md) 
+Sales Analysis location: [Analysis Writing Report/sales.md](Analysis%20Writing%20Report/sales.md) 
 
 ### 2️. Product Analysis
 Focus areas:
