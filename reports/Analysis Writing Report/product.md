@@ -4,11 +4,11 @@ This analysis covers Olist's 72 product categories over the period **October 201
 
 Portuguese product category names were translated into English by creating a join between columns in the translation table and the products table. Measures and calculated columns were used to answer key questions about the dataset. The aim was to discover:
 
-•	What product categories generate the highest revenue? Are there seasonal effects on product sales?
-•	Which product categories are most frequently purchased?
-•	Are certain product types associated with more negative reviews?
-•	How do product dimensions and weight relate to freight cost?
-•	Do heavy or large products lead to longer delivery delays?
+- What product categories generate the highest revenue? Are there seasonal effects on product sales?
+- Which product categories are most frequently purchased?
+- Are certain product types associated with more negative reviews?
+- How do product dimensions and weight relate to freight cost?
+- Do heavy or large products lead to longer delivery delays?
 
 ![Product Analysis](../Power%20BI%20Dashboard%20Image/3_Product%20Overview.jpg)
 
