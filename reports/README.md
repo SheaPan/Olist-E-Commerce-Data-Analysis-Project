@@ -1,6 +1,6 @@
 # Reports Folder
 
-This folder contains all final deliverables, including Power BI dashboards, presentations, and written reports.
+This folder contains all final deliverables, including the Power BI report and written reports.
 
 ## Subfolders
 
