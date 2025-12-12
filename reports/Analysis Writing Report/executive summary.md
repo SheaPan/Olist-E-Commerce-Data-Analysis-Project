@@ -2,6 +2,8 @@
 
 This report provides a comprehensive analysis of the Olist e-commerce platform's sales performance across Brazil. By combining geographic, temporal, payment, and product-level insights, we uncover key drivers of revenue, customer behaviour, and growth opportunities.
 
+![Executive Summary](../Power%20BI%20Dashboard%20Image/1_Overview.jpg)
+
 **High-Level Findings:**
 
 - **Revenue & Orders:** Olist generated **R$16.01M** from **99.44K orders** across **3,094 sellers**.
@@ -11,4 +13,3 @@ This report provides a comprehensive analysis of the Olist e-commerce platform's
 - **Growth Patterns:** Strong growth in 2017, stabilisation in 2018, with forecasts predicting continued revenue increase.
 
 *Executive Insight:* The platform demonstrates a healthy mix of customer engagement, repeat purchases, and regional concentration. Strategic interventions in underperforming regions and diversification in payment methods can unlock additional growth.
-
