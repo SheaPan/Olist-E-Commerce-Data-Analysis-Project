@@ -26,7 +26,7 @@ Segmentation provides a foundation for identifying high-risk customers and poten
 ---
 **Customer Analysis Dashboard**
 
-![Customer Analysis](../assets/Customer%20Analysis.jpg)
+![Customer Analysis](../Power%20BI%20Dashboard%20Image/8_Customer.jpg)
 
 ---
 
