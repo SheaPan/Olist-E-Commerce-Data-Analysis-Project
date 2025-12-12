@@ -1,8 +1,6 @@
 # Olist Dataset – Tables and Columns
 
-This folder contains all raw and cleaned datasets used in the **Olist E-Commerce Data Analytics Project**.  
-
-Below is a reference of all tables, columns, and their usage.
+This folder contains a reference to all tables, columns, and their usage.
 
 ---
 
