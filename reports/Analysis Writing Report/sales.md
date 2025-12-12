@@ -17,7 +17,11 @@ This report provides a comprehensive analysis of the Olist e-commerce platform's
 *Executive Insight:* The platform demonstrates a healthy mix of customer engagement, repeat purchases, and regional concentration. Strategic interventions in underperforming regions and diversification in payment methods can unlock additional growth.
 
 ---
+**Customer Analysis Dashboard**
 
+![Sales Analysis](../Power%20BI%20Dashboard%20Image/2_Sales.jpg)
+
+---
 ## 2. Sales Overview
 
 **Objective:** Understand overall sales performance, regional contributions, and marketplace reach.
