@@ -21,9 +21,5 @@ This folder contains analysis scripts, models, and outputs for different aspects
   
 ### `/customer`
 - Analysis related to customer insights and segmentation.
-- Includes sentiment analysis, topic extraction, clustering, and revenue-at-risk modeling.
-- Key files: word clouds, cluster visuals, sentiment distributions.
-
-## Notes
-- All outputs here are generated from cleaned datasets in `/data/cleaned`.
-- Power BI dashboards import data from this folder as needed.
+- Includes sentiment analysis, topic extraction, clustering, and revenue-at-risk modelling.
+- Key files: sentiment score, customer segments, high-risk markets, keywords from customers.
