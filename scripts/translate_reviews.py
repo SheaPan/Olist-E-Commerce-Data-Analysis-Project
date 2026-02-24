@@ -9,7 +9,7 @@ import os
 # -----------------------------
 # CONFIG
 # -----------------------------
-FILE_PATH = "reviews.csv"
+FILE_PATH = "reviews_translation.xlsx"
 BATCH_SIZE = 100           # number of rows per batch
 MIN_TEXT_LENGTH = 3
 SLEEP_TIME = 15            # seconds to wait on rate limit
@@ -26,11 +26,11 @@ except Exception as e:
     sys.exit(1)
 
 # -----------------------------
-# LOAD EXCEL
+# LOAD CSV
 # -----------------------------
 try:
     print("📂 Loading Excel file...")
-    df = pd.read_csv(FILE_PATH)
+    df = pd.read_excel(FILE_PATH)
 except FileNotFoundError:
     print("❌ ERROR: File not found. Check FILE_PATH.")
     sys.exit(1)
@@ -103,4 +103,5 @@ for start in range(0, total_rows, BATCH_SIZE):
 
 print("\n🎉 Translation completed! File saved at:")
 print(FILE_PATH)
+
 
